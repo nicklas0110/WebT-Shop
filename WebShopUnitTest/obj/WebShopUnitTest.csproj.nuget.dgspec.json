@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nickl\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj": {}
+    "C:\\Users\\frede\\RiderProjects\\DefiningTestCases\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nickl\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj": {
+    "C:\\Users\\frede\\RiderProjects\\DefiningTestCases\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nickl\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\frede\\RiderProjects\\DefiningTestCases\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj",
         "projectName": "WebShopUnitTest",
-        "projectPath": "C:\\Users\\Nickl\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj",
-        "packagesPath": "C:\\Users\\Nickl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nickl\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\frede\\RiderProjects\\DefiningTestCases\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj",
+        "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frede\\RiderProjects\\DefiningTestCases\\WebT-Shop\\WebShopUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nickl\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
