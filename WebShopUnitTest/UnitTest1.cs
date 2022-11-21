@@ -1,3 +1,6 @@
+using WebShopApplication;
+using WebShopApplication.Interfaces;
+
 namespace WebShopUnitTest;
 using Moq;
 
@@ -6,7 +9,7 @@ public class UnitTest1
 {
     private IWebShopRepository Repository;
 
-    public WebShopService(IWebShopRepository repository)
+    public UnitTest1(IWebShopRepository repository)
     {
         if (repository == null)
         {
@@ -14,6 +17,7 @@ public class UnitTest1
         }
         Repository = repository;
     }
+    
     [Fact]
     public void CreateTShirt()
     {
@@ -22,21 +26,21 @@ public class UnitTest1
         IWebShopRepository repository = mockRepository.Object;
         
         // Act
-        ITShirtService service = new TShirtService(repository);
+        IWebShopService service = new WebShopService(repository);
         
         // Assert
         Assert.NotNull(service);
-        Assert.True(service is TShirtService);
+        Assert.True(service is WebShopService);
     }
     
     [Fact]
     public void CreateReviewServiceWithNoRepositoryExceptArgumentException()
     {
         // Arrange
-        ITShirtService service = null;
+        IWebShopService service = null;
 
         // Act + Assert
-        var ex = Assert.Throws<ArgumentException>(() => service = new TShirtService(null));
+        var ex = Assert.Throws<ArgumentException>(() => service = new WebShopService(null));
 
         Assert.Equal("Missing repository", ex.Message);
         Assert.Null(service);

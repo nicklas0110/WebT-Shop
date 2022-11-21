@@ -10,4 +10,14 @@
       <ProjectReference Include="..\WebsShopDomain\WebsShopDomain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Validators" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.0" />
+      <PackageReference Include="FluentValidation" Version="11.3.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    </ItemGroup>
+
 </Project>
