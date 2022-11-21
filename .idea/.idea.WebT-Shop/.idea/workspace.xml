@@ -5,43 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopApplication/DepencyResolver/DependencyReolverService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopApplication/Validators/WebShopValidators.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/WebShopAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/WebShopAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/WebShopAPI.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopApplication.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopApplication.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopInfrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopInfrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/WebShopInfrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/WebShopInfrastructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsShopDomain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebsShopDomain/TShirt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/TShirt.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b780d9ef634df8733117ee737a8a38a2bb7da585e06e1f7e51cef6eb34211d6c/Mock`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -94,6 +70,7 @@
       <workItem from="1669031900021" duration="3710000" />
       <workItem from="1669037349959" duration="307000" />
       <workItem from="1669038221974" duration="1431000" />
+      <workItem from="1669039928739" duration="6061000" />
     </task>
     <servers />
   </component>

@@ -21,6 +21,7 @@ public class WebShopRepository : IWebShopRepository
     {
         _context.BoxTable.Add(tShirt);
         _context.SaveChanges();
+        tShirt.size = "1111";
         return tShirt;
     }
 
