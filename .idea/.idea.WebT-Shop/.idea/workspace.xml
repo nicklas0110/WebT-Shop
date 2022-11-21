@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsShopDomain/TShirt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/TShirt.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.WebShopAPI">
+  <component name="RunManager">
     <configuration name="WebShopAPI" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -71,6 +69,7 @@
       <workItem from="1669037349959" duration="307000" />
       <workItem from="1669038221974" duration="1431000" />
       <workItem from="1669039928739" duration="6061000" />
+      <workItem from="1669046269718" duration="366000" />
     </task>
     <servers />
   </component>

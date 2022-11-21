@@ -109,7 +109,7 @@ public class UnitTest1
     [Fact]
     public void ViLeger()
     {
-        var rand = new Random();
+        
         
         // Arrange
         var optionGroups = new List<OptionGroup>()
@@ -171,10 +171,10 @@ public class UnitTest1
             }
         };
         
-        var itemCategory = new ItemCategory()
+        var itemCategory = new Category()
         {
             Id = 1,
-            Name = "Tshirt"
+            CategoryName = "Tshirt"
         };
         
         var HummelTshirt = new Item()
@@ -186,7 +186,15 @@ public class UnitTest1
             ItemCategoryId = itemCategory.Id,
             ItemCategory = itemCategory
         };
-        
+        var AdidasTshirt = new Item()
+        {
+            Id = 1,
+            Name = "Adidas tshirt",
+            Price = 399.99m,
+            Options = options,
+            ItemCategoryId = itemCategory.Id,
+            ItemCategory = itemCategory
+        };
         
         
         TShirt tshirt = new TShirt() { size = "12", type = "V-Neck", color = "Blue" };
