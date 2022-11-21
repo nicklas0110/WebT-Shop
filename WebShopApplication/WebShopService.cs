@@ -50,4 +50,9 @@ public class WebShopService : IWebShopService {
     {
         throw new NotImplementedException();
     }
+
+    public TShirt GetNumberOfSizesFromTShirts(string size)
+    {
+        throw new NotImplementedException();
+    }
 }

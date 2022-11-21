@@ -10,5 +10,8 @@ public interface IWebShopService
     TShirt GetTShirtById(int id);
     void RebuildDB();
     TShirt UpdateTShirt(int id, TShirt product);
-    TShirt DeleteTShirt(int id);  
+    TShirt DeleteTShirt(int id);
+
+    TShirt GetNumberOfSizesFromTShirts(String size);
+
 }

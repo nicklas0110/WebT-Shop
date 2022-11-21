@@ -10,4 +10,6 @@ public interface IWebShopRepository
     void RebuildDB();
     TShirt UpdateTShirt(TShirt tShirt);
     TShirt DeleteTShirt(int id);
+
+    TShirt[] GetAll();
 }
