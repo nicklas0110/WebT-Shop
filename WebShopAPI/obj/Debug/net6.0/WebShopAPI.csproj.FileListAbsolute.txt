@@ -67,3 +67,9 @@ C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\runtimes\w
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.csproj.CopyComplete
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopApplication.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopInfrastructure.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebsShopDomain.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopInfrastructure.pdb
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopApplication.pdb
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebsShopDomain.pdb

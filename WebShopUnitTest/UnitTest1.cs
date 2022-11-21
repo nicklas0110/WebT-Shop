@@ -72,8 +72,44 @@ public class UnitTest1
         
         // Assert
         Assert.Null(mockRepo);
+        
+    }
+    
+    [Fact]
+    public void GetallTShirt()
+    {
+        // Arrange
+        TShirt[] fakeRepo = new TShirt[]
+        {
+            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
+            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+        };
 
+        // Act
+        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        mockRepo.Setup(r => r.GetAll()).Returns(fakeRepo);
 
+        // Assert
+        Assert.NotNull(mockRepo);
+    }
+    
+    [Fact]
+    public void GetAllTShirtFail()
+    {
+        // Arrange
+        TShirt[] fakeRepo = new TShirt[]
+        {
+            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
+            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+        };
+
+        // Act
+        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        mockRepo = null;
+        
+        // Assert
+        Assert.Null(mockRepo);
+        
     }
 }
 

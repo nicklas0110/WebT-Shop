@@ -10,4 +10,13 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="DependencyResolver" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WebShopApplication\WebShopApplication.csproj" />
+      <ProjectReference Include="..\WebsShopDomain\WebsShopDomain.csproj" />
+    </ItemGroup>
+
 </Project>

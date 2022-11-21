@@ -45,7 +45,7 @@ public class WebShopService : IWebShopService {
 
     public void RebuildDB()
     {
-        throw new NotImplementedException();
+        _tShirtRepository.RebuildDB();
     }
 
     public TShirt UpdateTShirt(int id, TShirt product)
@@ -57,9 +57,5 @@ public class WebShopService : IWebShopService {
     {
         throw new NotImplementedException();
     }
-
-    public TShirt GetNumberOfSizesFromTShirts(string size)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

@@ -597,6 +597,47 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "WebShopApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "FluentValidation": "11.3.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "WebsShopDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebShopApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebShopApplication.dll": {}
+        }
+      },
+      "WebShopInfrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "WebShopApplication": "1.0.0",
+          "WebsShopDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebShopInfrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebShopInfrastructure.dll": {}
+        }
+      },
+      "WebsShopDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WebsShopDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebsShopDomain.dll": {}
+        }
       }
     }
   },
@@ -1786,16 +1827,33 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "WebShopApplication/1.0.0": {
+      "type": "project",
+      "path": "../WebShopApplication/WebShopApplication.csproj",
+      "msbuildProject": "../WebShopApplication/WebShopApplication.csproj"
+    },
+    "WebShopInfrastructure/1.0.0": {
+      "type": "project",
+      "path": "../WebShopInfrastructure/WebShopInfrastructure.csproj",
+      "msbuildProject": "../WebShopInfrastructure/WebShopInfrastructure.csproj"
+    },
+    "WebsShopDomain/1.0.0": {
+      "type": "project",
+      "path": "../WebsShopDomain/WebsShopDomain.csproj",
+      "msbuildProject": "../WebsShopDomain/WebsShopDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutoMapper >= 12.0.0",
       "AutoMapper.Contrib.Autofac.DependencyInjection >= 7.0.0",
       "DomainValidationCore >= 1.1.1",
       "FluentValidation.DependencyInjectionExtensions >= 11.3.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "WebShopInfrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1822,7 +1880,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj": {
+              "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1835,6 +1897,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "AutoMapper.Contrib.Autofac.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
