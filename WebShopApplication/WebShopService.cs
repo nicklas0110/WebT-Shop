@@ -1,5 +1,5 @@
 ﻿namespace WebShopApplication;
 
-public class Class1
+public class WebShopService
 {
 }

@@ -1,0 +1,15 @@
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopAPI.exe
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopAPI.deps.json
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopAPI.runtimeconfig.json
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopAPI.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopAPI.pdb
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.csproj.AssemblyReference.cache
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.AssemblyInfoInputs.cache
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.AssemblyInfo.cs
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.csproj.CoreCompileInputs.cache
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\refint\WebShopAPI.dll
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.pdb
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.genruntimeconfig.cache
+C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\obj\Debug\net6.0\ref\WebShopAPI.dll
