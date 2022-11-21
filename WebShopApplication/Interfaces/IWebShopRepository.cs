@@ -1,11 +1,13 @@
-﻿namespace WebShopApplication.Interfaces;
+﻿using WebsShopDomain;
 
-public class IWebShopRepository
+namespace WebShopApplication.Interfaces;
+
+public interface IWebShopRepository
 {
-    List<TShirt> GetAllBoxes();
-    TShirt CreateNewBox(TShirt tShirt);
-    TShirt GetBoxById(int id);
+    List<TShirt> GetAllTShirts();
+    TShirt CreateNewTShirt(TShirt tShirt);
+    TShirt GetTShirtById(int id);
     void RebuildDB();
-    TShirt UpdateBox(TShirt tShirt);
-    TShirt DeleteBox(int id);
+    TShirt UpdateTShirt(TShirt tShirt);
+    TShirt DeleteTShirt(int id);
 }
