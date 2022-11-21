@@ -23,8 +23,8 @@ public class UnitTest1
         Assert.NotNull(service);
         Assert.True(service is WebShopService);
     }
-   
-    
+
+
     [Fact]
     public void CreateWebShopServiceWithNoRepositoryExceptArgumentException()
     {
@@ -37,27 +37,43 @@ public class UnitTest1
         Assert.Equal("Missing repository", ex.Message);
         Assert.Null(service);
     }
-    
+
     [Fact]
     public void CreateTShirt()
     {
         // Arrange
         TShirt[] fakeRepo = new TShirt[]
         {
-            new TShirt() { size = "12", type = "V-Neck", color = "Blue"},
-            new TShirt() { size = "M", type = "V-Neck", color = "Black"},
+            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
+            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
         };
-        
+
         // Act
         Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
         mockRepo.Setup(r => r.GetAll()).Returns(fakeRepo);
-        
+
         // Assert
         Assert.NotNull(mockRepo);
     }
-    
-    
 
-    
+    [Fact]
+    public void CreateTShirtFail()
+    {
+        // Arrange
+        TShirt[] fakeRepo = new TShirt[]
+        {
+            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
+            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+        };
+
+        // Act
+        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        mockRepo = null;
+        
+        // Assert
+        Assert.Null(mockRepo);
+
+
+    }
 }
 
