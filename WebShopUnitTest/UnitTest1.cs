@@ -8,19 +8,9 @@ using Moq;
 
 public class UnitTest1
 {
-    private IWebShopRepository Repository;
 
-    public UnitTest1(IWebShopRepository repository)
-    {
-        if (repository == null)
-        {
-            throw new ArgumentException("Missing repository");
-        }
-        Repository = repository;
-    }
-    
     [Fact]
-    public void CreateReviewServiceWithRepository()
+    public void CreateWebShopServiceWithRepository()
     {
         // Arrange
         Mock<IWebShopRepository> mockRepository = new Mock<IWebShopRepository>();
@@ -36,7 +26,7 @@ public class UnitTest1
    
     
     [Fact]
-    public void CreateReviewServiceWithNoRepositoryExceptArgumentException()
+    public void CreateWebShopServiceWithNoRepositoryExceptArgumentException()
     {
         // Arrange
         IWebShopService service = null;
@@ -55,11 +45,12 @@ public class UnitTest1
         TShirt[] fakeRepo = new TShirt[]
         {
             new TShirt() { size = "12", type = "V-Neck", color = "Blue"},
+            new TShirt() { size = "M", type = "V-Neck", color = "Black"},
         };
         
         // Act
         Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
-        mockRepo.SetupAdd(fakeRepo);
+        mockRepo.Setup(r => r.GetAll()).Returns(fakeRepo);
         
         // Assert
         Assert.NotNull(mockRepo);

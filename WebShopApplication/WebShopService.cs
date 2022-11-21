@@ -8,13 +8,20 @@ namespace WebShopApplication;
 
 public class WebShopService : IWebShopService {
     
+    private IWebShopRepository Repository;
+    
     private readonly IWebShopRepository _tShirtRepository;
     private readonly IValidator<WebShopDTOs> _postValidator;
     private readonly IValidator<TShirt> _tShirtValidator;
     private readonly IMapper _mapper;
+    
     public WebShopService(IWebShopRepository repository)
     {
-        throw new NotImplementedException();
+        if (repository == null)
+        {
+            throw new ArgumentException("Missing repository");
+        }
+        Repository = repository;
     }
 
     public List<TShirt> GetAllNTShirts()

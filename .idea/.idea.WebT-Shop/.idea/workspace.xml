@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Model/BETeshirt.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
@@ -66,6 +65,7 @@
       <workItem from="1668595857498" duration="1322000" />
       <workItem from="1669029818617" duration="1732000" />
       <workItem from="1669031900021" duration="3710000" />
+      <workItem from="1669037349959" duration="307000" />
     </task>
     <servers />
   </component>
@@ -87,5 +87,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs</url>
+          <line>55</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopUnitTest\UnitTest1.cs" initialLine="55" containingFunctionPresentation="method 'CreateTShirt'">
+            <startOffsets>
+              <option value="1424" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1449" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
