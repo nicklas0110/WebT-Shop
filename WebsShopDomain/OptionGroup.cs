@@ -1,6 +1,6 @@
 ﻿namespace WebsShopDomain;
 
-public class OptionGroup
+public class OptionGroup : BaseClass
 {
-    
+    public string Name { get; set; }
 }
