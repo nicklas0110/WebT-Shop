@@ -24,7 +24,7 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 
 var mapper = new MapperConfiguration(configuration =>
 {
-    configuration.CreateMap<WebShopDTOs, TShirt>();
+    configuration.CreateMap<WebShopDTOs, Item>();
 }).CreateMapper();
 builder.Services.AddSingleton(mapper);
 

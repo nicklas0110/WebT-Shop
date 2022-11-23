@@ -5,11 +5,11 @@ namespace WebShopApplication.Interfaces;
 
 public interface IWebShopService
 {
-    List<TShirt> GetAllNTShirts();
-    TShirt CreateNewTShirt(WebShopDTOs dto);
-    TShirt GetTShirtById(int id);
+    List<Item> GetAllItems();
+    Item CreateNewItem(WebShopDTOs dto);
+    Item GetItemById(int id);
     void RebuildDB();
-    TShirt UpdateTShirt(int id, TShirt product);
-    TShirt DeleteTShirt(int id);
+    Item UpdateItem(int id, Item product);
+    Item DeleteItem(int id);
 
 }

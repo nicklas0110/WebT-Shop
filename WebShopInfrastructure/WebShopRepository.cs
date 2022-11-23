@@ -12,20 +12,20 @@ public class WebShopRepository : IWebShopRepository
         _context = context;
     }
     
-    public List<TShirt> GetAllTShirts()
+    public List<Item> GetAllItems()
     {
-        return _context.BoxTable.ToList();
+        return _context.ItemTable.ToList();
     }
 
-    public TShirt CreateNewTShirt(TShirt tShirt)
+    public Item CreateNewItem(Item item)
     {
-        _context.BoxTable.Add(tShirt);
+        _context.ItemTable.Add(item);
         _context.SaveChanges();
-        tShirt.size = "1111";
-        return tShirt;
+        item.Price = 1111;
+        return item;
     }
 
-    public TShirt GetTShirtById(int id)
+    public Item GetItemById(int id)
     {
         throw new NotImplementedException();
     }
@@ -35,17 +35,17 @@ public class WebShopRepository : IWebShopRepository
         throw new NotImplementedException();
     }
 
-    public TShirt UpdateTShirt(TShirt tShirt)
+    public Item UpdateItem(Item item)
     {
         throw new NotImplementedException();
     }
 
-    public TShirt DeleteTShirt(int id)
+    public Item DeleteItem(int id)
     {
         throw new NotImplementedException();
     }
 
-    public TShirt[] GetAll()
+    public Item[] GetAll()
     {
         throw new NotImplementedException();
     }

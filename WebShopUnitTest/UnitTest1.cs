@@ -39,25 +39,25 @@ public class UnitTest1
     }
 
     [Fact]
-    public void CreateTShirt()
+    public void CreateItem()
     {
         // Arrange
-        TShirt tshirt = new TShirt() { size = "12", type = "V-Neck", color = "Blue" };
+        Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
         Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
 
         // Act, Assert
-        mockRepo.Setup(r => r.CreateNewTShirt(tshirt)).Returns(tshirt);
+        mockRepo.Setup(r => r.CreateNewItem(tshirt)).Returns(tshirt);
 
     }
 
     [Fact]
-    public void CreateTShirtFail()
+    public void CreateItemFail()
     {
         // Arrange
-        TShirt[] fakeRepo = new TShirt[]
+        Item[] fakeRepo = new Item[]
         {
-            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
-            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
+            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
         };
 
         // Act
@@ -70,13 +70,13 @@ public class UnitTest1
     }
     
     [Fact]
-    public void GetallTShirt()
+    public void GetallItems()
     {
         // Arrange
-        TShirt[] fakeRepo = new TShirt[]
+        Item[] fakeRepo = new Item[]
         {
-            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
-            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
+            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
         };
 
         // Act
@@ -88,13 +88,13 @@ public class UnitTest1
     }
     
     [Fact]
-    public void GetAllTShirtFail()
+    public void GetAllItemFail()
     {
         // Arrange
-        TShirt[] fakeRepo = new TShirt[]
+        Item[] fakeRepo = new Item[]
         {
-            new TShirt() { size = "12", type = "V-Neck", color = "Blue" },
-            new TShirt() { size = "M", type = "V-Neck", color = "Black" },
+            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
+            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
         };
 
         // Act
@@ -197,11 +197,11 @@ public class UnitTest1
         };
         
         
-        TShirt tshirt = new TShirt() { size = "12", type = "V-Neck", color = "Blue" };
+        Item item = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
         Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
 
         // Act, Assert
-        mockRepo.Setup(r => r.CreateNewTShirt(tshirt)).Returns(tshirt);
+        mockRepo.Setup(r => r.CreateNewItem(item)).Returns(item);
 
     }
 }

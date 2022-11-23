@@ -12,7 +12,7 @@ public class WebShopService : IWebShopService {
     
     private readonly IWebShopRepository _tShirtRepository;
     private readonly IValidator<WebShopDTOs> _postValidator;
-    private readonly IValidator<TShirt> _tShirtValidator;
+    private readonly IValidator<Item> _tShirtValidator;
     private readonly IMapper _mapper;
     
     public WebShopService(IWebShopRepository repository)
@@ -24,21 +24,21 @@ public class WebShopService : IWebShopService {
         Repository = repository;
     }
 
-    public List<TShirt> GetAllNTShirts()
+    public List<Item> GetAllItems()
     {
-        return _tShirtRepository.GetAllTShirts();
+        return _tShirtRepository.GetAllItems();
     }
 
-    public TShirt CreateNewTShirt(WebShopDTOs dto)
+    public Item CreateNewItem(WebShopDTOs dto)
     {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
 
-        return _tShirtRepository.CreateNewTShirt(_mapper.Map<TShirt>(dto));
+        return _tShirtRepository.CreateNewItem(_mapper.Map<Item>(dto));
     }
 
-    public TShirt GetTShirtById(int id)
+    public Item GetItemById(int id)
     {
         throw new NotImplementedException();
     }
@@ -48,12 +48,12 @@ public class WebShopService : IWebShopService {
         _tShirtRepository.RebuildDB();
     }
 
-    public TShirt UpdateTShirt(int id, TShirt product)
+    public Item UpdateItem(int id, Item product)
     {
         throw new NotImplementedException();
     }
 
-    public TShirt DeleteTShirt(int id)
+    public Item DeleteItem(int id)
     {
         throw new NotImplementedException();
     }
