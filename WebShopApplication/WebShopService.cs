@@ -8,9 +8,11 @@ namespace WebShopApplication;
 
 public class WebShopService : IWebShopService {
     
-    private IWebShopRepository Repository;
+    private IWebShopItemRepository Repository;
     
-    private readonly IWebShopRepository _itemRepository;
+    private readonly IWebShopItemRepository _itemRepository;
+    private readonly IWebShopCategoryRepository _categoryRepository;
+    private readonly IWebShopOptionRepository _optionRepository;
     private readonly IValidator<WebShopDTOs> _postValidator;
     private readonly IValidator<Item> _itemValidator;
     private readonly IValidator<WebShopDTOsCategory> _postValidatorCategory;
@@ -19,7 +21,7 @@ public class WebShopService : IWebShopService {
     private readonly IValidator<Option> _optionValidator;
     private readonly IMapper _mapper;
     
-    public WebShopService(IWebShopRepository repository)
+    public WebShopService(IWebShopItemRepository repository)
     {
         if (repository == null)
         {
@@ -68,25 +70,25 @@ public class WebShopService : IWebShopService {
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
 
-        return _itemRepository.CreateNewCategory(_mapper.Map<Category>(dtoCategory));
+        return _categoryRepository.CreateNewCategory(_mapper.Map<Category>(dtoCategory));
     }
 
     public List<Category> GetAllCategories()
     {
-        return _itemRepository.GetAllCategories();
+        return _categoryRepository.GetAllCategories();
     }
 
-    public Category CreateNewOption(OptionDTOs optionDto)
+    public Option CreateNewOption(OptionDTOs optionDto)
     {
         var validation = _postValidatorOption.Validate(optionDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
 
-        return _itemRepository.CreateNewCategory(_mapper.Map<Category>(optionDto));
+        return _optionRepository.CreateNewOption(_mapper.Map<Option>(optionDto));
     }
 
     public List<Option> GetAllOptions()
     {
-        return _itemRepository.GetAllOptions();
+        return _optionRepository.GetAllOptions();
     }
 }

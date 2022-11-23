@@ -9,6 +9,6 @@ public class DependencyResolverService
 {
     public static void RegisterInfrastructure(IServiceCollection services)
     {
-        services.AddScoped<IWebShopRepository, WebShopRepository>();
+        services.AddScoped<IWebShopItemRepository, WebShopRepository>();
     }
 } 

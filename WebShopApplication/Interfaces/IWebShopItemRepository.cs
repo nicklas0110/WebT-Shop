@@ -2,7 +2,7 @@
 
 namespace WebShopApplication.Interfaces;
 
-public interface IWebShopRepository
+public interface IWebShopItemRepository
 {
     List<Item> GetAllItems();
     Item CreateNewItem(Item tShirt);
@@ -13,11 +13,7 @@ public interface IWebShopRepository
 
     Item[] GetAll();
     
-    Category[] GetAllCat();
+   
     
-    Category CreateNewCategory(Category category);
-    List<Category> GetAllCategories();
-    
-    Option CreateNewOption(Option option);
-    List<Option> GetAllOptions();
+   
 }

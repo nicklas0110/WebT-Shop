@@ -13,8 +13,8 @@ public class UnitTest1
     public void CreateWebShopServiceWithRepository()
     {
         // Arrange
-        Mock<IWebShopRepository> mockRepository = new Mock<IWebShopRepository>();
-        IWebShopRepository repository = mockRepository.Object;
+        Mock<IWebShopItemRepository> mockRepository = new Mock<IWebShopItemRepository>();
+        IWebShopItemRepository repository = mockRepository.Object;
 
         // Act
         IWebShopService service = new WebShopService(repository);
@@ -43,7 +43,7 @@ public class UnitTest1
     {
         // Arrange
         Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
 
         // Act, Assert
         mockRepo.Setup(r => r.CreateNewItem(tshirt)).Returns(tshirt);
@@ -61,7 +61,7 @@ public class UnitTest1
         };
 
         // Act
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
         mockRepo = null;
         
         // Assert
@@ -80,7 +80,7 @@ public class UnitTest1
         };
 
         // Act
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
         mockRepo.Setup(r => r.GetAll()).Returns(fakeRepo);
 
         // Assert
@@ -98,7 +98,7 @@ public class UnitTest1
         };
 
         // Act
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
         mockRepo = null;
         
         // Assert
@@ -117,7 +117,7 @@ public class UnitTest1
         };
 
         // Act
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopCategoryRepository> mockRepo = new Mock<IWebShopCategoryRepository>();
         mockRepo.Setup(r => r.GetAllCat()).Returns(fakeRepo);
 
         // Assert
@@ -135,7 +135,7 @@ public class UnitTest1
         };
 
         // Act
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopCategoryRepository> mockRepo = new Mock<IWebShopCategoryRepository>();
         mockRepo = null;
         
         // Assert
@@ -235,7 +235,7 @@ public class UnitTest1
         
         
         Item item = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
-        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
 
         // Act, Assert
         mockRepo.Setup(r => r.CreateNewItem(item)).Returns(item);
