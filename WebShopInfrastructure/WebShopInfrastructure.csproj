@@ -11,10 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="DependencyResolver" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\WebShopApplication\WebShopApplication.csproj" />
       <ProjectReference Include="..\WebsShopDomain\WebsShopDomain.csproj" />
     </ItemGroup>

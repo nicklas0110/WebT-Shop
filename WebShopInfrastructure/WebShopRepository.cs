@@ -32,7 +32,8 @@ public class WebShopRepository : IWebShopRepository
 
     public void RebuildDB()
     {
-        throw new NotImplementedException();
+        _context.Database.EnsureDeleted();
+        _context.Database.EnsureCreated();
     }
 
     public Item UpdateItem(Item item)

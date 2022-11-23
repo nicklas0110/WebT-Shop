@@ -32,15 +32,17 @@ builder.Services.AddDbContext<WebShopDbContext>(options => options.UseSqlite(
     "Data source=db.db"
 ));
 
-/*
-MediaTypeNames.Application.DepencyResolver
-    .DependencyResolverService
+
+WebShopApplication
+    .DepencyResolver
+    .DependencyReolverService
     .RegisterApplicationLayer(builder.Services);
 
-WebShopInfrastructure.DependencyResolver
+WebShopInfrastructure
+    .DependencyResolver
     .DependencyResolverService
     .RegisterInfrastructure(builder.Services);
-    */
+    
 
 builder.Services.AddCors();
 
