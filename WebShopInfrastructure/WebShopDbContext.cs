@@ -19,8 +19,13 @@ public class WebShopDbContext  : DbContext
         modelBuilder.Entity<Category>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<Option>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
     } 
     
     public DbSet<Item> ItemTable { get; set; }
     public DbSet<Category> CategoryTable { get; set; }
+    public DbSet<Option> OptionTable { get; set; }
 }

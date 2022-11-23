@@ -18,14 +18,14 @@ public class WebShopController : ControllerBase
     }
     
     [HttpGet]
-    [Route("")]
+    [Route("Item")]
     public ActionResult<List<Item>> GetAllTItems()
     {
         return _webShopService.GetAllItems();
     }
     
     [HttpPost]  
-    [Route("")]
+    [Route("Item")]
     public ActionResult<Item> CreateNewItem(WebShopDTOs dto)
     {
         try
@@ -59,6 +59,32 @@ public class WebShopController : ControllerBase
         try
         {
             var result = _webShopService.CreateNewCategory(dtoCategory);
+            return Created("", result);
+        }
+        catch (ValidationException v)
+        {
+            return BadRequest(v.Message);
+        }
+        catch (System.Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    [HttpGet]
+    [Route("Option")]
+    public ActionResult<List<Option>> GetAllOptions()
+    {
+        return _webShopService.GetAllOptions();
+    }
+    
+    [HttpPost]  
+    [Route("Option")]
+    public ActionResult<Category> CreateNewOption(OptionDTOs dtoOption)
+    {
+        try
+        {
+            var result = _webShopService.CreateNewOption(dtoOption);
             return Created("", result);
         }
         catch (ValidationException v)

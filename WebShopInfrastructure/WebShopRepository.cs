@@ -67,13 +67,15 @@ public class WebShopRepository : IWebShopRepository
         return _context.CategoryTable.ToList();
     }
 
-    public Category CreateNewOption(Option option)
+    public Option CreateNewOption(Option option)
     {
-        throw new NotImplementedException();
+        _context.OptionTable.Add(option);
+        _context.SaveChanges();
+        return option;
     }
 
     public List<Option> GetAllOptions()
     {
-        throw new NotImplementedException();
+        return _context.OptionTable.ToList();
     }
 }

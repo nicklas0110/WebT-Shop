@@ -42,3 +42,18 @@ public class WebShopValidatorsCategory : AbstractValidator<Category>
         RuleFor(p => p.CategoryName).NotEmpty();
     }
 }
+
+public class PostBoxValidatorOption : AbstractValidator<OptionDTOs>
+{
+    public PostBoxValidatorOption()
+    {
+        RuleFor(p => p.Name).NotEmpty();
+    }
+}
+public class WebShopValidatorsOption : AbstractValidator<Option>
+{
+    public WebShopValidatorsOption()
+    {
+        RuleFor(p => p.Name).NotEmpty();
+    }
+}

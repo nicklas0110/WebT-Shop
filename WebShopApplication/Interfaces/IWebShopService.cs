@@ -13,5 +13,6 @@ public interface IWebShopService
     Item DeleteItem(int id);
     Category CreateNewCategory(WebShopDTOsCategory dto);
     List<Category> GetAllCategories();
-
+    Category CreateNewOption(OptionDTOs optionDto);
+    List<Option> GetAllOptions();
 }

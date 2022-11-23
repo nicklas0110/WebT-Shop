@@ -18,6 +18,6 @@ public interface IWebShopRepository
     Category CreateNewCategory(Category category);
     List<Category> GetAllCategories();
     
-    Category CreateNewOption(Option option);
+    Option CreateNewOption(Option option);
     List<Option> GetAllOptions();
 }
