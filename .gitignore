@@ -36,3 +36,5 @@ WebsShopDomain/obj/rider.project.restore.info
 *.user
 *.cache
 *.cache
+.idea/.idea.WebT-Shop/.idea/workspace.xml
+*.xml
