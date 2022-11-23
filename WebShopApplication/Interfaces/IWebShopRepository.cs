@@ -4,12 +4,18 @@ namespace WebShopApplication.Interfaces;
 
 public interface IWebShopRepository
 {
-    List<TShirt> GetAllTShirts();
-    TShirt CreateNewTShirt(TShirt tShirt);
-    TShirt GetTShirtById(int id);
+    List<Item> GetAllItems();
+    Item CreateNewItem(Item tShirt);
+    Item GetItemById(int id);
     void RebuildDB();
-    TShirt UpdateTShirt(TShirt tShirt);
-    TShirt DeleteTShirt(int id);
+    Item UpdateItem(Item tShirt);
+    Item DeleteItem(int id);
 
-    TShirt[] GetAll();
+    Item[] GetAll();
+    
+    Category CreateNewCategory(Category category);
+    List<Category> GetAllCategories();
+    
+    Category CreateNewOption(Option option);
+    List<Option> GetAllOptions();
 }

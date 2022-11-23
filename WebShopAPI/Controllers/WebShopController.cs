@@ -19,18 +19,46 @@ public class WebShopController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<TShirt>> GetAllTShirt()
+    public ActionResult<List<Item>> GetAllTItems()
     {
-        return _webShopService.GetAllNTShirts();
+        return _webShopService.GetAllItems();
     }
     
     [HttpPost]  
     [Route("")]
-    public ActionResult<TShirt> CreateNewTShirt(WebShopDTOs dto)
+    public ActionResult<Item> CreateNewItem(WebShopDTOs dto)
     {
         try
         {
-            var result = _webShopService.CreateNewTShirt(dto);
+            var result = _webShopService.CreateNewItem(dto);
+            return Created("", result);
+        }
+        catch (ValidationException v)
+        {
+            return BadRequest(v.Message);
+        }
+        catch (System.Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    
+    
+    [HttpGet]
+    [Route("Category")]
+    public ActionResult<List<Category>> GetAllTCategories()
+    {
+        return _webShopService.GetAllCategories();
+    }
+    
+    [HttpPost]  
+    [Route("Category")]
+    public ActionResult<Category> CreateNewCategory(WebShopDTOsCategory dtoCategory)
+    {
+        try
+        {
+            var result = _webShopService.CreateNewCategory(dtoCategory);
             return Created("", result);
         }
         catch (ValidationException v)

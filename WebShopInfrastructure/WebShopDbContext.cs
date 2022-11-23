@@ -12,10 +12,15 @@ public class WebShopDbContext  : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<TShirt>()
+        modelBuilder.Entity<Item>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<Category>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
     } 
     
-    public DbSet<TShirt> BoxTable { get; set; }
+    public DbSet<Item> ItemTable { get; set; }
+    public DbSet<Category> CategoryTable { get; set; }
 }
