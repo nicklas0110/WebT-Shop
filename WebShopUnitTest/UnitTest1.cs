@@ -107,6 +107,43 @@ public class UnitTest1
     }
     
     [Fact]
+    public void GetAllCategories()
+    {
+        // Arrange
+        Category[] fakeRepo = new Category[]
+        {
+            new Category() {  CategoryName = "tshirt med tryk" },
+            new Category() {  CategoryName = "tshirt med tryk" },
+        };
+
+        // Act
+        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        mockRepo.Setup(r => r.GetAllCat()).Returns(fakeRepo);
+
+        // Assert
+        Assert.NotNull(mockRepo);
+    }
+    
+    [Fact]
+    public void GetAllCategoryFail()
+    {
+        // Arrange
+        Category[] fakeRepo = new Category[]
+        {
+            new Category() { CategoryName = "tshirt med tryk"  },
+            new Category() {  CategoryName = "tshirt med tryk"  },
+        };
+
+        // Act
+        Mock<IWebShopRepository> mockRepo = new Mock<IWebShopRepository>();
+        mockRepo = null;
+        
+        // Assert
+        Assert.Null(mockRepo);
+        
+    }
+    
+    [Fact]
     public void ViLeger()
     {
         

@@ -13,6 +13,8 @@ public interface IWebShopRepository
 
     Item[] GetAll();
     
+    Category[] GetAllCat();
+    
     Category CreateNewCategory(Category category);
     List<Category> GetAllCategories();
     

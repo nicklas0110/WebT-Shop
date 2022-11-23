@@ -50,6 +50,11 @@ public class WebShopRepository : IWebShopRepository
         throw new NotImplementedException();
     }
 
+    Category[] IWebShopRepository.GetAllCat()
+    {
+        throw new NotImplementedException();
+    }
+
     public Category CreateNewCategory(Category category)
     {
         _context.CategoryTable.Add(category);

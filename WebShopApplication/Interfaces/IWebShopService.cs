@@ -11,7 +11,6 @@ public interface IWebShopService
     void RebuildDB();
     Item UpdateItem(int id, Item product);
     Item DeleteItem(int id);
-    
     Category CreateNewCategory(WebShopDTOsCategory dto);
     List<Category> GetAllCategories();
 
