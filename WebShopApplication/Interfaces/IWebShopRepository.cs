@@ -12,4 +12,10 @@ public interface IWebShopRepository
     Item DeleteItem(int id);
 
     Item[] GetAll();
+    
+    Category CreateNewCategory(Category category);
+    List<Category> GetAllCategories();
+    
+    Category CreateNewOption(Option option);
+    List<Option> GetAllOptions();
 }

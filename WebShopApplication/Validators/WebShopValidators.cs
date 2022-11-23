@@ -27,3 +27,18 @@ public class WebShopValidators : AbstractValidator<Item>
         RuleFor(p => p.Id).GreaterThan(0);
     }
 }
+
+public class PostBoxValidatorCategory : AbstractValidator<WebShopDTOsCategory>
+{
+    public PostBoxValidatorCategory()
+    {
+        RuleFor(p => p.CategoryName).NotEmpty();
+    }
+}
+public class WebShopValidatorsCategory : AbstractValidator<Category>
+{
+    public WebShopValidatorsCategory()
+    {
+        RuleFor(p => p.CategoryName).NotEmpty();
+    }
+}

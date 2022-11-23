@@ -10,9 +10,11 @@ public class WebShopService : IWebShopService {
     
     private IWebShopRepository Repository;
     
-    private readonly IWebShopRepository _tShirtRepository;
+    private readonly IWebShopRepository _itemRepository;
     private readonly IValidator<WebShopDTOs> _postValidator;
-    private readonly IValidator<Item> _tShirtValidator;
+    private readonly IValidator<Item> _itemValidator;
+    private readonly IValidator<WebShopDTOsCategory> _postValidatorCategory;
+    private readonly IValidator<Category> _categoryValidator;
     private readonly IMapper _mapper;
     
     public WebShopService(IWebShopRepository repository)
@@ -26,7 +28,7 @@ public class WebShopService : IWebShopService {
 
     public List<Item> GetAllItems()
     {
-        return _tShirtRepository.GetAllItems();
+        return _itemRepository.GetAllItems();
     }
 
     public Item CreateNewItem(WebShopDTOs dto)
@@ -35,7 +37,7 @@ public class WebShopService : IWebShopService {
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
 
-        return _tShirtRepository.CreateNewItem(_mapper.Map<Item>(dto));
+        return _itemRepository.CreateNewItem(_mapper.Map<Item>(dto));
     }
 
     public Item GetItemById(int id)
@@ -45,7 +47,7 @@ public class WebShopService : IWebShopService {
 
     public void RebuildDB()
     {
-        _tShirtRepository.RebuildDB();
+        _itemRepository.RebuildDB();
     }
 
     public Item UpdateItem(int id, Item product)
@@ -57,5 +59,18 @@ public class WebShopService : IWebShopService {
     {
         throw new NotImplementedException();
     }
-    
+
+    public Category CreateNewCategory(WebShopDTOsCategory dtoCategory)
+    {
+        var validation = _postValidatorCategory.Validate(dtoCategory);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+
+        return _itemRepository.CreateNewCategory(_mapper.Map<Category>(dtoCategory));
+    }
+
+    public List<Category> GetAllCategories()
+    {
+        return _itemRepository.GetAllCategories();
+    }
 }

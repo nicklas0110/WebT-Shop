@@ -43,4 +43,32 @@ public class WebShopController : ControllerBase
         }
     }
     
+    
+    
+    [HttpGet]
+    [Route("Category")]
+    public ActionResult<List<Category>> GetAllTCategories()
+    {
+        return _webShopService.GetAllCategories();
+    }
+    
+    [HttpPost]  
+    [Route("Category")]
+    public ActionResult<Category> CreateNewCategory(WebShopDTOsCategory dtoCategory)
+    {
+        try
+        {
+            var result = _webShopService.CreateNewCategory(dtoCategory);
+            return Created("", result);
+        }
+        catch (ValidationException v)
+        {
+            return BadRequest(v.Message);
+        }
+        catch (System.Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+    
 }

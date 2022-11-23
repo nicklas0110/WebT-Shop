@@ -49,4 +49,26 @@ public class WebShopRepository : IWebShopRepository
     {
         throw new NotImplementedException();
     }
+
+    public Category CreateNewCategory(Category category)
+    {
+        _context.CategoryTable.Add(category);
+        _context.SaveChanges();
+        return category;
+    }
+
+    public List<Category> GetAllCategories()
+    {
+        return _context.CategoryTable.ToList();
+    }
+
+    public Category CreateNewOption(Option option)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Option> GetAllOptions()
+    {
+        throw new NotImplementedException();
+    }
 }
