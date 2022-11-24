@@ -97,4 +97,10 @@ public class WebShopController : ControllerBase
         }
     }
     
+    [HttpGet]
+    [Route("RebuildDB")]
+    public void RebuildDB()
+    {
+        _webShopService.RebuildDB();
+    }
 }
