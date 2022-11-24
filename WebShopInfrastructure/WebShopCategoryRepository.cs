@@ -24,4 +24,21 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
     {
         return _context.CategoryTable.ToList();
     }
+
+    Category IWebShopCategoryRepository.DeleteCategory(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Category UpdateCategory(Category category)
+    {
+        _context.CategoryTable.Update(category);
+        _context.SaveChanges();
+        return category;
+    }
+
+    public Item DeleteCategory(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

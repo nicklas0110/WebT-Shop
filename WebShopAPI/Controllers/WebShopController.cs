@@ -104,4 +104,56 @@ public class WebShopController : ControllerBase
         _webShopService.RebuildDB();
     }
     
+    [HttpPut]
+    [Route("Item/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] Item item)
+    {
+        try
+        {
+            return Ok(_webShopService.UpdateItem(id, item));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    [HttpPut]
+    [Route("Category/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Category> UpdateCategory([FromRoute] int id, [FromBody] Category category)
+    {
+        try
+        {
+            return Ok(_webShopService.UpdateCategory(id, category));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    [HttpPut]
+    [Route("Option/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Option> UpdateOption([FromRoute] int id, [FromBody] Option option)
+    {
+        try
+        {
+            return Ok(_webShopService.UpdateOption(id, option));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    
 }

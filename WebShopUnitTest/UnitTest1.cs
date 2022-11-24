@@ -64,7 +64,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public void GetallItems()
+    public void GetallItems() 
     {
         // Arrange
         List<Item> fakeRepo = new List<Item>
@@ -171,6 +171,23 @@ public class UnitTest1
     }
     
     [Fact]
+    public void UpdateItem()
+    {
+        // Arrange
+        Item tshirt1 = new Item() { Id = 1, Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
+        Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499, ItemCategoryId = 2 };
+
+        // Act
+        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
+        mockRepo.Setup(i => i.UpdateItem(tshirt1));
+        
+        // Assert
+        Assert.Same(mockRepo , tshirt2);
+
+    }
+    
+    
+    [Fact]
     public void ViLeger()
     {
         
@@ -268,4 +285,8 @@ public class UnitTest1
         mockRepo.Setup(r => r.CreateNewItem(item)).Returns(item);
 
     }
+    
+    
+    
+    
 }

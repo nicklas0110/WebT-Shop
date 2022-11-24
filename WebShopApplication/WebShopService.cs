@@ -57,7 +57,12 @@ public class WebShopService : IWebShopService {
 
     public Item UpdateItem(int id, Item product)
     {
-        throw new NotImplementedException();
+        if (id != product.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _itemValidator.Validate(product);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _itemRepository.UpdateItem(product);;
     }
 
     public Item DeleteItem(int id)
@@ -79,6 +84,22 @@ public class WebShopService : IWebShopService {
         return _categoryRepository.GetAllCategories();
     }
 
+    public Category UpdateCategory(int id, Category category)
+    {
+        if (id != category.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _categoryValidator.Validate(category);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _categoryRepository.UpdateCategory(category);
+    }
+
+    public Category DeleteCategory(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    
     public Option CreateNewOption(OptionDTOs optionDto)
     {
         var validation = _postValidatorOption.Validate(optionDto);
@@ -91,5 +112,20 @@ public class WebShopService : IWebShopService {
     public List<Option> GetAllOptions()
     {
         return _optionRepository.GetAllOptions();
+    }
+
+    public Option UpdateOption(int id, Option option)
+    {
+        if (id != option.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _optionValidator.Validate(option);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _optionRepository.UpdateOption(option);;
+    }
+
+    public Option DeleteOption(int id)
+    {
+        throw new NotImplementedException();
     }
 }

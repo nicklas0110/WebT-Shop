@@ -37,7 +37,9 @@ public class WebShopRepository : IWebShopItemRepository
 
     public Item UpdateItem(Item item)
     {
-        throw new NotImplementedException();
+        _context.ItemTable.Update(item);
+        _context.SaveChanges();
+        return item;
     }
 
     public Item DeleteItem(int id)

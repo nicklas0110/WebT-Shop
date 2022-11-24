@@ -23,5 +23,16 @@ public class WebShopOptionRepository : IWebShopOptionRepository
     {
         return _context.OptionTable.ToList();
     }
-    
+
+    public Option UpdateOption(Option option)
+    {
+        _context.OptionTable.Update(option);
+        _context.SaveChanges();
+        return option;
+    }
+
+    public Option DeleteOption(int id)
+    {
+        throw new NotImplementedException();
+    }
 }
