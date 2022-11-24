@@ -48,9 +48,9 @@
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.3.0, )"
+              "version": "[11.4.0, )"
             },
-            "Microsoft.Extensions.DependencyInjection": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
             }

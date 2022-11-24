@@ -7,12 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+      <ProjectReference Include="..\WebShopApplication\WebShopApplication.csproj" />
+      <ProjectReference Include="..\WebsShopDomain\WebsShopDomain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WebShopApplication\WebShopApplication.csproj" />
-      <ProjectReference Include="..\WebsShopDomain\WebsShopDomain.csproj" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Autofac/6.4.0": {
+      "Autofac/6.5.0": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "4.7.1"
@@ -26,11 +26,11 @@
           "lib/netstandard2.1/AutoMapper.dll": {}
         }
       },
-      "AutoMapper.Contrib.Autofac.DependencyInjection/7.0.0": {
+      "AutoMapper.Contrib.Autofac.DependencyInjection/7.1.0": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "12.0.0",
-          "Autofac": "6.4.0"
+          "Autofac": "6.5.0"
         },
         "compile": {
           "lib/netstandard2.1/AutoMapper.Contrib.Autofac.DependencyInjection.dll": {}
@@ -48,7 +48,7 @@
           "lib/netcoreapp3.1/DomainValidationCore.dll": {}
         }
       },
-      "FluentValidation/11.3.0": {
+      "FluentValidation/11.4.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/FluentValidation.dll": {}
@@ -57,10 +57,10 @@
           "lib/net6.0/FluentValidation.dll": {}
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/11.3.0": {
+      "FluentValidation.DependencyInjectionExtensions/11.4.0": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "11.3.0",
+          "FluentValidation": "11.4.0",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
@@ -603,8 +603,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.0",
-          "FluentValidation": "11.3.0",
-          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "FluentValidation": "11.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "WebsShopDomain": "1.0.0"
         },
         "compile": {
@@ -619,6 +619,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "WebShopApplication": "1.0.0",
           "WebsShopDomain": "1.0.0"
         },
@@ -642,15 +643,15 @@
     }
   },
   "libraries": {
-    "Autofac/6.4.0": {
-      "sha512": "tkFxl6wAPuwVhrlN8wuNADnd+k2tv4ReP7ZZSL0vjfcN0RcfC9v25ogxK6b03HC7D4NwWjSLf1G/zTG8Bw43wQ==",
+    "Autofac/6.5.0": {
+      "sha512": "sm6HWWBDEoTPGXeyOchMygJ/7L89VxmVH72BFxakG88J34AVjA8RMi5jbv3PdpUtXI/d9ZLKOaxCmOSIo2K4aA==",
       "type": "package",
-      "path": "autofac/6.4.0",
+      "path": "autofac/6.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "autofac.6.4.0.nupkg.sha512",
+        "autofac.6.5.0.nupkg.sha512",
         "autofac.nuspec",
         "icon.png",
         "lib/net5.0/Autofac.dll",
@@ -678,14 +679,14 @@
         "lib/netstandard2.1/AutoMapper.xml"
       ]
     },
-    "AutoMapper.Contrib.Autofac.DependencyInjection/7.0.0": {
-      "sha512": "IPuit0gf99VRO76sAhRjynGpLg8nkEZu+p2cpCIGEwdCP4oW7N3nHjU5vLMGP9NI0D12BOL4hNzmMaYH1Du8rQ==",
+    "AutoMapper.Contrib.Autofac.DependencyInjection/7.1.0": {
+      "sha512": "wBY8J2MDu+bSCIwFXZJruY5j+s/dn6uqE034Qbx94ADnfzDZJx+cFsfSutTQRugTX2FwJWVWf77PYtJrjZnIDQ==",
       "type": "package",
-      "path": "automapper.contrib.autofac.dependencyinjection/7.0.0",
+      "path": "automapper.contrib.autofac.dependencyinjection/7.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "automapper.contrib.autofac.dependencyinjection.7.0.0.nupkg.sha512",
+        "automapper.contrib.autofac.dependencyinjection.7.1.0.nupkg.sha512",
         "automapper.contrib.autofac.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Contrib.Autofac.DependencyInjection.dll",
@@ -705,16 +706,16 @@
         "lib/netcoreapp3.1/DomainValidationCore.dll"
       ]
     },
-    "FluentValidation/11.3.0": {
-      "sha512": "AlsfUkdIzSMA2v091K0gT1YjEwc7YR5pIA5yq7PnZivhoH3YETMhZbUySzsLbJKhj/E3ei6nEgtqdm00AVHXeg==",
+    "FluentValidation/11.4.0": {
+      "sha512": "WZJyrNf4suiaI6avVG32W9kmBLC3+V5rDTcLeRJjeU4tDmTyDIOz1459DzCKppXs34YpZg9rCUzDY3M4XxG7Ug==",
       "type": "package",
-      "path": "fluentvalidation/11.3.0",
+      "path": "fluentvalidation/11.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.3.0.nupkg.sha512",
+        "fluentvalidation.11.4.0.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -728,16 +729,16 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/11.3.0": {
-      "sha512": "C7gtDO79JVRtZob4K4VvabpXEEcvxH6Bh3MzS/TAjoGlOu1/m93+NrAwzjWxUmPFMq+lk7/at+zu2uM8rB1tXg==",
+    "FluentValidation.DependencyInjectionExtensions/11.4.0": {
+      "sha512": "iZXtoDqfRnggHwIbFWnK1sFs3KlTadH5ezNDiXz411OSkUNowBRboaZBcSvx4gEot7CNZdoReUKWYJwow2+mbg==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.3.0",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.11.3.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
@@ -1847,9 +1848,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 12.0.0",
-      "AutoMapper.Contrib.Autofac.DependencyInjection >= 7.0.0",
+      "AutoMapper.Contrib.Autofac.DependencyInjection >= 7.1.0",
       "DomainValidationCore >= 1.1.1",
-      "FluentValidation.DependencyInjectionExtensions >= 11.3.0",
+      "FluentValidation.DependencyInjectionExtensions >= 11.4.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
@@ -1903,7 +1904,7 @@
           },
           "AutoMapper.Contrib.Autofac.DependencyInjection": {
             "target": "Package",
-            "version": "[7.0.0, )"
+            "version": "[7.1.0, )"
           },
           "DomainValidationCore": {
             "target": "Package",
@@ -1911,7 +1912,7 @@
           },
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
-            "version": "[11.3.0, )"
+            "version": "[11.4.0, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",

@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "mG+9P/DhucgUffTZL97wUghNJJT3YBJps7OYVuToE4n1s+LxPe0XM6rkk0GHi0eNBgnrrrJ+0BgpSIoY39HKeg==",
+  "dgSpecHash": "GpkegV4hQpfIiuHTRaM5bjoVq9tstnNgaym26TtDBG6tq52bfYPyh/p3vthIYL1wgbzL/9uzQODnz70o1tBttg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopUnitTest\\WebShopUnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Reigstad\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
-    "C:\\Users\\Reigstad\\.nuget\\packages\\fluentvalidation\\11.3.0\\fluentvalidation.11.3.0.nupkg.sha512",
+    "C:\\Users\\Reigstad\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

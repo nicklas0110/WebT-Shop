@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/+C5rlbmAi2g1+Kk39cZnRcK2JMcxfSf9MfoxV5jh/DfN3HBbAGKwPgoWmSO0mSK6cgUWvncYOVuV2ktUNc4w==",
+  "dgSpecHash": "6UQI+UiZv97T18wMp/mJ0JZPyhWIOae5yH7SFO+1kE92cfSP2DinRmlbcvI3a866BEeyKjlCAttyRuBVqKOySQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Reigstad\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
-    "C:\\Users\\Reigstad\\.nuget\\packages\\fluentvalidation\\11.3.0\\fluentvalidation.11.3.0.nupkg.sha512",
+    "C:\\Users\\Reigstad\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
