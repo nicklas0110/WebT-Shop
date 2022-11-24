@@ -23,4 +23,5 @@ public class WebShopOptionRepository : IWebShopOptionRepository
     {
         return _context.OptionTable.ToList();
     }
+    
 }

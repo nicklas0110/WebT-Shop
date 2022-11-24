@@ -44,9 +44,5 @@ public class WebShopRepository : IWebShopItemRepository
     {
         throw new NotImplementedException();
     }
-
-    public Item[] GetAll()
-    {
-        throw new NotImplementedException();
-    }
+    
 }

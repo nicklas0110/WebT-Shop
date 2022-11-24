@@ -54,26 +54,20 @@ public class UnitTest1
     public void CreateItemFail()
     {
         // Arrange
-        Item[] fakeRepo = new Item[]
-        {
-            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
-            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
-        };
-
-        // Act
+        Item tshirt = new Item() { };
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
         mockRepo = null;
         
-        // Assert
+        // Assert, Act
         Assert.Null(mockRepo);
-        
+
     }
     
     [Fact]
     public void GetallItems()
     {
         // Arrange
-        Item[] fakeRepo = new Item[]
+        List<Item> fakeRepo = new List<Item>
         {
             new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
             new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
@@ -81,7 +75,7 @@ public class UnitTest1
 
         // Act
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
-        mockRepo.Setup(r => r.GetAll()).Returns(fakeRepo);
+        mockRepo.Setup(r => r.GetAllItems()).Returns(fakeRepo);
 
         // Assert
         Assert.NotNull(mockRepo);
@@ -91,26 +85,24 @@ public class UnitTest1
     public void GetAllItemFail()
     {
         // Arrange
-        Item[] fakeRepo = new Item[]
+        List<Item> fakeRepo = new List<Item>
         {
-            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
-            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
         };
 
         // Act
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
-        mockRepo = null;
+        mockRepo.Setup(r => r.GetAllItems()).Returns(fakeRepo);
         
         // Assert
-        Assert.Null(mockRepo);
-        
+        Assert.Empty(fakeRepo);
+        Assert.NotNull(fakeRepo);
     }
     
     [Fact]
     public void GetAllCategories()
     {
         // Arrange
-        Category[] fakeRepo = new Category[]
+        List<Category> fakeRepo = new List<Category>
         {
             new Category() {  CategoryName = "tshirt med tryk" },
             new Category() {  CategoryName = "tshirt med tryk" },
@@ -118,7 +110,7 @@ public class UnitTest1
 
         // Act
         Mock<IWebShopCategoryRepository> mockRepo = new Mock<IWebShopCategoryRepository>();
-        mockRepo.Setup(r => r.GetAllCat()).Returns(fakeRepo);
+        mockRepo.Setup(r => r.GetAllCategories()).Returns(fakeRepo);
 
         // Assert
         Assert.NotNull(mockRepo);
@@ -128,19 +120,54 @@ public class UnitTest1
     public void GetAllCategoryFail()
     {
         // Arrange
-        Category[] fakeRepo = new Category[]
+        List<Category> fakeRepo = new List<Category>
         {
-            new Category() { CategoryName = "tshirt med tryk"  },
-            new Category() {  CategoryName = "tshirt med tryk"  },
         };
 
         // Act
         Mock<IWebShopCategoryRepository> mockRepo = new Mock<IWebShopCategoryRepository>();
-        mockRepo = null;
+        mockRepo.Setup(r => r.GetAllCategories()).Returns(fakeRepo);
         
         // Assert
-        Assert.Null(mockRepo);
+        Assert.Empty(fakeRepo);
+        Assert.NotNull(fakeRepo);
+    }
+    
+    [Fact]
+    public void GetAllOptiones()
+    {
+        // Arrange
+        List<Option> fakeRepo = new List<Option>
+        {
+            new Option() {  Name = "tshirt med tryk" },
+            new Option() {  Name = "tshirt Uden tryk" },
+        };
+
+        // Act
+        Mock<IWebShopOptionRepository> mockRepo = new Mock<IWebShopOptionRepository>();
+        mockRepo.Setup(r => r.GetAllOptions()).Returns(fakeRepo);
+
+        // Assert
+        Assert.NotNull(mockRepo);
+    }
+    
+    [Fact]
+    public void GetAllOptionFail()
+    {
+        // Arrange
+        List<Option> fakeRepo = new List<Option>
+        {
+            
+        };
+
+        // Act
+        Mock<IWebShopOptionRepository> mockRepo = new Mock<IWebShopOptionRepository>();
+        mockRepo.Setup(r => r.GetAllOptions()).Returns(fakeRepo);
         
+        // Assert
+        Assert.Empty(fakeRepo);
+        Assert.NotNull(fakeRepo);
+
     }
     
     [Fact]

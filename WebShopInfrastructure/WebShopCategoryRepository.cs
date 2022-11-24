@@ -11,10 +11,7 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
     {
         _context = context;
     }
-    public Category[] GetAllCat()
-    {
-        throw new NotImplementedException();
-    }
+    
 
     public Category CreateNewCategory(Category category)
     {

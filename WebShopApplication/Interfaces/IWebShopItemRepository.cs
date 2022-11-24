@@ -11,7 +11,7 @@ public interface IWebShopItemRepository
     Item UpdateItem(Item tShirt);
     Item DeleteItem(int id);
 
-    Item[] GetAll();
+    
     
    
     
