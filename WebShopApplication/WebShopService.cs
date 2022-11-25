@@ -62,7 +62,7 @@ public class WebShopService : IWebShopService {
         var validation = _itemValidator.Validate(product);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        return _itemRepository.UpdateItem(product);;
+        return _itemRepository.UpdateItem(id ,product);;
     }
 
     public Item DeleteItem(int id)

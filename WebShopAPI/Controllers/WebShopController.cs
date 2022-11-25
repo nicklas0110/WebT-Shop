@@ -15,9 +15,10 @@ public class WebShopController : ControllerBase
     private IWebShopCategoryRepository _webShopCategoryRepository;
     private IWebShopOptionRepository _webShopOptionRepository;
     
-    public WebShopController(IWebShopService webShopService)
+    public WebShopController(IWebShopService webShopService,IWebShopItemRepository webShopItemRepository)
     {
         _webShopService = webShopService;
+        _webShopItemRepository = webShopItemRepository;
     }
     
     [HttpGet]

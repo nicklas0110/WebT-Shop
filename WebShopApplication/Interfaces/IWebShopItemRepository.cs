@@ -8,7 +8,7 @@ public interface IWebShopItemRepository
     Item CreateNewItem(Item tShirt);
     Item GetItemById(int id);
     void RebuildDB();
-    Item UpdateItem(Item tShirt);
+    Item UpdateItem(int id, Item tShirt);
     Item DeleteItem(int id);
 
     

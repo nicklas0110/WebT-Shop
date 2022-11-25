@@ -35,13 +35,13 @@ public class WebShopRepository : IWebShopItemRepository
         _context.Database.EnsureCreated();
     }
 
-    public Item UpdateItem(Item item)
+    public Item UpdateItem(int id, Item tShirt)
     {
-        _context.ItemTable.Update(item);
+        _context.ItemTable.Update(tShirt);
         _context.SaveChanges();
-        return item;
+        return tShirt;
     }
-
+    
     public Item DeleteItem(int id)
     {
         throw new NotImplementedException();

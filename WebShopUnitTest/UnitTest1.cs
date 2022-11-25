@@ -47,7 +47,8 @@ public class UnitTest1
 
         // Act, Assert
         mockRepo.Setup(r => r.CreateNewItem(tshirt)).Returns(tshirt);
-
+        
+        
     }
 
     [Fact]
@@ -178,11 +179,13 @@ public class UnitTest1
         Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499, ItemCategoryId = 2 };
 
         // Act
-        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
-        mockRepo.Setup(i => i.UpdateItem(tshirt1));
+        Mock<WebShopService> mockRepo = new Mock<WebShopService>();
+        //mockRepo.Setup(i => i.UpdateItem(tshirt1.Id, tshirt2));
+        var item = mockRepo.Setup(i => i.UpdateItem(tshirt1.Id, tshirt2));
+        
         
         // Assert
-        Assert.Same(mockRepo , tshirt2);
+        Assert.Same(tshirt1, tshirt2);
 
     }
     

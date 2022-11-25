@@ -31,10 +31,9 @@ public class WebShopDbContext  : DbContext
 
         modelBuilder.Entity<Option>()
             .HasMany(o => o.Items)
-            .WithMany(i => i.Options)
-            .UsingEntity(j => j.HasData(new { ItemId = 1, OptionId = 1 }));
-        
-        
+            .WithMany(i => i.Options);
+
+
     } 
     
     public DbSet<Item> ItemTable { get; set; }
