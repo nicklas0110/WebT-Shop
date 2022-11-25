@@ -11,7 +11,10 @@ namespace WebShopAPI.Controllers;
 public class WebShopController : ControllerBase
 {
     private IWebShopService _webShopService;
-
+    private IWebShopItemRepository _webShopItemRepository;
+    private IWebShopCategoryRepository _webShopCategoryRepository;
+    private IWebShopOptionRepository _webShopOptionRepository;
+    
     public WebShopController(IWebShopService webShopService)
     {
         _webShopService = webShopService;
@@ -101,7 +104,7 @@ public class WebShopController : ControllerBase
     [Route("RebuildDB")]
     public void RebuildDB()
     {
-        _webShopService.RebuildDB();
+        _webShopItemRepository.RebuildDB();
     }
     
     [HttpPut]
