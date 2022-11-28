@@ -23,11 +23,7 @@ public class WebShopService : IWebShopService {
     
     public WebShopService(IWebShopItemRepository repository)
     {
-        if (repository == null)
-        {
-            throw new ArgumentException("Missing repository");
-        }
-        Repository = repository;
+        _itemRepository = repository;
     }
 
     public List<Item> GetAllItems()

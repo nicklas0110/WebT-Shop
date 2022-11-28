@@ -106,6 +106,7 @@ public class WebShopController : ControllerBase
     public void RebuildDB()
     {
         _webShopItemRepository.RebuildDB();
+        
     }
     
     [HttpPut]

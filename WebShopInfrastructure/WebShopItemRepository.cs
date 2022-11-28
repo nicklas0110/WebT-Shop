@@ -33,6 +33,7 @@ public class WebShopRepository : IWebShopItemRepository
     {
         _context.Database.EnsureDeleted();
         _context.Database.EnsureCreated();
+        Console.WriteLine("test");
     }
 
     public Item UpdateItem(int id, Item tShirt)
