@@ -28,7 +28,7 @@ var mapper = new MapperConfiguration(configuration =>
 }).CreateMapper();
 builder.Services.AddSingleton(mapper);
 
-builder.Services.AddDbContext<WebShopDbContext>(options => options.UseSqlite(
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
     "Data source=db.db"
 ));
 

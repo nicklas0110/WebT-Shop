@@ -6,19 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebShopInfrastructure/UserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebsShopDomain/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/DepencyResolver/DependencyReolverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DepencyResolver/DependencyReolverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopCategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/DatabaseContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopItemRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +23,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -120,6 +116,7 @@
       <workItem from="1669222022434" duration="4895000" />
       <workItem from="1669292351511" duration="1970000" />
       <workItem from="1669300157290" duration="1941000" />
+      <workItem from="1669635877451" duration="2632000" />
     </task>
     <servers />
   </component>

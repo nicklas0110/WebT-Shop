@@ -5,9 +5,9 @@ namespace WebShopInfrastructure;
 
 public class WebShopRepository : IWebShopItemRepository
 {
-    private readonly WebShopDbContext _context; 
+    private readonly DatabaseContext _context; 
     
-    public WebShopRepository(WebShopDbContext context)
+    public WebShopRepository(DatabaseContext context)
     {
         _context = context;
     }
