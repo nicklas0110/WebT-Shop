@@ -5,7 +5,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebShopApplication;
 using WebShopApplication.DTOs;
+using WebShopApplication.Helpers;
+using WebShopApplication.Interfaces;
 using WebShopInfrastructure;
 using WebsShopDomain;
 
@@ -32,16 +35,13 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
     "Data source=db.db"
 ));
 
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-WebShopApplication
-    .DepencyResolver
-    .DependencyReolverService
-    .RegisterApplicationLayer(builder.Services);
-
-WebShopInfrastructure
-    .DependencyResolver
-    .DependencyResolverService
-    .RegisterInfrastructure(builder.Services);
+//dependency, Application
+builder.Services.AddScoped<IUserRepository, IUserRepository>();
+builder.Services.AddScoped<IWebShopService, WebShopService>();
+//dependency, Infrastructure
+builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
     
 
 builder.Services.AddCors();
