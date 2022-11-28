@@ -21,13 +21,31 @@ public class WebShopService : IWebShopService {
     private readonly IValidator<Option> _optionValidator;
     private readonly IMapper _mapper;
     
-    public WebShopService(IWebShopItemRepository repository)
+    public WebShopService(
+        IWebShopItemRepository itemRepository,
+        IWebShopCategoryRepository categoryRepository,
+        IWebShopOptionRepository optionRepository,
+        IValidator<WebShopDTOs> postValidatorWebShopDTOs,
+        IValidator<Item> itemValidator,
+        IValidator<WebShopDTOsCategory> postValidatorCategory,
+        IValidator<Category> categoryValidator,
+        IValidator<OptionDTOs> postValidatorOption,
+        IValidator<Option> optionValidator,
+        IMapper mapper
+        
+    )
     {
-        if (repository == null)
-        {
-            throw new ArgumentException("Missing repository");
-        }
-        Repository = repository;
+        _itemRepository = itemRepository;
+        _categoryRepository = categoryRepository;
+        _optionRepository = optionRepository;
+        _postValidator = postValidatorWebShopDTOs;
+        _itemValidator = itemValidator;
+        _postValidatorCategory = postValidatorCategory;
+        _categoryValidator = categoryValidator;
+        _postValidatorOption = postValidatorOption;
+        _optionValidator = optionValidator;
+        _mapper = mapper;
+
     }
 
     public List<Item> GetAllItems()
