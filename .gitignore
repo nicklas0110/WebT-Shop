@@ -42,3 +42,4 @@ WebsShopDomain/obj/rider.project.restore.info
 WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll
 .idea/.idea.WebT-Shop/.idea/workspace.xml
 .idea/.idea.WebT-Shop/.idea/workspace.xml
+*.dll
