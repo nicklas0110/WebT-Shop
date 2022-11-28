@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebShopApplication.DTOs;
+using WebShopApplication.Interfaces;
 using WebShopInfrastructure;
 using WebsShopDomain;
 
@@ -24,9 +25,12 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 
 var mapper = new MapperConfiguration(configuration =>
 {
-    configuration.CreateMap<WebShopDTOs, Item>();
+    configuration.CreateMap<ItemDTO, Item>();
 }).CreateMapper();
 builder.Services.AddSingleton(mapper);
+builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryRepository>();
+builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();
+builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
 
 builder.Services.AddDbContext<WebShopDbContext>(options => options.UseSqlite(
     "Data source=db.db"

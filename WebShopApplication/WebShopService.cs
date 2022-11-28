@@ -2,6 +2,7 @@
 using FluentValidation;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
+using WebShopApplication.Validators;
 using WebsShopDomain;
 
 namespace WebShopApplication;
@@ -13,9 +14,9 @@ public class WebShopService : IWebShopService {
     private readonly IWebShopItemRepository _itemRepository;
     private readonly IWebShopCategoryRepository _categoryRepository;
     private readonly IWebShopOptionRepository _optionRepository;
-    private readonly IValidator<WebShopDTOs> _postValidator;
-    private readonly IValidator<Item> _itemValidator;
-    private readonly IValidator<WebShopDTOsCategory> _postValidatorCategory;
+    private readonly PostBoxValidator _postValidator;
+    private readonly ItemValidator _itemValidator;
+    private readonly CategoryValidator _postValidatorCategory;
     private readonly IValidator<Category> _categoryValidator;
     private readonly IValidator<OptionDTOs> _postValidatorOption;
     private readonly IValidator<Option> _optionValidator;
@@ -25,9 +26,9 @@ public class WebShopService : IWebShopService {
         IWebShopItemRepository itemRepository,
         IWebShopCategoryRepository categoryRepository,
         IWebShopOptionRepository optionRepository,
-        IValidator<WebShopDTOs> postValidatorWebShopDTOs,
-        IValidator<Item> itemValidator,
-        IValidator<WebShopDTOsCategory> postValidatorCategory,
+        PostBoxValidator postValidatorWebShopDTOs,
+        ItemValidator itemValidator,
+        CategoryValidator postValidatorCategory,
         IValidator<Category> categoryValidator,
         IValidator<OptionDTOs> postValidatorOption,
         IValidator<Option> optionValidator,
@@ -53,7 +54,7 @@ public class WebShopService : IWebShopService {
         return _itemRepository.GetAllItems();
     }
 
-    public Item CreateNewItem(WebShopDTOs dto)
+    public Item CreateNewItem(ItemDTO dto)
     {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
@@ -88,13 +89,13 @@ public class WebShopService : IWebShopService {
         throw new NotImplementedException();
     }
 
-    public Category CreateNewCategory(WebShopDTOsCategory dtoCategory)
+    public Category CreateNewCategory(ItemCategoryDTO dtoCategoryDto)
     {
-        var validation = _postValidatorCategory.Validate(dtoCategory);
+        var validation = _postValidatorCategory.Validate(dtoCategoryDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-
-        return _categoryRepository.CreateNewCategory(_mapper.Map<Category>(dtoCategory));
+        var category = new Category(dtoCategoryDto.CategoryName);
+        return _categoryRepository.CreateNewCategory(category);
     }
 
     public List<Category> GetAllCategories()

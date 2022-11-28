@@ -8,7 +8,7 @@ using Moq;
 
 public class UnitTest1
 {
-
+/*
     [Fact]
     public void CreateWebShopServiceWithRepository()
     {
@@ -36,7 +36,7 @@ public class UnitTest1
 
         Assert.Equal("Missing repository", ex.Message);
         Assert.Null(service);
-    }
+    } */
 
     [Fact]
     public void CreateItem()

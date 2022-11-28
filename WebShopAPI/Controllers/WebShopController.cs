@@ -30,10 +30,11 @@ public class WebShopController : ControllerBase
     
     [HttpPost]  
     [Route("Item")]
-    public ActionResult<Item> CreateNewItem(WebShopDTOs dto)
+    public ActionResult<Item> CreateNewItem(ItemPostModel postModel)
     {
         try
         {
+            var dto = new ItemDTO(postModel);
             var result = _webShopService.CreateNewItem(dto);
             return Created("", result);
         }
@@ -58,11 +59,12 @@ public class WebShopController : ControllerBase
     
     [HttpPost]  
     [Route("Category")]
-    public ActionResult<Category> CreateNewCategory(WebShopDTOsCategory dtoCategory)
+    public ActionResult<Category> CreateNewCategory(ItemCategoryPostModel postModel)
     {
         try
         {
-            var result = _webShopService.CreateNewCategory(dtoCategory);
+            var dto = new ItemCategoryDTO(postModel);
+            var result = _webShopService.CreateNewCategory(dto);
             return Created("", result);
         }
         catch (ValidationException v)

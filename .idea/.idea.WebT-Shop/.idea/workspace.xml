@@ -8,17 +8,30 @@
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/WebShopDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/WebShopDTOsCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemCategoryDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Validators/WebShopValidators.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Validators/WebShopValidators.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopItemRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebsShopDomain/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebsShopDomain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +39,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1a59674744830c52bb8ec2c75c1a5b1b21ec7b871acd25d24a346472da73b/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c765e47ec58cf89220cd5779fc5cce70b01abab88edf4ed2b5deaba1244c610/IValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -37,6 +53,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HcskN9T8i8XnmI6GpSxKUra57p" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -141,5 +160,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>93</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="93" containingFunctionPresentation="method 'CreateNewCategory'">
+            <startOffsets>
+              <option value="2980" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3045" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs</url>
+          <line>66</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\WebShopController.cs" initialLine="66" containingFunctionPresentation="method 'CreateNewCategory'">
+            <startOffsets>
+              <option value="1780" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1832" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

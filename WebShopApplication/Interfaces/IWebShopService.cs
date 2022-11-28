@@ -6,13 +6,13 @@ namespace WebShopApplication.Interfaces;
 public interface IWebShopService
 {
     List<Item> GetAllItems();
-    Item CreateNewItem(WebShopDTOs dto);
+    Item CreateNewItem(ItemDTO dto);
     Item GetItemById(int id);
     void RebuildDB();
     Item UpdateItem(int id, Item product);
     Item DeleteItem(int id);
 
-    Category CreateNewCategory(WebShopDTOsCategory dto);
+    Category CreateNewCategory(ItemCategoryDTO dto);
     List<Category> GetAllCategories();
     Category UpdateCategory(int id, Category category);
     Category DeleteCategory(int id);

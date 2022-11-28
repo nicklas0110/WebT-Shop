@@ -4,48 +4,44 @@ using WebsShopDomain;
 
 namespace WebShopApplication.Validators;
 
-public class PostBoxValidator : AbstractValidator<WebShopDTOs>
+public class PostBoxValidator : AbstractValidator<ItemDTO>
 {
     public PostBoxValidator()
     {
         RuleFor(p => p.Name).NotEmpty();
         RuleFor(p => p.Price).NotEmpty();
         RuleFor(p => p.ItemCategoryId).NotEmpty();
-        RuleFor(p => p.ItemCategory).NotEmpty();
-        RuleFor(p => p.Options).NotEmpty();
     }
 }
-public class WebShopValidators : AbstractValidator<Item>
+public class ItemValidator : AbstractValidator<Item>
 {
-    public WebShopValidators()
+    public ItemValidator()
     {
         RuleFor(p => p.Name).NotEmpty();
         RuleFor(p => p.Price).NotEmpty();
         RuleFor(p => p.ItemCategoryId).NotEmpty();
-        RuleFor(p => p.ItemCategory).NotEmpty();
-        RuleFor(p => p.Options).NotEmpty();
-        RuleFor(p => p.Id).GreaterThan(0);
+        //RuleFor(p => p.Options).NotEmpty(); 
     }
 }
 
-public class PostBoxValidatorCategory : AbstractValidator<WebShopDTOsCategory>
+public class CategoryValidator : AbstractValidator<ItemCategoryDTO>
 {
-    public PostBoxValidatorCategory()
+    public CategoryValidator()
     {
         RuleFor(p => p.CategoryName).NotEmpty();
     }
 }
-public class WebShopValidatorsCategory : AbstractValidator<Category>
+public class CategoryValidators : AbstractValidator<Category>
 {
-    public WebShopValidatorsCategory()
+    public CategoryValidators()
     {
         RuleFor(p => p.CategoryName).NotEmpty();
     }
 }
 
-public class PostBoxValidatorOption : AbstractValidator<OptionDTOs>
+public class PostOptionValidatorOption : AbstractValidator<OptionDTOs>
 {
-    public PostBoxValidatorOption()
+    public PostOptionValidatorOption()
     {
         RuleFor(p => p.Name).NotEmpty();
     }
