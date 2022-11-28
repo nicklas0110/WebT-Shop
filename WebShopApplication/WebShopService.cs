@@ -21,9 +21,31 @@ public class WebShopService : IWebShopService {
     private readonly IValidator<Option> _optionValidator;
     private readonly IMapper _mapper;
     
-    public WebShopService(IWebShopItemRepository repository)
+    public WebShopService(
+        IWebShopItemRepository itemRepository,
+        IWebShopCategoryRepository categoryRepository,
+        IWebShopOptionRepository optionRepository,
+        IValidator postValidator,
+        IValidator itemValidator,
+        IValidator postValidatorCategory,
+        IValidator categoryValidator,
+        IValidator postValidatorOption,
+        IValidator optionValidator,
+        IMapper IMapper
+    )
     {
-        _itemRepository = repository;
+        _itemRepository = itemRepository;
+        _categoryRepository = categoryRepository;
+        _optionRepository = optionRepository;
+        _postValidator = postValidator;
+        _itemValidator = itemValidator;
+        _postValidatorCategory = postValidatorCategory;
+        _categoryValidator = categoryValidator;
+        _postValidatorOption = postValidatorOption;
+        _optionValidator = optionValidator;
+        _mapper = IMapper;
+
+
     }
 
     public List<Item> GetAllItems()
