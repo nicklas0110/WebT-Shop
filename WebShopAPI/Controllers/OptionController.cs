@@ -32,11 +32,12 @@ public class OptionController : ControllerBase
     
     [HttpPost]  
     [Route("Option")]
-    public ActionResult<Category> CreateNewOption(OptionDTOs dtoOption)
+    public ActionResult<Category> CreateNewOption(ItemOptionPostModel postModel)
     {
         try
         {
-            var result = _webShopService.CreateNewOption(dtoOption);
+            var dto = new OptionDTOs(postModel);
+            var result = _webShopService.CreateNewOption(dto);
             return Created("", result);
         }
         catch (ValidationException v)

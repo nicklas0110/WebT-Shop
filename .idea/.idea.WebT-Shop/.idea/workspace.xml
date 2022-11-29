@@ -6,23 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/ItemController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/WebShopController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/ref/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/refint/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemCategoryDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemCategoryDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/a305237ee6c741b785be2acac6e61fe42600/ea/560bb323/WebShopInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1a59674744830c52bb8ec2c75c1a5b1b21ec7b871acd25d24a346472da73b/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c765e47ec58cf89220cd5779fc5cce70b01abab88edf4ed2b5deaba1244c610/IValidator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -132,6 +123,9 @@
       <workItem from="1669292351511" duration="1970000" />
       <workItem from="1669300157290" duration="1941000" />
       <workItem from="1669722088223" duration="1930000" />
+      <workItem from="1669724728359" duration="385000" />
+      <workItem from="1669725147840" duration="40000" />
+      <workItem from="1669725346947" duration="679000" />
     </task>
     <servers />
   </component>
