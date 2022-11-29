@@ -40,9 +40,8 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
 ));
 
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-
 //dependency, Application
-builder.Services.AddScoped<IUserRepository, IUserRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IWebShopService, WebShopService>();
 //dependency, Infrastructure
 builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
@@ -79,7 +78,6 @@ app.UseCors(options =>
         .AllowCredentials();
 });
 
-//app.UseAuthorization();
 
 app.UseAuthentication();
 app.UseAuthorization();
