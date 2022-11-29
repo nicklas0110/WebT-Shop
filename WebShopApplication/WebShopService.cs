@@ -18,7 +18,7 @@ public class WebShopService : IWebShopService {
     private readonly ItemValidator _itemValidator;
     private readonly CategoryValidator _postValidatorCategory;
     private readonly IValidator<Category> _categoryValidator;
-    private readonly IValidator<OptionDTOs> _postValidatorOption;
+    private readonly PostOptionValidatorOption _postValidatorOption;
     private readonly IValidator<Option> _optionValidator;
     private readonly IMapper _mapper;
     
@@ -30,7 +30,7 @@ public class WebShopService : IWebShopService {
         ItemValidator itemValidator,
         CategoryValidator postValidatorCategory,
         IValidator<Category> categoryValidator,
-        IValidator<OptionDTOs> postValidatorOption,
+        PostOptionValidatorOption postValidatorOption,
         IValidator<Option> optionValidator,
         IMapper mapper
         
@@ -124,8 +124,8 @@ public class WebShopService : IWebShopService {
         var validation = _postValidatorOption.Validate(optionDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-
-        return _optionRepository.CreateNewOption(_mapper.Map<Option>(optionDto));
+        var option = new Option(optionDto.Name);
+        return _optionRepository.CreateNewOption(option);
     }
 
     public List<Option> GetAllOptions()

@@ -14,6 +14,10 @@ public class OptionDTOs
     
     public DateTime? DeletedAt { get; set; }
     
+    public List<Item> Items { get; set; }
+    
+    public OptionDTOs(){}
+    
     public OptionDTOs(ItemOptionPostModel postModel)
     {
         Name = postModel.Name;
