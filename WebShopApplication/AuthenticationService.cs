@@ -2,8 +2,10 @@
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using WebShopApplication.DTOs;
+using WebShopApplication.Helpers;
 using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
@@ -11,11 +13,13 @@ namespace WebShopApplication;
 
 public class AuthenticationService : IAuthenticationService
 {
-
+    private readonly AppSettings _appSettings;
     private readonly IUserRepository _repository;
     
-    public AuthenticationService(IUserRepository repository)
+    public AuthenticationService(IUserRepository repository,
+        IOptions<AppSettings> appSettings)
     {
+        _appSettings = appSettings.Value;
         _repository = repository;
     }
     
@@ -43,7 +47,7 @@ public class AuthenticationService : IAuthenticationService
     
     private string GenerateToken(User user)
     {
-        var key =Encoding.UTF8.GetBytes("secret");
+        var key =Encoding.UTF8.GetBytes(_appSettings.Secret);
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email)}),

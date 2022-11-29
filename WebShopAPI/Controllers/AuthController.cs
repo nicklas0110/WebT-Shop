@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
+using WebShopApplication.Interfaces;
 
 namespace WebShopAPI.Controllers;
 
@@ -7,19 +8,39 @@ namespace WebShopAPI.Controllers;
 [Route("controller")]
 public class AuthController : ControllerBase
 {
-
-    public AuthController()
+    private readonly IAuthenticationService _auth;
+    
+    public AuthController(IAuthenticationService auth)
     {
-        
+        _auth = auth;
     }
     
+    [HttpPost]
+    [Route("login")]
     public ActionResult Login(LoginAndRegisterDTO dto)
     {
-        return null;
+        try
+        {
+            return Ok(_auth.Login(dto));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
     
+    [HttpPost]
+    [Route("register")]
     public ActionResult Register(LoginAndRegisterDTO dto)
     {
-        return null;
+        try
+        {
+            return Ok(_auth.Register(dto));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
+
 }

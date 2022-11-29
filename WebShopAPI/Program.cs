@@ -1,10 +1,14 @@
 ﻿using System.Net.Mime;
+using System.Text;
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using WebShopApplication;
 using WebShopApplication.DTOs;
 using WebShopApplication.Helpers;
@@ -42,7 +46,18 @@ builder.Services.AddScoped<IUserRepository, IUserRepository>();
 builder.Services.AddScoped<IWebShopService, WebShopService>();
 //dependency, Infrastructure
 builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
-    
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+            builder.Configuration.GetValue<string>("AppSettings:Secret")))
+    };
+});   
 
 builder.Services.AddCors();
 
@@ -53,18 +68,21 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
     
 }
-app.UseCors(options => {
-    options.AllowAnyOrigin();
-    options.AllowAnyHeader();
-    options.AllowAnyMethod();
-    options.SetIsOriginAllowed(origin => true);
+
+app.UseCors(options =>
+{
+    options.SetIsOriginAllowed(origin => true)
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials();
 });
 
-
 //app.UseAuthorization();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

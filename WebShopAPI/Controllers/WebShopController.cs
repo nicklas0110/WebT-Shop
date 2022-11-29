@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
@@ -6,6 +7,7 @@ using WebsShopDomain;
 
 namespace WebShopAPI.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class WebShopController : ControllerBase

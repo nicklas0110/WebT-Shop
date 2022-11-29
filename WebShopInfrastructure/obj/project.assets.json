@@ -431,6 +431,7 @@
           "BCrypt.Net-Next": "4.0.3",
           "FluentValidation": "11.4.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0",
           "Microsoft.IdentityModel.Tokens": "6.25.0",
           "System.IdentityModel.Tokens.Jwt": "6.25.0",
           "WebsShopDomain": "1.0.0"
