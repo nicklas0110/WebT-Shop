@@ -24,15 +24,15 @@ public class OptionController : ControllerBase
     
     
     [HttpGet]
-    [Route("Option")]
+    [Route("")]
     public ActionResult<List<Option>> GetAllOptions()
     {
         return _webShopService.GetAllOptions();
     }
     
     [HttpPost]  
-    [Route("Option")]
-    public ActionResult<Category> CreateNewOption(ItemOptionPostModel postModel)
+    [Route("")]
+    public ActionResult<Option> CreateNewOption(ItemOptionPostModel postModel)
     {
         try
         {

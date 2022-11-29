@@ -16,6 +16,7 @@ public class WebShopDbContext  : DbContext
         modelBuilder.Entity<Item>()
             .Property(i => i.Id)
             .ValueGeneratedOnAdd();
+        
         modelBuilder.Entity<Item>()
             .HasOne<Category>().WithMany()
             .HasForeignKey(i => i.ItemCategoryId);
@@ -28,9 +29,9 @@ public class WebShopDbContext  : DbContext
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
 
-        modelBuilder.Entity<Option>()
-            .HasMany(o => o.Items)
-            .WithMany(i => i.Options);
+         modelBuilder.Entity<Option>()
+             .HasMany(o => o.Items)
+             .WithMany(i => i.Options);
 
 
     } 

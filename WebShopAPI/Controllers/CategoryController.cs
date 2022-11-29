@@ -22,14 +22,14 @@ public class CategoryController : ControllerBase
     }
     
     [HttpGet]
-    [Route("Category")]
+    [Route("")]
     public ActionResult<List<Category>> GetAllTCategories()
     {
         return _webShopService.GetAllCategories();
     }
     
     [HttpPost]  
-    [Route("Category")]
+    [Route("")]
     public ActionResult<Category> CreateNewCategory(ItemCategoryPostModel postModel)
     {
         try
