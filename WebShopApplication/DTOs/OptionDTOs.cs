@@ -21,17 +21,13 @@ public class OptionDTOs
     public OptionDTOs(ItemOptionPostModel postModel)
     {
         Name = postModel.Name;
-        Group = postModel.Group;
+      
     }
 }
-
-
-
 
 
 public class ItemOptionPostModel
 {
     public string Name { get; set; }
     
-    public OptionGroup Group { get; set; }
 }
