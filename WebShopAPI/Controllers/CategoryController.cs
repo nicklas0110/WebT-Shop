@@ -11,9 +11,8 @@ namespace WebShopAPI.Controllers;
 public class CategoryController : ControllerBase
 {
     private IWebShopService _webShopService;
-    private IWebShopItemRepository _webShopItemRepository;
     private IWebShopCategoryRepository _webShopCategoryRepository;
-    private IWebShopOptionRepository _webShopOptionRepository;
+    
     
     public CategoryController(IWebShopService webShopService,IWebShopCategoryRepository webShopCategoryRepository)
     {

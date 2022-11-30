@@ -11,8 +11,7 @@ public class ItemController : ControllerBase
 {
     private IWebShopService _webShopService;
     private IWebShopItemRepository _webShopItemRepository;
-    private IWebShopCategoryRepository _webShopCategoryRepository;
-    private IWebShopOptionRepository _webShopOptionRepository;
+
     
     public ItemController(IWebShopService webShopService,IWebShopItemRepository webShopItemRepository)
     {

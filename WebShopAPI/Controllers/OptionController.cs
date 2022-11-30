@@ -11,8 +11,6 @@ namespace WebShopAPI.Controllers;
 public class OptionController : ControllerBase
 {
     private IWebShopService _webShopService;
-    private IWebShopItemRepository _webShopItemRepository;
-    private IWebShopCategoryRepository _webShopCategoryRepository;
     private IWebShopOptionRepository _webShopOptionRepository;
     
     public OptionController(IWebShopService webShopService,IWebShopOptionRepository webShopOptionRepository)

@@ -13,7 +13,7 @@ public class Item : BaseClass
     public Item(){}
     public Item(string dtoName, decimal dtoPrice)
     {
-        dtoName = Name;
-        dtoPrice = Price;
+        Name = dtoName;
+        Price = dtoPrice;
     }
 }

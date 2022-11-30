@@ -7,11 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebsShopDomain/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/Item.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +134,7 @@
       <workItem from="1669755944292" duration="421000" />
       <workItem from="1669756510048" duration="813000" />
       <workItem from="1669807227190" duration="3423000" />
-      <workItem from="1669813213754" duration="880000" />
+      <workItem from="1669813213754" duration="1903000" />
     </task>
     <servers />
   </component>
@@ -159,23 +158,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
-          <line>127</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="127" containingFunctionPresentation="method 'CreateNewOption'">
-            <startOffsets>
-              <option value="4233" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4282" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Frame#WebShopAPI.Controllers.OptionController.CreateNewOption" memberName="dto" />
