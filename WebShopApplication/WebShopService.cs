@@ -59,8 +59,8 @@ public class WebShopService : IWebShopService {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-
-        return _itemRepository.CreateNewItem(_mapper.Map<Item>(dto));
+        var item = new Item(dto.Name,dto.Price);
+        return _itemRepository.CreateNewItem(item);
     }
 
     public Item GetItemById(int id)

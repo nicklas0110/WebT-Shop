@@ -18,8 +18,8 @@ public class WebShopDbContext  : DbContext
             .ValueGeneratedOnAdd();
 
         modelBuilder.Entity<Item>()
-            .HasOne<Category>().WithMany();
-            //.HasForeignKey(i => i.ItemCategoryId);
+            .HasOne<Category>().WithMany()
+            .HasForeignKey(i => i.ItemCategoryId);
 
         modelBuilder.Entity<Category>()
             .Property(p => p.Id)

@@ -16,10 +16,8 @@ public class ItemDTO
     public List<Option> Options { get; set; }
 
     public List<int> OptionIds { get; set; }
-    public ItemDTO()
-    {
-        
-    }
+    public ItemDTO() {}
+    
     public ItemDTO(ItemPostModel postModel)
     {
         Name = postModel.Name;
