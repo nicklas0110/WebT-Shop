@@ -7,12 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/db.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs" afterDir="false" />
@@ -26,7 +24,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/a305237ee6c741b785be2acac6e61fe42600/ea/560bb323/WebShopInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1a59674744830c52bb8ec2c75c1a5b1b21ec7b871acd25d24a346472da73b/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,16 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebShopAPI: API">
     <configuration name="WebShopAPI" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -134,6 +136,9 @@
       <workItem from="1669725346947" duration="679000" />
       <workItem from="1669728719987" duration="1782000" />
       <workItem from="1669732992688" duration="1532000" />
+      <workItem from="1669755944292" duration="421000" />
+      <workItem from="1669756510048" duration="813000" />
+      <workItem from="1669807227190" duration="3423000" />
     </task>
     <servers />
   </component>
@@ -161,60 +166,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
-          <line>123</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="123" containingFunctionPresentation="method 'CreateNewOption'">
-            <startOffsets>
-              <option value="3988" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4046" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\DTOs\OptionDTOs.cs" initialLine="22" containingFunctionPresentation="constructor 'OptionDTOs'">
-            <startOffsets>
-              <option value="492" />
-            </startOffsets>
-            <endOffsets>
-              <option value="514" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopApplication/DTOs/OptionDTOs.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\DTOs\OptionDTOs.cs" initialLine="30" containingFunctionPresentation="property 'Name'">
-            <startOffsets>
-              <option value="592" />
-              <option value="597" />
-            </startOffsets>
-            <endOffsets>
-              <option value="596" />
-              <option value="601" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
-          <line>126</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="126" containingFunctionPresentation="method 'CreateNewOption'">
-            <startOffsets>
-              <option value="4154" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4194" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
           <line>127</line>
           <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="127" containingFunctionPresentation="method 'CreateNewOption'">
             <startOffsets>
@@ -225,6 +176,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionRepository.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionRepository.cs" initialLine="16" containingFunctionPresentation="method 'CreateNewOption'">
+            <startOffsets>
+              <option value="379" />
+            </startOffsets>
+            <endOffsets>
+              <option value="412" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionRepository.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionRepository.cs" initialLine="18" containingFunctionPresentation="method 'CreateNewOption'">
+            <startOffsets>
+              <option value="453" />
+            </startOffsets>
+            <endOffsets>
+              <option value="467" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionRepository.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionRepository.cs" initialLine="17" containingFunctionPresentation="method 'CreateNewOption'">
+            <startOffsets>
+              <option value="421" />
+            </startOffsets>
+            <endOffsets>
+              <option value="444" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopDbContext.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopDbContext.cs" initialLine="23" containingFunctionPresentation="method 'OnModelCreating'">
+            <startOffsets>
+              <option value="577" />
+            </startOffsets>
+            <endOffsets>
+              <option value="677" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
