@@ -19,7 +19,7 @@ public class RebuildDbController : ControllerBase
     }
     
     [HttpGet]
-    [Route("RebuildDB")]
+    [Route("")]
     public void RebuildDB()
     {
         _webShopItemRepository.RebuildDB();

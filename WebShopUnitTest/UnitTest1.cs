@@ -42,7 +42,7 @@ public class UnitTest1
     public void CreateItem()
     {
         // Arrange
-        Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
+        Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399};
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
 
         // Act, Assert
@@ -70,8 +70,8 @@ public class UnitTest1
         // Arrange
         List<Item> fakeRepo = new List<Item>
         {
-            new Item() {  Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 },
-            new Item() {  Name = "tshirt med tryk2", Price = 399, ItemCategoryId = 2 },
+            new Item() {  Name = "tshirt med tryk", Price = 399},
+            new Item() {  Name = "tshirt med tryk2", Price = 399},
         };
 
         // Act
@@ -175,8 +175,8 @@ public class UnitTest1
     public void UpdateItem()
     {
         // Arrange
-        Item tshirt1 = new Item() { Id = 1, Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
-        Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499, ItemCategoryId = 2 };
+        Item tshirt1 = new Item() { Id = 1, Name = "tshirt med tryk", Price = 399};
+        Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499};
 
         // Act
         Mock<WebShopService> mockRepo = new Mock<WebShopService>();
