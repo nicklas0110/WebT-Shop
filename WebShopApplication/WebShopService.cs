@@ -71,6 +71,8 @@ public class WebShopService : IWebShopService {
     public void RebuildDB()
     {
         _itemRepository.RebuildDB();
+        _categoryRepository.RebuildDB();
+        _optionRepository.RebuildDB();
     }
 
 

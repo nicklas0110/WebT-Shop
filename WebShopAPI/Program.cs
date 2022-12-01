@@ -26,7 +26,10 @@ builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssembli
 var mapper = new MapperConfiguration(configuration =>
 {
     configuration.CreateMap<ItemDTO, Item>();
+    configuration.CreateMap<ItemCategoryDTO, Category>();
+    configuration.CreateMap<OptionDTOs, Option>();
 }).CreateMapper();
+
 builder.Services.AddSingleton(mapper);
 builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryRepository>();
 builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();

@@ -35,4 +35,10 @@ public class WebShopOptionRepository : IWebShopOptionRepository
     {
         throw new NotImplementedException();
     }
+
+    public void RebuildDB()
+    {
+        _context.Database.EnsureDeleted();
+        _context.Database.EnsureCreated();
+    }
 }

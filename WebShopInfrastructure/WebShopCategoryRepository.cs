@@ -30,6 +30,12 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
         throw new NotImplementedException();
     }
 
+    public void RebuildDB()
+    {
+        _context.Database.EnsureDeleted();
+        _context.Database.EnsureCreated();
+    }
+
     public Category UpdateCategory(Category category)
     {
         _context.CategoryTable.Update(category);
