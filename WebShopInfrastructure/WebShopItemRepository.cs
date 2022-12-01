@@ -41,10 +41,14 @@ public class WebShopRepository : IWebShopItemRepository
         _context.SaveChanges();
         return tShirt;
     }
-    
-    public Item DeleteItem(int id)
+
+    public Item DeleteUpdateItem(int id, Item item)
     {
-        throw new NotImplementedException();
+        _context.ItemTable.Update(item);
+        _context.SaveChanges();
+        return item;
     }
+
+    
     
 }

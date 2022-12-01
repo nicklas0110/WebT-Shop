@@ -46,12 +46,29 @@ public class ItemController : ControllerBase
         }
     }
     [HttpPut]
-    [Route("{id}")] //localhost:5111/box/8732648732
+    [Route("edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] Item item)
     {
         try
         {
             return Ok(_webShopService.UpdateItem(id, item));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    [HttpPut]
+    [Route("{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemDTO item)
+    {
+        try
+        {
+            return Ok(_webShopService.DeleteUpdateItem(id, item));
         }
         catch (KeyNotFoundException e)
         {

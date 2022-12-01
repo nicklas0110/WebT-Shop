@@ -10,7 +10,8 @@ public interface IWebShopService
     Item GetItemById(int id);
     void RebuildDB();
     Item UpdateItem(int id, Item product);
-    Item DeleteItem(int id);
+    object? DeleteUpdateItem(int id, ItemDTO item);
+    
 
     Category CreateNewCategory(ItemCategoryDTO dto);
     List<Category> GetAllCategories();
@@ -21,4 +22,5 @@ public interface IWebShopService
     List<Option> GetAllOptions();
     Option UpdateOption(int id, Option option);
     Option DeleteOption(int id);
+    
 }

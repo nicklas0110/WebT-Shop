@@ -11,40 +11,54 @@ public class WebShopService : IWebShopService {
     
     private IWebShopItemRepository Repository;
     
-    private readonly IWebShopItemRepository _itemRepository;
-    private readonly IWebShopCategoryRepository _categoryRepository;
-    private readonly IWebShopOptionRepository _optionRepository;
     private readonly PostBoxValidator _postValidator;
     private readonly ItemValidator _itemValidator;
+    private readonly IWebShopItemRepository _itemRepository;
+    private readonly PostDeleteValidator _itemSingleEditRepositoryPost;
+    
+    private readonly IWebShopCategoryRepository _categoryRepository;
     private readonly CategoryValidator _postValidatorCategory;
     private readonly IValidator<Category> _categoryValidator;
+    
+    private readonly IWebShopOptionRepository _optionRepository;
     private readonly PostOptionValidatorOption _postValidatorOption;
     private readonly IValidator<Option> _optionValidator;
+    
     private readonly IMapper _mapper;
     
     public WebShopService(
         IWebShopItemRepository itemRepository,
-        IWebShopCategoryRepository categoryRepository,
-        IWebShopOptionRepository optionRepository,
         PostBoxValidator postValidatorWebShopDTOs,
         ItemValidator itemValidator,
+        PostDeleteValidator itemSingleEditRepositoryPost,
+        
+        IWebShopCategoryRepository categoryRepository,
         CategoryValidator postValidatorCategory,
         IValidator<Category> categoryValidator,
+        
+        IWebShopOptionRepository optionRepository,
         PostOptionValidatorOption postValidatorOption,
         IValidator<Option> optionValidator,
+        
         IMapper mapper
         
     )
     {
         _itemRepository = itemRepository;
-        _categoryRepository = categoryRepository;
-        _optionRepository = optionRepository;
         _postValidator = postValidatorWebShopDTOs;
         _itemValidator = itemValidator;
+        _itemSingleEditRepositoryPost = itemSingleEditRepositoryPost;
+        
+        _categoryRepository = categoryRepository;
         _postValidatorCategory = postValidatorCategory;
         _categoryValidator = categoryValidator;
+        
+        _optionRepository = optionRepository;
         _postValidatorOption = postValidatorOption;
         _optionValidator = optionValidator;
+        _postValidatorOption = postValidatorOption;
+        _optionValidator = optionValidator;
+        
         _mapper = mapper;
 
     }
@@ -85,11 +99,19 @@ public class WebShopService : IWebShopService {
             throw new ValidationException(validation.ToString());
         return _itemRepository.UpdateItem(id ,product);;
     }
-
-    public Item DeleteItem(int id)
+    
+    public object? DeleteUpdateItem(int id, ItemDTO dto)
     {
-        throw new NotImplementedException();
+        if (id != dto.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _itemSingleEditRepositoryPost.Validate(dto);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        var item = new Item(dto.DeletedAt);
+        return _itemRepository.DeleteUpdateItem(id ,item);;
     }
+
+    
 
     public Category CreateNewCategory(ItemCategoryDTO dtoCategoryDto)
     {
@@ -149,4 +171,6 @@ public class WebShopService : IWebShopService {
     {
         throw new NotImplementedException();
     }
+
+ 
 }

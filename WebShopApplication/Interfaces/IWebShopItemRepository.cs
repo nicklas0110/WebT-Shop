@@ -9,11 +9,7 @@ public interface IWebShopItemRepository
     Item GetItemById(int id);
     void RebuildDB();
     Item UpdateItem(int id, Item tShirt);
-    Item DeleteItem(int id);
-
+    Item DeleteUpdateItem(int id, Item item);
     
     
-   
-    
-   
 }

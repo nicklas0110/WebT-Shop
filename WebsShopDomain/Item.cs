@@ -11,6 +11,11 @@ public class Item : BaseClass
    // public List<Option> Options { get; set; }
     
     public Item(){}
+
+    public Item(DateTime deletedAt)
+    {
+        DeletedAt = deletedAt;
+    }
     public Item(string dtoName, decimal dtoPrice)
     {
         Name = dtoName;

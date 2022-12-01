@@ -42,7 +42,7 @@ public class UnitTest1
     public void CreateItem()
     {
         // Arrange
-        Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399};
+        Item tshirt = new Item() { Name = "tshirt med tryk", Price = 399 };
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
 
         // Act, Assert
@@ -175,8 +175,8 @@ public class UnitTest1
     public void UpdateItem()
     {
         // Arrange
-        Item tshirt1 = new Item() { Id = 1, Name = "tshirt med tryk", Price = 399};
-        Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499};
+        Item tshirt1 = new Item() { Id = 1, Name = "tshirt med tryk", Price = 399 };
+        Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499 };
 
         // Act
         Mock<WebShopService> mockRepo = new Mock<WebShopService>();

@@ -13,6 +13,17 @@ public class PostBoxValidator : AbstractValidator<ItemDTO>
         //RuleFor(p => p.ItemCategoryId).NotEmpty();
     }
 }
+
+public class PostDeleteValidator : AbstractValidator<ItemDTO>
+{
+    public PostDeleteValidator()
+    {
+        RuleFor(p => p.DeletedAt).NotEmpty();
+    }
+    
+}
+
+
 public class ItemValidator : AbstractValidator<Item>
 {
     public ItemValidator()
