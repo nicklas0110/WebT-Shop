@@ -190,104 +190,104 @@ public class UnitTest1
     }
     
     
-    [Fact]
-    public void ViLeger()
-    {
-        
-        
-        // Arrange
-        var optionGroups = new List<OptionGroup>()
-        {
-            new OptionGroup()
-            {
-                Id = 1,
-                Name = "Farve"
-            },
-            new OptionGroup()
-            {
-                Id = 2,
-                Name = "Størelse"
-            }
-        };
-        var options = new List<Option>()
-        {
-            new Option()
-            {
-                Id = 1,
-                Name = "Rød",
-                Group = optionGroups.First(og => og.Name == "Farve")
-            },
-            new Option()
-            {
-                Id = 2,
-                Name = "Gul",
-                Group = optionGroups.First(og => og.Name == "Farve")
-            },
-            new Option()
-            {
-                Id = 3,
-                Name = "Grøn",
-                Group = optionGroups.First(og => og.Name == "Farve")
-            },
-            new Option()
-            {
-                Id = 4,
-                Name = "S",
-                Group = optionGroups.First(og => og.Name == "Størelse")
-            },
-            new Option()
-            {
-                Id = 5,
-                Name = "M",
-                Group = optionGroups.First(og => og.Name == "Størelse")
-            },
-            new Option()
-            {
-                Id = 6,
-                Name = "L",
-                Group = optionGroups.First(og => og.Name == "Størelse")
-            },
-            new Option()
-            {
-                Id = 7,
-                Name = "Xl",
-                Group = optionGroups.First(og => og.Name == "Størelse")
-            }
-        };
-        
-        var itemCategory = new Category()
-        {
-            Id = 1,
-            CategoryName = "Tshirt"
-        };
-        
-        var HummelTshirt = new Item()
-        {
-            Id = 1,
-            Name = "Hummel tshirt",
-            Price = 299.99m,
-            Options = options,
-            ItemCategoryId = itemCategory.Id,
-            ItemCategory = itemCategory
-        };
-        var AdidasTshirt = new Item()
-        {
-            Id = 1,
-            Name = "Adidas tshirt",
-            Price = 399.99m,
-            Options = options,
-            ItemCategoryId = itemCategory.Id,
-            ItemCategory = itemCategory
-        };
-        
-        
-        Item item = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
-        Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
-
-        // Act, Assert
-        mockRepo.Setup(r => r.CreateNewItem(item)).Returns(item);
-
-    }
+    // [Fact]
+    // public void ViLeger()
+    // {
+    //     
+    //     
+    //     // Arrange
+    //     var optionGroups = new List<OptionGroup>()
+    //     {
+    //         new OptionGroup()
+    //         {
+    //             Id = 1,
+    //             Name = "Farve"
+    //         },
+    //         new OptionGroup()
+    //         {
+    //             Id = 2,
+    //             Name = "Størelse"
+    //         }
+    //     };
+    //     var options = new List<Option>()
+    //     {
+    //         new Option()
+    //         {
+    //             Id = 1,
+    //             Name = "Rød",
+    //             Group = optionGroups.First(og => og.Name == "Farve")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 2,
+    //             Name = "Gul",
+    //             Group = optionGroups.First(og => og.Name == "Farve")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 3,
+    //             Name = "Grøn",
+    //             Group = optionGroups.First(og => og.Name == "Farve")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 4,
+    //             Name = "S",
+    //             Group = optionGroups.First(og => og.Name == "Størelse")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 5,
+    //             Name = "M",
+    //             Group = optionGroups.First(og => og.Name == "Størelse")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 6,
+    //             Name = "L",
+    //             Group = optionGroups.First(og => og.Name == "Størelse")
+    //         },
+    //         new Option()
+    //         {
+    //             Id = 7,
+    //             Name = "Xl",
+    //             Group = optionGroups.First(og => og.Name == "Størelse")
+    //         }
+    //     };
+    //     
+    //     var itemCategory = new Category()
+    //     {
+    //         Id = 1,
+    //         CategoryName = "Tshirt"
+    //     };
+    //     
+    //     var HummelTshirt = new Item()
+    //     {
+    //         Id = 1,
+    //         Name = "Hummel tshirt",
+    //         Price = 299.99m,
+    //         Options = options,
+    //         ItemCategoryId = itemCategory.Id,
+    //         ItemCategory = itemCategory
+    //     };
+    //     var AdidasTshirt = new Item()
+    //     {
+    //         Id = 1,
+    //         Name = "Adidas tshirt",
+    //         Price = 399.99m,
+    //         Options = options,
+    //         ItemCategoryId = itemCategory.Id,
+    //         ItemCategory = itemCategory
+    //     };
+    //     
+    //     
+    //     Item item = new Item() { Name = "tshirt med tryk", Price = 399, ItemCategoryId = 1 };
+    //     Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
+    //
+    //     // Act, Assert
+    //     mockRepo.Setup(r => r.CreateNewItem(item)).Returns(item);
+    //
+    // }
     
     
     
