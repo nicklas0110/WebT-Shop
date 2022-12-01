@@ -36,7 +36,7 @@ builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>
 builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
 
 builder.Services.AddDbContext<WebShopDbContext>(options => options.UseSqlite(
-    "Data source=db.db"
+    "Data source=../../../db.db"
 ));
 
 

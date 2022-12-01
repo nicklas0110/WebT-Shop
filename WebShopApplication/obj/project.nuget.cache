@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "H03ZM2pOcc9eoUizLRQdyUt7NV5GOKlBrpQ6t2QT/P1+W1jlouBtz3XSSPMtjXf33wkggowJaJ8Bw7x0IRCp9A==",
+  "dgSpecHash": "ES0u13NFdA5ZlBIm/6yqWo12o1wxljVG7PqzbPx/ET70/9xGBtHFUiStK8n1NWV9/QZTQzKjQoJ2Vvntbv2Rhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
+  "projectFilePath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nicklas\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
-    "C:\\Users\\Nicklas\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
-    "C:\\Users\\Nicklas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\Nicklas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    "C:\\Users\\Reigstad\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Reigstad\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Reigstad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
