@@ -10,7 +10,7 @@ public interface IWebShopService
     Item GetItemById(int id);
     void RebuildDB();
     Item UpdateItem(int id, Item product);
-    object? DeleteUpdateItem(int id, ItemDTO item);
+    object? DeleteUpdateItem(int id, ItemSingleEditModel item);
     
 
     Category CreateNewCategory(ItemCategoryDTO dto);

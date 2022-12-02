@@ -1,4 +1,5 @@
-﻿using WebsShopDomain;
+﻿using WebShopApplication.DTOs;
+using WebsShopDomain;
 
 namespace WebShopApplication.Interfaces;
 
@@ -9,7 +10,7 @@ public interface IWebShopItemRepository
     Item GetItemById(int id);
     void RebuildDB();
     Item UpdateItem(int id, Item tShirt);
-    Item DeleteUpdateItem(int id, Item item);
+    Item DeleteUpdateItem(int id, ItemSingleEditModel item);
     
     
 }

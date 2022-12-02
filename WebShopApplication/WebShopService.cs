@@ -100,14 +100,14 @@ public class WebShopService : IWebShopService {
         return _itemRepository.UpdateItem(id ,product);;
     }
     
-    public object? DeleteUpdateItem(int id, ItemDTO dto)
+    public object? DeleteUpdateItem(int id, ItemSingleEditModel dto)
     {
         if (id != dto.Id)
             throw new ValidationException("ID in body and route are different");
         var validation = _itemSingleEditRepositoryPost.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var item = new Item(dto.DeletedAt);
+        var item = new ItemSingleEditModel{DeletedAt = DateTime.Now};
         return _itemRepository.DeleteUpdateItem(id ,item);;
     }
 

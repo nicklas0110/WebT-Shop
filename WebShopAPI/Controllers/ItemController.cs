@@ -64,7 +64,7 @@ public class ItemController : ControllerBase
     }
     [HttpPut]
     [Route("{id}")] //localhost:5111/box/8732648732
-    public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemDTO item)
+    public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemSingleEditModel item)
     {
         try
         {

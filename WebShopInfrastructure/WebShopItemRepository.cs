@@ -1,4 +1,5 @@
-﻿using WebShopApplication.Interfaces;
+﻿using WebShopApplication.DTOs;
+using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
 namespace WebShopInfrastructure;
@@ -42,11 +43,13 @@ public class WebShopRepository : IWebShopItemRepository
         return tShirt;
     }
 
-    public Item DeleteUpdateItem(int id, Item item)
+    public Item DeleteUpdateItem(int id, ItemSingleEditModel item)
     {
-        _context.ItemTable.Update(item);
+        var d = _context.ItemTable.Find(id);
+        d.DeletedAt = item.DeletedAt;
+        _context.ItemTable.Update(d);
         _context.SaveChanges();
-        return item;
+        return d;
     }
 
     

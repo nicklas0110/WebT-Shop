@@ -14,7 +14,7 @@ public class PostBoxValidator : AbstractValidator<ItemDTO>
     }
 }
 
-public class PostDeleteValidator : AbstractValidator<ItemDTO>
+public class PostDeleteValidator : AbstractValidator<ItemSingleEditModel>
 {
     public PostDeleteValidator()
     {
