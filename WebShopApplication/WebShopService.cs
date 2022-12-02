@@ -24,6 +24,7 @@ public class WebShopService : IWebShopService {
     private readonly IWebShopOptionRepository _optionRepository;
     private readonly PostOptionValidatorOption _postValidatorOption;
     private readonly IValidator<Option> _optionValidator;
+    private readonly OptionDeleteValidators _optionDeleteValidators;
     
     private readonly IMapper _mapper;
     
@@ -41,6 +42,7 @@ public class WebShopService : IWebShopService {
         IWebShopOptionRepository optionRepository,
         PostOptionValidatorOption postValidatorOption,
         IValidator<Option> optionValidator,
+        OptionDeleteValidators optionDeleteValidators,
         
         IMapper mapper
         
@@ -59,8 +61,7 @@ public class WebShopService : IWebShopService {
         _optionRepository = optionRepository;
         _postValidatorOption = postValidatorOption;
         _optionValidator = optionValidator;
-        _postValidatorOption = postValidatorOption;
-        _optionValidator = optionValidator;
+        _optionDeleteValidators = optionDeleteValidators;
         
         _mapper = mapper;
 
@@ -176,9 +177,15 @@ public class WebShopService : IWebShopService {
         return _optionRepository.UpdateOption(option);;
     }
 
-    public Option DeleteOption(int id,OptionSingleEditModel option)
+    public Option DeleteOption(int id,OptionSingleEditModel dto)
     {
-        throw new NotImplementedException();
+        if (id != dto.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _optionDeleteValidators.Validate(dto);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        var option = new OptionSingleEditModel{DeletedAt = DateTime.Now};
+        return _optionRepository.DeleteOption(id ,option);;
     }
 
  

@@ -71,4 +71,13 @@ public class WebShopValidatorsOption : AbstractValidator<Option>
     {
         RuleFor(p => p.Name).NotEmpty();
     }
+    
+    
+}
+public class OptionDeleteValidators : AbstractValidator<OptionSingleEditModel>
+{
+    public OptionDeleteValidators()
+    {
+        RuleFor(p => p.DeletedAt).NotEmpty();
+    }
 }

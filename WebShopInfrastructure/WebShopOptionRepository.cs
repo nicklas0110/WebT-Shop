@@ -34,7 +34,11 @@ public class WebShopOptionRepository : IWebShopOptionRepository
 
     public Option DeleteOption(int id, OptionSingleEditModel option)
     {
-        throw new NotImplementedException();
+        var d = _context.OptionTable.Find(id);
+        d.DeletedAt = option.DeletedAt;
+        _context.OptionTable.Update(d);
+        _context.SaveChanges();
+        return d;
     }
 
     public void RebuildDB()
