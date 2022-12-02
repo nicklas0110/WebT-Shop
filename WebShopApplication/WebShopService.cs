@@ -176,7 +176,7 @@ public class WebShopService : IWebShopService {
         return _optionRepository.UpdateOption(option);;
     }
 
-    public Option DeleteOption(int id)
+    public Option DeleteOption(int id,OptionSingleEditModel option)
     {
         throw new NotImplementedException();
     }

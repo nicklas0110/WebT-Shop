@@ -1,4 +1,5 @@
-﻿using WebsShopDomain;
+﻿using WebShopApplication.DTOs;
+using WebsShopDomain;
 
 namespace WebShopApplication.Interfaces;
 
@@ -10,6 +11,6 @@ public interface IWebShopOptionRepository
     
     Option UpdateOption(Option option);
     
-    Option DeleteOption(int id);
+    Option DeleteOption(int id, OptionSingleEditModel option);
     void RebuildDB();
 }

@@ -21,6 +21,6 @@ public interface IWebShopService
     Option CreateNewOption(OptionDTOs optionDto);
     List<Option> GetAllOptions();
     Option UpdateOption(int id, Option option);
-    Option DeleteOption(int id);
+    Option DeleteOption(int id,OptionSingleEditModel option);
     
 }

@@ -66,4 +66,22 @@ public class OptionController : ControllerBase
         }
     }
     
+    [HttpPut]
+    [Route("Delete/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Item> DeleteUpdateOption([FromRoute] int id, [FromBody] OptionSingleEditModel option)
+    {
+        try
+        {
+            return Ok(_webShopService.DeleteOption(id, option));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    
 }

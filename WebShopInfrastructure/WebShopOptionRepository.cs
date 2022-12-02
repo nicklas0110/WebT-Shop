@@ -1,4 +1,5 @@
-﻿using WebShopApplication.Interfaces;
+﻿using WebShopApplication.DTOs;
+using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
 namespace WebShopInfrastructure;
@@ -31,7 +32,7 @@ public class WebShopOptionRepository : IWebShopOptionRepository
         return option;
     }
 
-    public Option DeleteOption(int id)
+    public Option DeleteOption(int id, OptionSingleEditModel option)
     {
         throw new NotImplementedException();
     }
