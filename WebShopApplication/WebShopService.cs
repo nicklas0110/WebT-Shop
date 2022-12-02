@@ -19,6 +19,7 @@ public class WebShopService : IWebShopService {
     private readonly IWebShopCategoryRepository _categoryRepository;
     private readonly CategoryValidator _postValidatorCategory;
     private readonly IValidator<Category> _categoryValidator;
+    private readonly CategoryDeleteValidators _categoryDeleteValidators;
     
     private readonly IWebShopOptionRepository _optionRepository;
     private readonly PostOptionValidatorOption _postValidatorOption;
@@ -35,6 +36,7 @@ public class WebShopService : IWebShopService {
         IWebShopCategoryRepository categoryRepository,
         CategoryValidator postValidatorCategory,
         IValidator<Category> categoryValidator,
+        CategoryDeleteValidators categoryDeleteValidators,
         
         IWebShopOptionRepository optionRepository,
         PostOptionValidatorOption postValidatorOption,
@@ -52,6 +54,7 @@ public class WebShopService : IWebShopService {
         _categoryRepository = categoryRepository;
         _postValidatorCategory = postValidatorCategory;
         _categoryValidator = categoryValidator;
+        _categoryDeleteValidators = categoryDeleteValidators;
         
         _optionRepository = optionRepository;
         _postValidatorOption = postValidatorOption;
@@ -137,9 +140,15 @@ public class WebShopService : IWebShopService {
         return _categoryRepository.UpdateCategory(category);
     }
 
-    public Category DeleteCategory(int id)
+    public Category DeleteCategory(int id, CategorySingleEditModel dto)
     {
-        throw new NotImplementedException();
+        if (id != dto.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _categoryDeleteValidators.Validate(dto);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        var category = new CategorySingleEditModel{DeletedAt = DateTime.Now};
+        return _categoryRepository.DeleteCategory(id ,category);;
     }
 
     

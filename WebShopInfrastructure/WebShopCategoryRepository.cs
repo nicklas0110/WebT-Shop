@@ -1,4 +1,5 @@
-﻿using WebShopApplication.Interfaces;
+﻿using WebShopApplication.DTOs;
+using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
 namespace WebShopInfrastructure;
@@ -25,9 +26,13 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
         return _context.CategoryTable.ToList();
     }
 
-    Category IWebShopCategoryRepository.DeleteCategory(int id)
+    Category IWebShopCategoryRepository.DeleteCategory(int id, CategorySingleEditModel category)
     {
-        throw new NotImplementedException();
+        var d = _context.CategoryTable.Find(id);
+        d.DeletedAt = category.DeletedAt;
+        _context.CategoryTable.Update(d);
+        _context.SaveChanges();
+        return d;
     }
 
     public void RebuildDB()

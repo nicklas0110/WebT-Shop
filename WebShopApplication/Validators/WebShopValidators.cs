@@ -42,6 +42,14 @@ public class CategoryValidator : AbstractValidator<ItemCategoryDTO>
         RuleFor(p => p.CategoryName).NotEmpty();
     }
 }
+public class CategoryDeleteValidators : AbstractValidator<CategorySingleEditModel>
+{
+    public CategoryDeleteValidators()
+    {
+        RuleFor(p => p.DeletedAt).NotEmpty();
+    }
+}
+
 public class CategoryValidators : AbstractValidator<Category>
 {
     public CategoryValidators()

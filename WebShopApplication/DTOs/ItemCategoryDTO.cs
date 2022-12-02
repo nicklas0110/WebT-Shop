@@ -21,10 +21,21 @@ public class ItemCategoryDTO
     {
         CategoryName = postModel.Name;
     }
-
+    
+    public ItemCategoryDTO(CategorySingleEditModel postModel)
+    {
+        Id = postModel.Id;
+        DeletedAt = postModel.DeletedAt;
+    }
 }
 
 public class ItemCategoryPostModel
 {
     public string Name { get; set; }
+}
+
+public class CategorySingleEditModel
+{
+    public int Id { get; set; }
+    public DateTime DeletedAt { get; set; }
 }

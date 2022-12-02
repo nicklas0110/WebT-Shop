@@ -47,12 +47,30 @@ public class CategoryController : ControllerBase
         }
     }
     [HttpPut]
-    [Route("{id}")] //localhost:5111/box/8732648732
+    [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Category> UpdateCategory([FromRoute] int id, [FromBody] Category category)
     {
         try
         {
             return Ok(_webShopService.UpdateCategory(id, category));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
+    
+    [HttpPut]
+    [Route("Delete/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Item> DeleteUpdateCategory([FromRoute] int id, [FromBody] CategorySingleEditModel category)
+    {
+        try
+        {
+            return Ok(_webShopService.DeleteCategory(id, category));
         }
         catch (KeyNotFoundException e)
         {

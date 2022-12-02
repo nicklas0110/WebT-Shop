@@ -16,7 +16,7 @@ public interface IWebShopService
     Category CreateNewCategory(ItemCategoryDTO dto);
     List<Category> GetAllCategories();
     Category UpdateCategory(int id, Category category);
-    Category DeleteCategory(int id);
+    Category DeleteCategory(int id, CategorySingleEditModel category);
 
     Option CreateNewOption(OptionDTOs optionDto);
     List<Option> GetAllOptions();

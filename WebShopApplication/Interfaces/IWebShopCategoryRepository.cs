@@ -1,4 +1,5 @@
-﻿using WebsShopDomain;
+﻿using WebShopApplication.DTOs;
+using WebsShopDomain;
 
 namespace WebShopApplication.Interfaces;
 
@@ -10,6 +11,6 @@ public interface IWebShopCategoryRepository
     
     Category UpdateCategory(Category category);
     
-    Category DeleteCategory(int id);
+    Category DeleteCategory(int id, CategorySingleEditModel category);
     void RebuildDB();
 }
