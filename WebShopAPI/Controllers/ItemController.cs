@@ -46,7 +46,7 @@ public class ItemController : ControllerBase
         }
     }
     [HttpPut]
-    [Route("edit/{id}")] //localhost:5111/box/8732648732
+    [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] Item item)
     {
         try
@@ -63,7 +63,7 @@ public class ItemController : ControllerBase
         }
     }
     [HttpPut]
-    [Route("{id}")] //localhost:5111/box/8732648732
+    [Route("Delete/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemSingleEditModel item)
     {
         try
