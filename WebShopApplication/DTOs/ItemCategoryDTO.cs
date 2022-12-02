@@ -27,6 +27,8 @@ public class ItemCategoryDTO
         Id = postModel.Id;
         DeletedAt = postModel.DeletedAt;
     }
+    
+    
 }
 
 public class ItemCategoryPostModel
@@ -38,4 +40,17 @@ public class CategorySingleEditModel
 {
     public int Id { get; set; }
     public DateTime DeletedAt { get; set; }
+}
+
+public class CategoryGetAllDto : IEnumerable<object>
+{
+    public int Id { get; set; }
+    
+    public DateTime CreatedAt { get; set; }
+    
+    public DateTime DeletedAt { get; set; }
+    public IEnumerator<object> GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
 }

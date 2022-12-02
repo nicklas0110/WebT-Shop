@@ -21,9 +21,19 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
         return category;
     }
 
-    public List<Category> GetAllCategories()
+    public List<Category> GetAllCategories(CategoryGetAllDto deleteAt, CategoryGetAllDto updatedAt)
     {
-        return _context.CategoryTable.ToList();
+        var graterThenDelete =
+            from upd in updatedAt
+            from del in deleteAt 
+            where upd < del
+            select upd;
+        foreach (var s in graterThenDelete)
+        {
+            return _context.CategoryTable.ToList();
+        }
+        //return _context.CategoryTable.ToList();
+        return null;
     }
 
     Category IWebShopCategoryRepository.DeleteCategory(int id, CategorySingleEditModel category)

@@ -126,9 +126,9 @@ public class WebShopService : IWebShopService {
         return _categoryRepository.CreateNewCategory(category);
     }
 
-    public List<Category> GetAllCategories()
+    public List<Category> GetAllCategories(CategoryGetAllDto deleteAt, CategoryGetAllDto updatedAt)
     {
-        return _categoryRepository.GetAllCategories();
+        return _categoryRepository.GetAllCategories(deleteAt,updatedAt);
     }
 
     public Category UpdateCategory(int id, Category category)
