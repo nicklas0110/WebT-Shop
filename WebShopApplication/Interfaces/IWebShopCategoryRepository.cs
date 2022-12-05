@@ -7,7 +7,7 @@ public interface IWebShopCategoryRepository
 {
     Category CreateNewCategory(Category category);
     
-    List<Category> GetAllCategories(CategoryGetAllDto deleteAt, CategoryGetAllDto updatedAt);
+    List<Category> GetAllCategories();
     
     Category UpdateCategory(Category category);
     

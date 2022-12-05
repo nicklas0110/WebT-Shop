@@ -21,19 +21,13 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
         return category;
     }
 
-    public List<Category> GetAllCategories(CategoryGetAllDto deleteAt, CategoryGetAllDto updatedAt)
+    public List<Category> GetAllCategories()
     {
-        var graterThenDelete =
-            from upd in updatedAt
-            from del in deleteAt 
-            where upd < del
-            select upd;
-        foreach (var s in graterThenDelete)
-        {
-            return _context.CategoryTable.ToList();
-        }
-        //return _context.CategoryTable.ToList();
-        return null;
+         _context.CategoryTable.Where(x => x.UpdatedAt <= x.UpdatedAt);
+         //  filteredOwners= _context.Orders.Include(o => o.Customer).Include(p => p.DateForOrderToBeCompleted).OrderByDescending(c => c.ID).Skip((filter.CurrentPage - 1) * filter.ItemsPerPage).Take(filter.ItemsPerPage).ToList();
+
+         
+         return  _context.CategoryTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
     Category IWebShopCategoryRepository.DeleteCategory(int id, CategorySingleEditModel category)

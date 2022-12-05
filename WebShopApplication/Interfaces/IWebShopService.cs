@@ -14,7 +14,7 @@ public interface IWebShopService
     
 
     Category CreateNewCategory(ItemCategoryDTO dto);
-    List<Category> GetAllCategories(CategoryGetAllDto deleteAt, CategoryGetAllDto updatedAt);
+    List<Category> GetAllCategories();
     Category UpdateCategory(int id, Category category);
     Category DeleteCategory(int id, CategorySingleEditModel category);
 

@@ -1,4 +1,5 @@
-﻿using WebsShopDomain;
+﻿using System.Collections;
+using WebsShopDomain;
 
 namespace WebShopApplication.DTOs;
 
@@ -52,5 +53,10 @@ public class CategoryGetAllDto : IEnumerable<object>
     public IEnumerator<object> GetEnumerator()
     {
         throw new NotImplementedException();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
 }
