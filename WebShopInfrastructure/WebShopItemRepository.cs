@@ -15,7 +15,7 @@ public class WebShopRepository : IWebShopItemRepository
     
     public List<Item> GetAllItems()
     {
-        return _context.ItemTable.ToList();
+        return  _context.ItemTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
     public Item CreateNewItem(Item item)

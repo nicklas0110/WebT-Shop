@@ -22,7 +22,7 @@ public class WebShopOptionRepository : IWebShopOptionRepository
 
     public List<Option> GetAllOptions()
     {
-        return _context.OptionTable.ToList();
+        return  _context.OptionTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
     public Option UpdateOption(Option option)
