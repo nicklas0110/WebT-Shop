@@ -1,11 +1,17 @@
 ﻿using System.Net.Mime;
+using System.Text;
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using WebShopApplication;
 using WebShopApplication.DTOs;
+using WebShopApplication.Helpers;
 using WebShopApplication.Interfaces;
 using WebShopInfrastructure;
 using WebsShopDomain;
@@ -35,21 +41,29 @@ builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryReposit
 builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();
 builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
 
-builder.Services.AddDbContext<WebShopDbContext>(options => options.UseSqlite(
-    "Data source=../../../db.db"
-));
+
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
+    "Data source=../../../db.db"));
 
 
-WebShopApplication
-    .DepencyResolver
-    .DependencyReolverService
-    .RegisterApplicationLayer(builder.Services);
-
-WebShopInfrastructure
-    .DependencyResolver
-    .DependencyResolverService
-    .RegisterInfrastructure(builder.Services);
-    
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+//dependency, Application
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IWebShopService, WebShopService>();
+//dependency, Infrastructure
+builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+            builder.Configuration.GetValue<string>("AppSettings:Secret")))
+    };
+});   
 
 builder.Services.AddCors();
 
@@ -60,18 +74,20 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
     
 }
-app.UseCors(options => {
-    options.AllowAnyOrigin();
-    options.AllowAnyHeader();
-    options.AllowAnyMethod();
-    options.SetIsOriginAllowed(origin => true);
+
+app.UseCors(options =>
+{
+    options.SetIsOriginAllowed(origin => true)
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials();
 });
 
 
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

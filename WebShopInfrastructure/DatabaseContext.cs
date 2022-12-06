@@ -3,16 +3,16 @@ using WebsShopDomain;
 
 namespace WebShopInfrastructure;
 
-public class WebShopDbContext  : DbContext
+public class DatabaseContext  : DbContext
 {
-    public WebShopDbContext(DbContextOptions<WebShopDbContext> opts) : base(opts)
+    public DatabaseContext(DbContextOptions<DatabaseContext> opts) : base(opts)
     {
         
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
+        //Webshop 
         modelBuilder.Entity<Item>()
             .Property(i => i.Id)
             .ValueGeneratedOnAdd();
@@ -33,10 +33,20 @@ public class WebShopDbContext  : DbContext
          //     .HasMany(o => o.Items)
          //     .WithMany(i => i.Options);
 
+        
+        //User Login
+        modelBuilder.Entity<User>()
+            .Property(u => u.Id)
+            .ValueGeneratedOnAdd();
+        modelBuilder.Entity<User>()
+            .HasIndex((u => u.Email))
+            .IsUnique();
+
 
     } 
     
     public DbSet<Item> ItemTable { get; set; }
     public DbSet<Category> CategoryTable { get; set; }
     public DbSet<Option> OptionTable { get; set; }
+    public DbSet<User> UserTable { get; set; }
 }

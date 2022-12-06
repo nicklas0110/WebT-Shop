@@ -81,6 +81,7 @@ C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\WebShopA
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Autofac.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\AutoMapper.Contrib.Autofac.DependencyInjection.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\DomainValidationCore.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
@@ -99,6 +100,10 @@ C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsof
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\SQLitePCLRaw.core.dll
@@ -106,6 +111,7 @@ C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\SQLitePC
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\runtimes\alpine-arm\native\libe_sqlite3.so
@@ -148,3 +154,7 @@ C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\obj\Debug\net6.0\refint\W
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.pdb
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\obj\Debug\net6.0\WebShopAPI.genruntimeconfig.cache
 C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\obj\Debug\net6.0\ref\WebShopAPI.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+
