@@ -5,15 +5,7 @@
     <projectFile profileName="IIS Express">WebshopAPI/WebShopAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
