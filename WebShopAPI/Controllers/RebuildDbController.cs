@@ -8,6 +8,7 @@ namespace WebShopAPI.Controllers;
 public class RebuildDbController : ControllerBase
 {
     private IWebShopService _webShopService;
+    private IAuthenticationService _authenticationService;
 
     public RebuildDbController(IWebShopService webShopService)
     {
@@ -19,6 +20,7 @@ public class RebuildDbController : ControllerBase
     public void RebuildDB()
     {
         _webShopService.RebuildDB();
+        _authenticationService.RebuildDB();
 
     }
 }

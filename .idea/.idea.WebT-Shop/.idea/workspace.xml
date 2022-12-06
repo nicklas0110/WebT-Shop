@@ -6,7 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/AuthenticationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IAuthenticationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/a305237ee6c741b785be2acac6e61fe42600/ea/560bb323/WebShopInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70d379baac3d406cffd18dc3cc4c85aaeea113b69ebe9d2b5e2877a8b3a998/OptionsFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1a59674744830c52bb8ec2c75c1a5b1b21ec7b871acd25d24a346472da73b/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c765e47ec58cf89220cd5779fc5cce70b01abab88edf4ed2b5deaba1244c610/IValidator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,6 +142,7 @@
       <workItem from="1670239529790" duration="7707000" />
       <workItem from="1669635877451" duration="2632000" />
       <workItem from="1669722266495" duration="5518000" />
+      <workItem from="1670335099031" duration="696000" />
     </task>
     <servers />
   </component>

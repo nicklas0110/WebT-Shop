@@ -68,5 +68,9 @@ public class AuthenticationService : IAuthenticationService
 
         throw new Exception("Invalid login");
     }
-    
+
+    public void RebuildDB()
+    {
+        _repository.RebuildDB();
+    }
 }
