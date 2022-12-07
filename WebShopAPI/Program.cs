@@ -62,10 +62,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidateIssuer = false,
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
-            builder.Configuration.GetValue<string>("AppSettings:Secret")))
+            ("D6ECEF6F47921E86EAB135CA49744")))
     };
 });   
-
+ 
 builder.Services.AddCors();
 
 var app = builder.Build();

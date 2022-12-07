@@ -2467,6 +2467,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
+      "System.IdentityModel.Tokens.Jwt >= 6.25.0",
       "WebShopInfrastructure >= 1.0.0"
     ]
   },
@@ -2542,6 +2543,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "System.IdentityModel.Tokens.Jwt": {
+            "target": "Package",
+            "version": "[6.25.0, )"
           }
         },
         "imports": [

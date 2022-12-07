@@ -9,7 +9,7 @@ using Moq;
 
 public class UnitTest1
 {
-/*
+
     [Fact]
     public void CreateWebShopServiceWithRepository()
     {
@@ -24,20 +24,7 @@ public class UnitTest1
         Assert.NotNull(service);
         Assert.True(service is WebShopService);
     }
-
-
-    [Fact]
-    public void CreateWebShopServiceWithNoRepositoryExceptArgumentException()
-    {
-        // Arrange
-        IWebShopService service = null;
-
-        // Act + Assert
-        var ex = Assert.Throws<ArgumentException>(() => service = new WebShopService(null));
-
-        Assert.Equal("Missing repository", ex.Message);
-        Assert.Null(service);
-    } */
+    
 
     [Fact]
     public void CreateItem()

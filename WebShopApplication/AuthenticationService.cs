@@ -47,7 +47,7 @@ public class AuthenticationService : IAuthenticationService
     
     private string GenerateToken(User user)
     {
-        var key =Encoding.UTF8.GetBytes(_appSettings.Secret);
+        var key =Encoding.UTF8.GetBytes("D6ECEF6F47921E86EAB135CA49744");
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email)}),

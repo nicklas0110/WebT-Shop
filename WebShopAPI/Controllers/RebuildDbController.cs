@@ -10,9 +10,10 @@ public class RebuildDbController : ControllerBase
     private IWebShopService _webShopService;
     private IAuthenticationService _authenticationService;
 
-    public RebuildDbController(IWebShopService webShopService)
+    public RebuildDbController(IWebShopService webShopService,IAuthenticationService authenticationService)
     {
         _webShopService = webShopService;
+        _authenticationService = authenticationService;
     }
     
     [HttpGet]

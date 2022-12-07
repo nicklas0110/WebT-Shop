@@ -67,6 +67,11 @@ public class WebShopService : IWebShopService {
 
     }
 
+    public WebShopService(IWebShopItemRepository itemRepository)
+    {
+        itemRepository = Repository;
+    }
+
     public List<Item> GetAllItems()
     {
         return _itemRepository.GetAllItems();
