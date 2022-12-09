@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { SuperadminComponent } from './superadmin/superadmin.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
-import {Routes} from "@angular/router";
+import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 
 const route: Routes = [
   {
@@ -43,7 +43,8 @@ const route: Routes = [
     BrowserAnimationsModule,
     MatFormFieldModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule.forRoot(route)
   ],
   providers: [],
   bootstrap: [AppComponent]
