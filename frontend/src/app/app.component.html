@@ -1,9 +1,20 @@
 <div>
+  <link rel="stylesheet" href="app.component.scss">
 
-  <mat-form-field>
+  <mat-form-field style="margin-left:100px; margin-top:100px ">
     <input matInput [(ngModel)]="formModel.name" placeholder="option name" >
   </mat-form-field>
 
+  <button [disabled]="formModel.name == '' " mat-raised-button (click)="postForm()" style="margin-left:125px">{{ formModel.id === 0 ? 'Create' : 'Edit'}}</button>
+  <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
+  <br>
+  <br>
+  <br>
+  <mat-card *ngFor="let o of options" class="option-card" (click)="selectCard(o)">
+    <mat-card-title>Size: {{o.name}}</mat-card-title>
+    <br>
+    <mat-card-title>Id: {{o.id}}</mat-card-title>
+  </mat-card>
 
 </div>

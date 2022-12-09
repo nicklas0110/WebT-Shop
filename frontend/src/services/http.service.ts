@@ -11,4 +11,14 @@ export const customAxios = axios.create({
 export class HttpService {
 
   constructor() { }
+
+  async getOption(){
+    const httpResponse = await customAxios.get('option');
+    return httpResponse.data;
+  }
+
+  async createBox(dto: {name: any;}) {
+    const httpResponse = await customAxios.post('option',dto)
+    return httpResponse.data;
+  }
 }
