@@ -40,13 +40,14 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryRepository>();
 builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();
 builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
+builder.Services.AddTransient<IItemOption, ItemOptionRepository>();
 
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
     "Data source=../../../db.db"));
-    
 
 
+var test = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 //dependency, Application
 builder.Services.AddScoped<IUserRepository, UserRepository>();

@@ -17,9 +17,7 @@ public class DatabaseContext  : DbContext
             .Property(i => i.Id)
             .ValueGeneratedOnAdd();
 
-       // modelBuilder.Entity<Item>()
-            //.HasOne<Category>().WithMany()
-            //.HasForeignKey(i => i.ItemCategoryId);
+        modelBuilder.Entity<Item>();
 
         modelBuilder.Entity<Category>()
             .Property(p => p.Id)
@@ -29,9 +27,15 @@ public class DatabaseContext  : DbContext
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
 
-         // modelBuilder.Entity<Option>()
-         //     .HasMany(o => o.Items)
-         //     .WithMany(i => i.Options);
+        modelBuilder.Entity<ItemOption>()
+            .Property(io => io.Id)
+            .ValueGeneratedOnAdd();
+        // modelBuilder.Entity<ItemOption>()
+        //     .HasOne<Item>(io => io.Item)
+        //     .WithMany().HasForeignKey(io => io.ItemId);
+        // modelBuilder.Entity<ItemOption>()
+        //     .HasOne<Option>(io => io.Option)
+        //     .WithMany().HasForeignKey(io => io.OptionId);
 
         
         //User Login
@@ -49,4 +53,5 @@ public class DatabaseContext  : DbContext
     public DbSet<Category> CategoryTable { get; set; }
     public DbSet<Option> OptionTable { get; set; }
     public DbSet<User> UserTable { get; set; }
+    public DbSet<ItemOption> ItemOptionTable { get; set; }
 }

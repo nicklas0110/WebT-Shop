@@ -25,6 +25,8 @@ public class WebShopService : IWebShopService {
     private readonly PostOptionValidatorOption _postValidatorOption;
     private readonly IValidator<Option> _optionValidator;
     private readonly OptionDeleteValidators _optionDeleteValidators;
+
+    private readonly IItemOption _itemOptionRepo;
     
     private readonly IMapper _mapper;
     
@@ -44,6 +46,8 @@ public class WebShopService : IWebShopService {
         IValidator<Option> optionValidator,
         OptionDeleteValidators optionDeleteValidators,
         
+        IItemOption itemOptionRepo,
+        
         IMapper mapper
         
     )
@@ -62,6 +66,8 @@ public class WebShopService : IWebShopService {
         _postValidatorOption = postValidatorOption;
         _optionValidator = optionValidator;
         _optionDeleteValidators = optionDeleteValidators;
+
+        _itemOptionRepo = itemOptionRepo;
         
         _mapper = mapper;
 
@@ -82,8 +88,19 @@ public class WebShopService : IWebShopService {
         var validation = _postValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var item = new Item(dto.Name,dto.Price);
-        return _itemRepository.CreateNewItem(item);
+        var item = new Item(dto.Name,dto.Price, dto.ItemCategoryId);
+        item = _itemRepository.CreateNewItem(item);
+        if (dto.OptionIds.Any())
+        {
+            // to do create ItemOptions
+            var itemOptions = new List<ItemOption>();
+            foreach (var optionId in dto.OptionIds)
+            {
+                itemOptions.Add(new ItemOption() { ItemId = item.Id, OptionId = optionId });
+            }
+            _itemOptionRepo.CreateItemOptions(itemOptions);
+        }
+        return item;
     }
 
     public Item GetItemById(int id)
@@ -163,7 +180,7 @@ public class WebShopService : IWebShopService {
         var validation = _postValidatorOption.Validate(optionDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var option = new Option(optionDto.Name);
+        var option = new Option(optionDto.Name, optionDto.OptionGroupId);
         return _optionRepository.CreateNewOption(option);
     }
 

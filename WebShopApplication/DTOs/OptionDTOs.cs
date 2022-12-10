@@ -16,18 +16,20 @@ public class OptionDTOs
     public DateTime? DeletedAt { get; set; }
     
     public List<Item> Items { get; set; }
+    public int OptionGroupId { get; set; }
+
     
     public OptionDTOs(){}
     
     public OptionDTOs(ItemOptionPostModel postModel)
     {
         Name = postModel.Name;
+        OptionGroupId = postModel.OptionGroupId;
     }
     
     public OptionDTOs(OptionSingleEditModel postModel)
     {
         Id = postModel.Id;
-        DeletedAt = postModel.DeletedAt;
     }
 }
 
@@ -35,6 +37,7 @@ public class OptionDTOs
 public class ItemOptionPostModel
 {
     public string Name { get; set; }
+    public int OptionGroupId { get; set; }
     
 } 
 

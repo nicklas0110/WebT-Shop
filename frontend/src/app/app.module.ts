@@ -12,6 +12,8 @@ import { UserpageComponent } from './userpage/userpage.component';
 import { SuperadminComponent } from './superadmin/superadmin.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 const route: Routes = [
   {
@@ -44,7 +46,9 @@ const route: Routes = [
     MatFormFieldModule,
     FormsModule,
     MatCardModule,
-    RouterModule.forRoot(route)
+    RouterModule.forRoot(route),
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
