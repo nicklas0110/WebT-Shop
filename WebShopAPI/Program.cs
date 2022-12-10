@@ -40,7 +40,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryRepository>();
 builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();
 builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
-builder.Services.AddTransient<IItemOption, ItemOptionRepository>();
+builder.Services.AddTransient<IItemOptionRepository, ItemOptionRepositoryRepository>();
 
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(

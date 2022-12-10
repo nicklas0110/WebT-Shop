@@ -2,7 +2,7 @@
 
 namespace WebShopApplication.Interfaces;
 
-public interface IItemOption
+public interface IItemOptionRepository
 {
     public void CreateItemOptions(List<ItemOption> itemOptions);
 }

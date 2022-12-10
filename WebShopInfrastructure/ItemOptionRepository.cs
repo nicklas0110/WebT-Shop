@@ -3,11 +3,11 @@ using WebsShopDomain;
 
 namespace WebShopInfrastructure;
 
-public class ItemOptionRepository : IItemOption
+public class ItemOptionRepositoryRepository : IItemOptionRepository
 {
     private readonly DatabaseContext _context;
 
-    public ItemOptionRepository(DatabaseContext context)
+    public ItemOptionRepositoryRepository(DatabaseContext context)
     {
         _context = context;
     }

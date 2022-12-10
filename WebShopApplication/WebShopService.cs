@@ -26,7 +26,7 @@ public class WebShopService : IWebShopService {
     private readonly IValidator<Option> _optionValidator;
     private readonly OptionDeleteValidators _optionDeleteValidators;
 
-    private readonly IItemOption _itemOptionRepo;
+    private readonly IItemOptionRepository _itemOptionRepositoryRepo;
     
     private readonly IMapper _mapper;
     
@@ -46,7 +46,7 @@ public class WebShopService : IWebShopService {
         IValidator<Option> optionValidator,
         OptionDeleteValidators optionDeleteValidators,
         
-        IItemOption itemOptionRepo,
+        IItemOptionRepository itemOptionRepositoryRepo,
         
         IMapper mapper
         
@@ -67,7 +67,7 @@ public class WebShopService : IWebShopService {
         _optionValidator = optionValidator;
         _optionDeleteValidators = optionDeleteValidators;
 
-        _itemOptionRepo = itemOptionRepo;
+        _itemOptionRepositoryRepo = itemOptionRepositoryRepo;
         
         _mapper = mapper;
 
@@ -98,7 +98,7 @@ public class WebShopService : IWebShopService {
             {
                 itemOptions.Add(new ItemOption() { ItemId = item.Id, OptionId = optionId });
             }
-            _itemOptionRepo.CreateItemOptions(itemOptions);
+            _itemOptionRepositoryRepo.CreateItemOptions(itemOptions);
         }
         return item;
     }
