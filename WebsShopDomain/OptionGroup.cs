@@ -2,9 +2,9 @@
 
 public class OptionGroup : BaseClass
 {
-    public OptionGroup(string optionDtoName)
+    public OptionGroup(string name)
     {
-        Name = optionDtoName;
+        Name = name;
     }
 
     public string Name { get; set; }

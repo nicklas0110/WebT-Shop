@@ -219,12 +219,12 @@ public class WebShopService : IWebShopService {
         return _optionRepository.DeleteOption(id ,option);;
     }
 
-    public OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionDto)
+    public OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto)
     {
-        var validation = _postOptionGroupValidator.Validate(optionDto);
+        var validation = _postOptionGroupValidator.Validate(optionGroupDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var optionGroup = new OptionGroup(optionDto.Name);
+        var optionGroup = new OptionGroup(optionGroupDto.Name);
         return _optionGroupRepository.CreateNewOptionGroup(optionGroup);
     }
 

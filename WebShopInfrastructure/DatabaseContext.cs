@@ -46,7 +46,7 @@ public class DatabaseContext  : DbContext
             .HasIndex((u => u.Email))
             .IsUnique();
         
-        //option group
+        //Option group
         modelBuilder.Entity<OptionGroup>()
             .Property(u => u.Id)
             .ValueGeneratedOnAdd();
