@@ -45,6 +45,11 @@ public class DatabaseContext  : DbContext
         modelBuilder.Entity<User>()
             .HasIndex((u => u.Email))
             .IsUnique();
+        
+        //option group
+        modelBuilder.Entity<OptionGroup>()
+            .Property(u => u.Id)
+            .ValueGeneratedOnAdd();
 
 
     } 
@@ -54,4 +59,5 @@ public class DatabaseContext  : DbContext
     public DbSet<Option> OptionTable { get; set; }
     public DbSet<User> UserTable { get; set; }
     public DbSet<ItemOption> ItemOptionTable { get; set; }
+    public DbSet<OptionGroup> OptionGroupTable { get; set; }
 }

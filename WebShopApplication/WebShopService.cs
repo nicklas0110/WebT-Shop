@@ -27,6 +27,8 @@ public class WebShopService : IWebShopService {
     private readonly OptionDeleteValidators _optionDeleteValidators;
 
     private readonly IItemOptionRepository _itemOptionRepositoryRepo;
+
+    private readonly IWebShopOptionGroupRepository _optionGroupRepository;
     
     private readonly IMapper _mapper;
     
@@ -48,6 +50,9 @@ public class WebShopService : IWebShopService {
         
         IItemOptionRepository itemOptionRepositoryRepo,
         
+        IWebShopOptionGroupRepository optionGroupRepository,
+        
+        
         IMapper mapper
         
     )
@@ -68,6 +73,8 @@ public class WebShopService : IWebShopService {
         _optionDeleteValidators = optionDeleteValidators;
 
         _itemOptionRepositoryRepo = itemOptionRepositoryRepo;
+
+        _optionGroupRepository = optionGroupRepository;
         
         _mapper = mapper;
 
@@ -210,5 +217,13 @@ public class WebShopService : IWebShopService {
         return _optionRepository.DeleteOption(id ,option);;
     }
 
- 
+    public OptionGroup CreateNewOptionGroup(OptionGroup option)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<OptionGroup> GetAllOptionGroups()
+    {
+        return _optionGroupRepository.GetAllOptionGroups();
+    }
 }
