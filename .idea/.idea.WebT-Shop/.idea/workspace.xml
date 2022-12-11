@@ -6,34 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopServiceRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopInfrastructure/RBDatabaseData/OptionGroupsDatabase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopServiceRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/obj/Debug/net6.0/WebShopAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/AuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IAuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IItemOptionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IItemOptionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopCategoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopOptionGroupRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopOptionGroupRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopOptionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopOptionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/obj/Debug/net6.0/WebShopApplication.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionGroupRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionGroupRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopInfrastructure/obj/Debug/net6.0/WebShopInfrastructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebsShopDomain/OptionGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebsShopDomain/OptionGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopUnitTest/obj/Debug/net6.0/WebShopUnitTest.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +36,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9daeeaab8409865442b5e80e634dc64dae9a14892fe81e0f17b46f51b2c48f8/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopItemRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Reigstad/RiderProjects/WebT-Shop/WebShopInfrastructure/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Reigstad/RiderProjects/WebT-Shop/WebShopInfrastructure/WebShopItemRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebShopUnitTest/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -184,6 +160,7 @@
       <workItem from="1670673514362" duration="9223000" />
       <workItem from="1670761014808" duration="4114000" />
       <workItem from="1670765773557" duration="4007000" />
+      <workItem from="1670773459106" duration="308000" />
     </task>
     <servers />
   </component>
@@ -429,45 +406,6 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionGroupRepository.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionGroupRepository.cs" initialLine="16" containingFunctionPresentation="method 'CreateNewOptionGroup'">
-            <startOffsets>
-              <option value="416" />
-            </startOffsets>
-            <endOffsets>
-              <option value="459" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionGroupRepository.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionGroupRepository.cs" initialLine="17" containingFunctionPresentation="method 'CreateNewOptionGroup'">
-            <startOffsets>
-              <option value="468" />
-            </startOffsets>
-            <endOffsets>
-              <option value="491" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopOptionGroupRepository.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopOptionGroupRepository.cs" initialLine="18" containingFunctionPresentation="method 'CreateNewOptionGroup'">
-            <startOffsets>
-              <option value="500" />
-            </startOffsets>
-            <endOffsets>
-              <option value="519" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/OptionGroupController.cs</url>
           <line>34</line>
           <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\OptionGroupController.cs" initialLine="34" containingFunctionPresentation="method 'CreateNewOptionGroup'">
@@ -505,6 +443,71 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>129</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="129" containingFunctionPresentation="method 'RebuildDB'">
+            <startOffsets>
+              <option value="4398" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4398" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>130</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="130" containingFunctionPresentation="method 'RebuildDB'">
+            <startOffsets>
+              <option value="4438" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4449" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopServiceRepository.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopServiceRepository.cs" initialLine="16" containingFunctionPresentation="method 'RebuildDB'">
+            <startOffsets>
+              <option value="341" />
+            </startOffsets>
+            <endOffsets>
+              <option value="375" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopServiceRepository.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopServiceRepository.cs" initialLine="17" containingFunctionPresentation="method 'RebuildDB'">
+            <startOffsets>
+              <option value="384" />
+            </startOffsets>
+            <endOffsets>
+              <option value="418" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/RebuildDbController.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\RebuildDbController.cs" initialLine="22" containingFunctionPresentation="method 'RebuildDB'">
+            <startOffsets>
+              <option value="597" />
+            </startOffsets>
+            <endOffsets>
+              <option value="625" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

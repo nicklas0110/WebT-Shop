@@ -41,6 +41,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddTransient<IWebShopCategoryRepository, WebShopCategoryRepository>();
 builder.Services.AddTransient<IWebShopOptionRepository, WebShopOptionRepository>();
 builder.Services.AddTransient<IWebShopItemRepository, WebShopRepository>();
+builder.Services.AddTransient<IWebShopServiceRepository, WebShopServiceRepository>();
 builder.Services.AddTransient<IWebShopOptionGroupRepository, WebShopOptionGroupRepository>();
 builder.Services.AddTransient<IItemOptionRepository, ItemOptionRepositoryRepository>();
 
@@ -58,6 +59,7 @@ builder.Services.AddScoped<IWebShopService, WebShopService>();
 //dependency, Infrastructure
 builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
 builder.Services.AddScoped<IWebShopOptionGroupRepository, WebShopOptionGroupRepository>();
+builder.Services.AddScoped<IWebShopServiceRepository, WebShopServiceRepository>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
