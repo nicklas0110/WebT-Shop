@@ -2,6 +2,10 @@
 
 public class OptionGroup : BaseClass
 {
+    
+    public OptionGroup()
+    {
+    }
     public OptionGroup(string name)
     {
         Name = name;

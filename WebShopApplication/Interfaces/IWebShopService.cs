@@ -9,6 +9,7 @@ public interface IWebShopService
     Item CreateNewItem(ItemDTO dto);
     Item GetItemById(int id);
     void RebuildDB();
+    void SeedData();
     Item UpdateItem(int id, Item product);
     object? DeleteUpdateItem(int id, ItemSingleEditModel item);
     

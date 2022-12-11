@@ -12,5 +12,4 @@ public interface IWebShopOptionRepository
     Option UpdateOption(Option option);
     
     Option DeleteOption(int id, OptionSingleEditModel option);
-    void RebuildDB();
 }

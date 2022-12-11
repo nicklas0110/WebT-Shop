@@ -9,8 +9,12 @@ namespace WebShopApplication;
 
 public class WebShopService : IWebShopService {
     
-    private IWebShopItemRepository Repository;
     
+    
+    private IWebShopItemRepository Repository;
+
+    private readonly IWebShopServiceRepository _serviceRepository;
+
     private readonly PostBoxValidator _postValidator;
     private readonly ItemValidator _itemValidator;
     private readonly IWebShopItemRepository _itemRepository;
@@ -34,6 +38,8 @@ public class WebShopService : IWebShopService {
     private readonly IMapper _mapper;
     
     public WebShopService(
+        IWebShopServiceRepository serviceRepository,
+        
         IWebShopItemRepository itemRepository,
         PostBoxValidator postValidatorWebShopDTOs,
         ItemValidator itemValidator,
@@ -58,6 +64,8 @@ public class WebShopService : IWebShopService {
         
     )
     {
+        _serviceRepository = serviceRepository;
+        
         _itemRepository = itemRepository;
         _postValidator = postValidatorWebShopDTOs;
         _itemValidator = itemValidator;
@@ -119,9 +127,50 @@ public class WebShopService : IWebShopService {
 
     public void RebuildDB()
     {
-        _itemRepository.RebuildDB();
-        _categoryRepository.RebuildDB();
-        _optionRepository.RebuildDB();
+        _serviceRepository.RebuildDB();
+        SeedData();
+    }
+
+    public void SeedData()
+    {
+        // create option groups
+        var optionGroups = new List<OptionGroup>()
+        {
+            new OptionGroup("Farver"),
+            new OptionGroup("Størelse"),
+            new OptionGroup("Print")
+        };
+        foreach (var optionGroup in optionGroups)
+        {
+            _optionGroupRepository.CreateNewOptionGroup(optionGroup);
+        }
+        // create option
+        var options = new List<Option>()
+        {
+            new Option("Rød", 1),
+            new Option("Blå", 1),
+            new Option("Hvid", 1),
+            new Option("Sort", 1),
+            new Option("S", 2),
+            new Option("M", 2),
+            new Option("L", 2),
+            new Option("XL", 2),
+            new Option("Ja", 3),
+            new Option("Nej", 3)
+        };
+        foreach (var option in options)
+        {
+            _optionRepository.CreateNewOption(option);
+        }
+        // create category
+        var categories = new List<Category>()
+        {
+            new Category("T-Shit")
+        };
+        foreach (var category in categories)
+        {
+            _categoryRepository.CreateNewCategory(category);
+        }
     }
 
 

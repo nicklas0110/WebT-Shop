@@ -24,10 +24,5 @@ public class UserRepository : IUserRepository
         _context.SaveChanges();
         return user;
     }
-
-    public void RebuildDB()
-    {
-        _context.Database.EnsureDeleted();
-        _context.Database.EnsureCreated();
-    }
+    
 }

@@ -21,7 +21,5 @@ public class RebuildDbController : ControllerBase
     public void RebuildDB()
     {
         _webShopService.RebuildDB();
-        _authenticationService.RebuildDB();
-
     }
 }

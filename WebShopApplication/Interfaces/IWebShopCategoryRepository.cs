@@ -12,5 +12,4 @@ public interface IWebShopCategoryRepository
     Category UpdateCategory(Category category);
     
     Category DeleteCategory(int id, CategorySingleEditModel category);
-    void RebuildDB();
 }

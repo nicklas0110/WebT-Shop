@@ -6,6 +6,4 @@ public interface IAuthenticationService
 {
     public string Register(LoginAndRegisterDTO dto);
     public string Login(LoginAndRegisterDTO dto);
-    
-    void RebuildDB();
 }
