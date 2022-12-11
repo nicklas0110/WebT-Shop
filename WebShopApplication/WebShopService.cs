@@ -28,9 +28,6 @@ public class WebShopService : IWebShopService {
 
     private readonly IItemOptionRepository _itemOptionRepositoryRepo;
     
-    private readonly PostOptionValidatorOptionGroup _postOptionValidatorOptionGroup;
-    private readonly IOptionGroupRepository _optionGroupRepository;
-    
     private readonly IMapper _mapper;
     
     public WebShopService(
@@ -50,9 +47,6 @@ public class WebShopService : IWebShopService {
         OptionDeleteValidators optionDeleteValidators,
         
         IItemOptionRepository itemOptionRepositoryRepo,
-        
-        PostOptionValidatorOptionGroup postOptionValidatorOptionGroup,
-        IOptionGroupRepository optionGroupRepository,
         
         IMapper mapper
         
@@ -74,9 +68,6 @@ public class WebShopService : IWebShopService {
         _optionDeleteValidators = optionDeleteValidators;
 
         _itemOptionRepositoryRepo = itemOptionRepositoryRepo;
-        
-        _postOptionValidatorOptionGroup = postOptionValidatorOptionGroup;
-        _optionGroupRepository = optionGroupRepository;
         
         _mapper = mapper;
 
@@ -219,19 +210,5 @@ public class WebShopService : IWebShopService {
         return _optionRepository.DeleteOption(id ,option);;
     }
 
-  
-
-    public OptionGroup CreateOptionGroups(OptionGroupDTO optionGroups)
-    {
-        var validation = _postOptionValidatorOptionGroup.Validate(optionGroups);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var optionGroup = new OptionGroup(optionGroups.Name);
-        return _optionGroupRepository.CreateOptionGroups(optionGroup);
-    }
-
-    public List<OptionGroup> GetAllOptionGroups()
-    {
-        return _optionGroupRepository.GetAllOptionGroups();
-    }
+ 
 }

@@ -81,27 +81,3 @@ public class OptionDeleteValidators : AbstractValidator<OptionSingleEditModel>
         RuleFor(p => p.DeletedAt).NotEmpty();
     }
 }
-
-public class PostOptionValidatorOptionGroup : AbstractValidator<OptionGroupDTO>
-{
-    public PostOptionValidatorOptionGroup()
-    {
-        RuleFor(p => p.Name).NotEmpty();
-    }
-}
-public class WebShopValidatorsOptionGroup : AbstractValidator<OptionGroup>
-{
-    public WebShopValidatorsOptionGroup()
-    {
-        RuleFor(p => p.Name).NotEmpty();
-    }
-    
-    
-}
-public class OptionGroupDeleteValidators : AbstractValidator<OptionGroupDTOSingleEditModel>
-{
-    public OptionGroupDeleteValidators()
-    {
-        RuleFor(p => p.DeletedAt).NotEmpty();
-    }
-}
