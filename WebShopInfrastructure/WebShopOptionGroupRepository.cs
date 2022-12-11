@@ -12,9 +12,11 @@ public class WebShopOptionGroupRepository : IWebShopOptionGroupRepository
         _context = context;
     }
     
-    public OptionGroup CreateNewOptionGroup(OptionGroup option)
+    public OptionGroup CreateNewOptionGroup(OptionGroup optionGroup)
     {
-        throw new NotImplementedException();
+        _context.OptionGroupTable.Add(optionGroup);
+        _context.SaveChanges();
+        return optionGroup;
     }
 
     public List<OptionGroup> GetAllOptionGroups()

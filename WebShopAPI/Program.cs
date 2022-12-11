@@ -34,6 +34,7 @@ var mapper = new MapperConfiguration(configuration =>
     configuration.CreateMap<ItemDTO, Item>();
     configuration.CreateMap<ItemCategoryDTO, Category>();
     configuration.CreateMap<OptionDTOs, Option>();
+    configuration.CreateMap<OptionGroupDTOs, OptionGroup>();
 }).CreateMapper();
 
 builder.Services.AddSingleton(mapper);
@@ -50,6 +51,7 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(
 
 var test = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 //dependency, Application
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IWebShopService, WebShopService>();
@@ -57,6 +59,7 @@ builder.Services.AddScoped<IWebShopService, WebShopService>();
 builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
 builder.Services.AddScoped<IWebShopOptionGroupRepository, WebShopOptionGroupRepository>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters

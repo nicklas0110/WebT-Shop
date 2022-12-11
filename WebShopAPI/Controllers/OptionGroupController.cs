@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
@@ -22,6 +24,26 @@ public class OptionGroupController : ControllerBase
     public ActionResult<List<OptionGroup>> GetAllOptionGroups()
     {
         return _webShopService.GetAllOptionGroups();
+    }
+    
+    [HttpPost]  
+    [Route("")]
+    public ActionResult<OptionGroup> CreateNewOptionGroup(OptionGroupPostModel postModel)
+    {
+        try
+        {
+            var dto = new OptionGroupDTOs(postModel);
+            var result = _webShopService.CreateNewOptionGroup(dto);
+            return Created("", result);
+        }
+        catch (ValidationException v)
+        {
+            return BadRequest(v.Message);
+        }
+        catch (System.Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
     }
     
     
