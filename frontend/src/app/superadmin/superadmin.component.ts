@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './superadmin.component.html',
   styleUrls: ['./superadmin.component.scss']
 })
+// @ts-ignore
 export class SuperadminComponent implements OnInit {
 
   constructor() { }

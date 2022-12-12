@@ -7,6 +7,7 @@ import {customAxios} from "../app.component";
   templateUrl: './userpage.component.html',
   styleUrls: ['./userpage.component.scss']
 })
+// @ts-ignore
 export class UserpageComponent implements OnInit {
   title = 'frontend';
   formModel: Option = new Option; // Sets formModel = to the Option class

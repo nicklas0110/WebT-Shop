@@ -14,6 +14,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 const route: Routes = [
   {
@@ -48,9 +49,11 @@ const route: Routes = [
     MatCardModule,
     RouterModule.forRoot(route),
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+// @ts-ignore
 export class AppModule { }
