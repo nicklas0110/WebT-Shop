@@ -12,8 +12,8 @@ export const customAxios = axios.create({
 })
 export class HttpService {
 
-  constructor(){
-    /*customAxios.interceptors.response.use(
+  constructor(private matSnackbar: MatSnackBar){
+    customAxios.interceptors.response.use(
     response => {
       if(response.status == 201){
         this.matSnackbar.open("Great Success")
@@ -27,7 +27,7 @@ export class HttpService {
         this.matSnackbar.open("Something Went Wrong")
       }
       catchError(rejected)
-    }) */
+    })
   }
 
   async getOption(){
@@ -35,7 +35,7 @@ export class HttpService {
     return httpResponse.data;
   }
 
-  async createOption(dto: {name: any;}) {
+  async createOption(dto: { name: string; optionGroupId: Number }) {
     const httpResponse = await customAxios.post('option',dto)
     return httpResponse.data;
   }

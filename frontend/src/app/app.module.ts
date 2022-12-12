@@ -1,5 +1,5 @@
 
-import { NgModule } from '@angular/core';
+import {Injectable, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,9 @@ import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {Overlay} from "@angular/cdk/overlay";
+
 
 const route: Routes = [
   {
@@ -52,8 +55,10 @@ const route: Routes = [
     MatIconModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]
 })
 // @ts-ignore
-export class AppModule { }
+export class AppModule {
+
+}
