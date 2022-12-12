@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminpage.component.scss']
 })
 export class AdminpageComponent implements OnInit {
+  optionName: any;
 
   constructor() { }
 
