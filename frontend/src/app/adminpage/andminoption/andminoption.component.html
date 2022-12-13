@@ -1,0 +1,43 @@
+<h1 style="margin-left: 900px; margin-top: 20px"> Option </h1>
+<a href="adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>
+<a href="adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>
+<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
+
+<div>
+    <link rel="stylesheet" href="andminoption.component.scss">
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="formModel.name"placeholder="Option Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Option Group</mat-label>
+        <mat-select [formControl]="optionGroupControl" required>
+            <mat-option *ngFor="let optionGroup of optionGroups" [value]="optionGroup.id">
+                {{optionGroup.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="optionGroupControl.hasError('required')">Please choose an category</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <button mat-raised-button [disabled]="formModel.name === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
+
+    <button mat-raised-button [disabled]="formModel.name === '' || formModel.optionGroupId == 0" (click)="editOption(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+
+    <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
+
+    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
+        <mat-card-title>
+            {{o.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            optionGroupId: {{o.optionGroupId}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            Id: {{o.id}}
+        </mat-card-subtitle>
+    </mat-card>
+
+</div>

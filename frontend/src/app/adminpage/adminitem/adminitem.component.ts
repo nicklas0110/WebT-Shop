@@ -3,7 +3,7 @@ import {HttpService} from "../../../services/http.service";
 import {Item, ItemDto} from "./ItemDto";
 import {Category, CategoryDto} from "../admincatgory/CategoryDto";
 import {FormControl, Validators} from "@angular/forms";
-import {Option} from "../OptionDto";
+import {Option} from "../andminoption/OptionDto";
 
 @Component({
   selector: 'app-adminitem',

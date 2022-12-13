@@ -1,16 +1,15 @@
-import {Component, OnInit} from "@angular/core";
-import {HttpService} from "../../services/http.service";
-import {Option} from "./andminoption/OptionDto";
+import { Component, OnInit } from '@angular/core';
+import {Option} from "./OptionDto";
 import {FormControl, Validators} from "@angular/forms";
-
+import {HttpService} from "../../../services/http.service";
 
 @Component({
-  selector: 'app-adminpage',
-  templateUrl: './adminpage.component.html',
-  styleUrls: ['./adminpage.component.scss']
+  selector: 'app-andminoption',
+  templateUrl: './andminoption.component.html',
+  styleUrls: ['./andminoption.component.scss']
 })
+export class AndminoptionComponent implements OnInit {
 
-export class AdminpageComponent implements OnInit {
   formModel : Option = new Option(); // Sets formModel = to the Box class
   option: any;
   options: any[] = [];

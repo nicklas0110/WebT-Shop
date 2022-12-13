@@ -22,6 +22,7 @@ import { AdminitemComponent } from './adminpage/adminitem/adminitem.component';
 import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminoptiongroup.component';
 import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.component';
 import {MatSelectModule} from "@angular/material/select";
+import { AndminoptionComponent } from './adminpage/andminoption/andminoption.component';
 
 
 const route: Routes = [
@@ -33,6 +34,9 @@ const route: Routes = [
   },
   {
     path: 'adminpage', component: AdminpageComponent,
+  },
+  {
+    path: 'adminoption', component: AndminoptionComponent,
   },
   {
     path: 'admincategory', component: AdmincategoryComponent,
@@ -59,7 +63,8 @@ const route: Routes = [
     AdminpageComponent,
     AdminitemComponent,
     AdminoptiongroupComponent,
-    AdmincategoryComponent
+    AdmincategoryComponent,
+    AndminoptionComponent
   ],
   imports: [
     BrowserModule,
