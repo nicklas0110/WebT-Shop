@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Option} from "./OptionDto";
+import {Option, OptionDto} from "./OptionDto";
 import {FormControl, Validators} from "@angular/forms";
 import {HttpService} from "../../../services/http.service";
+import {ItemDto} from "../adminitem/ItemDto";
 
 @Component({
   selector: 'app-andminoption',
@@ -40,7 +41,6 @@ export class AndminoptionComponent implements OnInit {
 
   selectCard(option: Option) {
     this.formModel = {...option};
-    console.log(option);
   }
   clearForm(){
     this.formModel = new Option(); // sets the info to the base value we have whits is blank for txt fields and id is 0

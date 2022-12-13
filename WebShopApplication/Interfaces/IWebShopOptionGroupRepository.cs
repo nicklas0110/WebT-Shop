@@ -7,6 +7,5 @@ public interface IWebShopOptionGroupRepository
     OptionGroup CreateNewOptionGroup(OptionGroup option);
     
     List<OptionGroup> GetAllOptionGroups();
-
-    
+    OptionGroup UpdateOptionGroups(OptionGroup optionGroup);
 }

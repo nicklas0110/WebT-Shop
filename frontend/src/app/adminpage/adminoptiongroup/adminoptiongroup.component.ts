@@ -22,10 +22,6 @@ export class AdminoptiongroupComponent implements OnInit {
   }
 
   async createOptionGroup() {
-    // @ts-ignore
-    /*  const result = await this.http.createOption(this.formModel as OptionDto);
-      this.options.push(result);
-      this.formModel = new Option();*/
     let dto = {
       name: this.formModel.optionName,
     }
@@ -35,9 +31,8 @@ export class AdminoptiongroupComponent implements OnInit {
     this.clearForm();
   }
 
-  selectCard(option: OptionGroup) {
-    this.formModel = {...option};
-    console.log(option);
+  selectCard(optionGroup: OptionGroup) {
+    this.formModel = {...optionGroup};
   }
   clearForm(){
     this.formModel = new OptionGroup(); // sets the info to the base value we have whits is blank for txt fields and id is 0

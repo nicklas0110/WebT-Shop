@@ -25,7 +25,7 @@ public interface IWebShopService
     Option DeleteOption(int id,OptionSingleEditModel option);
     
     OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto);
-    
     List<OptionGroup> GetAllOptionGroups();
+    OptionGroup UpdateOptionGroups(int id, OptionGroup option);
     
 }

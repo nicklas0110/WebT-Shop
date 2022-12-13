@@ -33,6 +33,7 @@ public class WebShopService : IWebShopService {
     private readonly IItemOptionRepository _itemOptionRepositoryRepo;
 
     private readonly IWebShopOptionGroupRepository _optionGroupRepository;
+    private readonly IValidator<OptionGroup> _optionGroupValidator;
     private readonly PostOptionGroupValidatorOption _postOptionGroupValidator;
     
     private readonly IMapper _mapper;
@@ -58,6 +59,7 @@ public class WebShopService : IWebShopService {
         IItemOptionRepository itemOptionRepositoryRepo,
         
         IWebShopOptionGroupRepository optionGroupRepository,
+        IValidator<OptionGroup> optionGroupValidator,
         PostOptionGroupValidatorOption postOptionGroupValidator,
         
         IMapper mapper
@@ -84,6 +86,7 @@ public class WebShopService : IWebShopService {
         _itemOptionRepositoryRepo = itemOptionRepositoryRepo;
 
         _optionGroupRepository = optionGroupRepository;
+        _optionGroupValidator = optionGroupValidator;
         _postOptionGroupValidator = postOptionGroupValidator;
 
         _mapper = mapper;
@@ -254,7 +257,7 @@ public class WebShopService : IWebShopService {
         var validation = _optionValidator.Validate(option);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        return _optionRepository.UpdateOption(option);;
+        return _optionRepository.UpdateOption(option);
     }
 
     public Option DeleteOption(int id,OptionSingleEditModel dto)
@@ -281,5 +284,15 @@ public class WebShopService : IWebShopService {
     public List<OptionGroup> GetAllOptionGroups()
     {
         return _optionGroupRepository.GetAllOptionGroups();
+    }
+
+    public OptionGroup UpdateOptionGroups(int id, OptionGroup optionGroup)
+    {
+        if (id != optionGroup.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _optionGroupValidator.Validate(optionGroup);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _optionGroupRepository.UpdateOptionGroups(optionGroup);
     }
 }

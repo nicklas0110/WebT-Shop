@@ -59,7 +59,8 @@ export class HttpService {
   }
 
   async editOptionGroup(id: any, dto: { name: string }) {
-
+    const httpResponse = await customAxios.put('Category/Edit/' + id,dto)
+    return httpResponse.data;
   }
 
   async getItems() {
@@ -83,7 +84,7 @@ export class HttpService {
   }
 
   async editCategory(id: any, dto: { categoryName: string }) {
-    const httpResponse = await customAxios.put('Category/Edit/' + id,dto)
+    const httpResponse = await customAxios.put('OptionGroup/Edit/' + id,dto)
     return httpResponse.data;
   }
 

@@ -46,9 +46,8 @@ export class AdminitemComponent implements OnInit {
     this.clearForm();
   }
 
-  selectCard(option: Item) {
-    this.formModel = {...option};
-    console.log(option);
+  selectCard(item: Item) {
+    this.formModel = {...item};
   }
   clearForm(){
     this.formModel = new Item(); // sets the info to the base value we have whits is blank for txt fields and id is 0

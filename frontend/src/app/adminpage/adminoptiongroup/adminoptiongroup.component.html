@@ -19,7 +19,7 @@
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
-    <mat-card style="margin-top:30px"*ngFor="let og of optiongroups" class="option-card" (click)="selectCard(og)">
+    <mat-card *ngFor="let og of optiongroups" class="option-card" (click)="selectCard(og)">
         <mat-card-title>
             {{og.name}}
         </mat-card-title>
