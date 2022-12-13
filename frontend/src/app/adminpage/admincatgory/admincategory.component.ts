@@ -34,9 +34,8 @@ export class AdmincategoryComponent implements OnInit {
     this.clearForm();
   }
 
-  selectCard(option: Category) {
-    this.formModel = {...option};
-    console.log(option);
+  selectCard(category: Category) {
+    this.formModel = {...category}; // creates a copy of option and sets it to the form - done to prevent 2 way binding
   }
   clearForm(){
     this.formModel = new Category(); // sets the info to the base value we have whits is blank for txt fields and id is 0
@@ -47,10 +46,10 @@ export class AdmincategoryComponent implements OnInit {
       id : id,
       categoryName: this.formModel.categoryName,
     }
-    const option : Category = await this.http.editCategory(id,dto);
+    const category : Category = await this.http.editCategory(id,dto);
     let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.categorys[indexToEdit] = option;
+    this.categorys[indexToEdit] = category;
     this.clearForm();
   }
 }

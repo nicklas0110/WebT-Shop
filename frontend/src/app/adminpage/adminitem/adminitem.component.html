@@ -4,9 +4,10 @@
 <a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
 <a href="adminoption"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option</button></a>
 
+<link rel="stylesheet" href="adminitem.component.scss">
 
 <div>
-    <link rel="stylesheet" href="adminitem.component.scss">
+
     <mat-form-field >
         <input matInput [(ngModel)]="formModel.name"placeholder="Item Name">
     </mat-form-field>
@@ -30,22 +31,20 @@
     </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.name === '' || formModel.price == 0 || categoryControl.invalid" (click)="createItem()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button mat-raised-button [disabled]="formModel.name === '' || formModel.price == 0 || categoryControl.invalid" (click)="createItem()">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.name === ''|| formModel.price == 0 || categoryControl.invalid" (click)="editItem(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+    <button mat-raised-button [disabled]="formModel.name === ''|| formModel.price == 0 || categoryControl.invalid" (click)="editItem(this.formModel.id)">Edit</button>
 
-    <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
+    <button mat-raised-button (click)="clearForm()">Clear</button>
 
-    <mat-card style="margin-top:30px"*ngFor="let i of items" class="option-card" (click)="selectCard(i)">
+    <mat-card *ngFor="let i of items let c of categories" class="option-card" (click)="selectCard(i)">
         <mat-card-title>
-            {{i.name}}
+           Name: {{i.name}}
         </mat-card-title>
         <mat-card-subtitle >
             Price: {{i.price}}
         </mat-card-subtitle>
-        <mat-card-subtitle>
-            Category: {{i.itemCategoryId}}
-        </mat-card-subtitle>
+            Categorty: {{c.categoryName}}
         <mat-card-subtitle>
             Id: {{i.id}}
         </mat-card-subtitle>

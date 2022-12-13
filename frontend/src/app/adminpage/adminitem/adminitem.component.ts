@@ -16,7 +16,7 @@ export class AdminitemComponent implements OnInit {
   item: any;
   items: any[] = [];
   categories : any[] = [];
-  options : Option[] = [];
+  options : any[] = [];
   categoryControl = new FormControl<number | null>(null, Validators.required);
   optionsControl = new FormControl<number[]>([]);
   selectFormControl = new FormControl('', Validators.required);
@@ -24,12 +24,12 @@ export class AdminitemComponent implements OnInit {
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
-    const items = await this.http.getItems();
     const categories = await this.http.getCategorys();
+    const items = await this.http.getItems();
     const options = await this.http.getOption();
     this.categories = categories;
-    this.options = options;
     this.items = items;
+    this.options = options;
     this.item = items;
   }
 

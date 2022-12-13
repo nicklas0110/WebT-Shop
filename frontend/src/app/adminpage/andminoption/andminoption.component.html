@@ -28,12 +28,12 @@
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
-    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
+    <mat-card style="margin-top:30px"*ngFor="let o of options let og of optionGroups" class="option-card" (click)="selectCard(o)">
         <mat-card-title>
             {{o.name}}
         </mat-card-title>
         <mat-card-subtitle>
-            optionGroupId: {{o.optionGroupId}}
+            Option Groups: {{og.name}}
         </mat-card-subtitle>
         <mat-card-subtitle>
             Id: {{o.id}}

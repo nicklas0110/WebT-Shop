@@ -63,22 +63,22 @@ export class HttpService {
   }
 
   async getItems() {
-    const httpResponse = await customAxios.get('Item');
+    const httpResponse = await customAxios.get('item');
     return httpResponse.data;
   }
   async createItem(dto: ItemDto) {
-    const httpResponse = await customAxios.post('Item',dto)
+    const httpResponse = await customAxios.post('item',dto)
     return httpResponse.data
   }
 
   async getCategorys() {
-    const httpResponse = await customAxios.get('Category');
+    const httpResponse = await customAxios.get('category');
     return httpResponse.data;
   }
 
 
   async createCategory(dto: CategoryDto) {
-    const httpResponse = await customAxios.post('Category',dto)
+    const httpResponse = await customAxios.post('category',dto)
     return httpResponse.data;
   }
 
