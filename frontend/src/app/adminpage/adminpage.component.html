@@ -12,7 +12,7 @@
 
     <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
 
-    <mat-card style="margin-top:30px"*ngFor="let o of options">
+    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
         <mat-card-title>
             {{o.name}}
         </mat-card-title>

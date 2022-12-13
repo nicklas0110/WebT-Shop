@@ -35,6 +35,10 @@ export class AdminpageComponent implements OnInit {
     this.options.push(result);
 
   }
+
+  selectCard(option: Option) {
+    this.formModel = {...option};
+  }
 }
 
 class OptionDto {
