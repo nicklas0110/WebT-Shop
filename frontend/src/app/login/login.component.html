@@ -1,11 +1,12 @@
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-        <mat-label>Favorite food</mat-label>
-        <input ngmodel matInput placeholder="Ex. Pizza" value="Sushi">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input [(ngModel)]="email" matInput>
+    </mat-form-field>
+<br>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input [(ngModel)]="password" matInput type="password">
+
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
-</form>
+    <button mat-raised-button (click)="login()">Log in</button>

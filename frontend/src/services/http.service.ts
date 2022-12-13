@@ -45,4 +45,9 @@ export class HttpService {
     const httpResponse = await customAxios.put('box/' + id, dto)
     return httpResponse.data;
   }
+
+    async login(dto: any) {
+      const httpResult = await customAxios.post('auth/controller/login', dto);
+      return httpResult.data;
+    }
 }
