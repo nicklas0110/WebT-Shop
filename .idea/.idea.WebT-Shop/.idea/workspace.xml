@@ -6,16 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminpage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminpage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/WebIcon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
