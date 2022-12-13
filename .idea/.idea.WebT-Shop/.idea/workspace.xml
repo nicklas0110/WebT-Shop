@@ -7,10 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/http.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -470,6 +469,162 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs</url>
+          <line>54</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\CategoryController.cs" initialLine="54" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1524" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1580" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs</url>
+          <line>58</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\CategoryController.cs" initialLine="58" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1652" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1700" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopAPI/Controllers/CategoryController.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopAPI\Controllers\CategoryController.cs" initialLine="62" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1761" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1798" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopCategoryRepository.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopCategoryRepository.cs" initialLine="49" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1500" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1540" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopCategoryRepository.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopCategoryRepository.cs" initialLine="50" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1549" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1572" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopInfrastructure/WebShopCategoryRepository.cs</url>
+          <line>51</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopInfrastructure\WebShopCategoryRepository.cs" initialLine="51" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="1581" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1597" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>215</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="215" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7110" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7132" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>216</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="216" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7145" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7213" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>218</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="218" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7286" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7310" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>219</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="219" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7323" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7376" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>220</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="220" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7385" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7437" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebShopApplication/WebShopService.cs</url>
+          <line>217</line>
+          <properties documentPath="C:\Users\Reigstad\RiderProjects\WebT-Shop\WebShopApplication\WebShopService.cs" initialLine="217" containingFunctionPresentation="method 'UpdateCategory'">
+            <startOffsets>
+              <option value="7222" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7277" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

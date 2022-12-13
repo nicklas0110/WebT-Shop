@@ -83,7 +83,7 @@ export class HttpService {
   }
 
   async editCategory(id: any, dto: { categoryName: string }) {
-    const httpResponse = await customAxios.put('Category/' + id,dto)
+    const httpResponse = await customAxios.put('Category/Edit/' + id,dto)
     return httpResponse.data;
   }
 

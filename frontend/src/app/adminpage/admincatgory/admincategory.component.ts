@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../../services/http.service";
 import {Category, CategoryDto} from "./CategoryDto";
+import {timestamp} from "rxjs";
 
 @Component({
   selector: 'app-admincatgory',
@@ -21,10 +22,6 @@ export class AdmincategoryComponent implements OnInit {
   }
 
   async createCategory() {
-    // @ts-ignore
-    /*  const result = await this.http.createOption(this.formModel as OptionDto);
-      this.options.push(result);
-      this.formModel = new Option();*/
     let dto : CategoryDto= {
       categoryName: this.formModel.categoryName,
     }
@@ -42,6 +39,7 @@ export class AdmincategoryComponent implements OnInit {
   }
 
   async editCategory(id: any) {
+    var timestamp = new Date().getTime()/1000;
     let dto : Category = {
       id : id,
       categoryName: this.formModel.categoryName,
