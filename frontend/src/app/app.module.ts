@@ -18,6 +18,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Overlay} from "@angular/cdk/overlay";
 import {MatInputModule} from "@angular/material/input";
+import { AdminitemComponent } from './adminpage/adminitem/adminitem.component';
+import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminoptiongroup.component';
+import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.component';
 
 
 const route: Routes = [
@@ -28,7 +31,16 @@ const route: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'adminpage', component: AdminpageComponent
+    path: 'adminpage', component: AdminpageComponent,
+  },
+  {
+    path: 'admincategory', component: AdmincategoryComponent,
+  },
+  {
+    path: 'adminitem', component: AdminitemComponent,
+  },
+  {
+    path: 'adminoptiongroup', component: AdminoptiongroupComponent,
   },
   {
     path: 'superadmin', component: SuperadminComponent
@@ -43,7 +55,10 @@ const route: Routes = [
     LoginComponent,
     UserpageComponent,
     SuperadminComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    AdminitemComponent,
+    AdminoptiongroupComponent,
+    AdmincategoryComponent
   ],
   imports: [
     BrowserModule,

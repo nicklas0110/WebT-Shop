@@ -41,8 +41,47 @@ export class HttpService {
   }
 
   // puts to the backend using an id and the dto class whits also contain an id and edits
-  async editOption(id : any, dto: { size: any; type: any; customerName: any }) {
-    const httpResponse = await customAxios.put('box/' + id, dto)
+  async editOption(id : any, dto: { name: string; optionGroupId: Number}) {
+    const httpResponse = await customAxios.put('option' + id, dto)
     return httpResponse.data;
   }
+
+  async getOptionGroups() {
+    const httpResponse = await customAxios.get('optiongroup');
+    return httpResponse.data;
+  }
+
+  async createOptionGroup(dto: { name: string }) {
+    const httpResponse = await customAxios.post('optiongroup',dto)
+    return httpResponse.data;
+  }
+
+  async editOptionGroup(id: any, dto: { name: string }) {
+
+  }
+
+  async getItems() {
+    const httpResponse = await customAxios.get('Item');
+    return httpResponse.data;
+  }
+  async createItem(dto: { price: number; name: string; itemCategoryId: number }) {
+    const httpResponse = await customAxios.post('Item',dto)
+    return httpResponse.data
+  }
+
+  async getCategorys() {
+    const httpResponse = await customAxios.get('Category');
+    return httpResponse.data;
+  }
+
+
+  async createCategory(dto: { name: string }) {
+    const httpResponse = await customAxios.post('Category',dto)
+    return httpResponse.data;
+  }
+
+  async editCategory(id: any, dto: { name: string }) {
+
+  }
+
 }

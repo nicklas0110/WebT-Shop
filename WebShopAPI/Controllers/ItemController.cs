@@ -20,14 +20,14 @@ public class ItemController : ControllerBase
     }
     
     [HttpGet]
-    [Route("Item")]
+    [Route("")]
     public ActionResult<List<Item>> GetAllTItems()
     {
         return _webShopService.GetAllItems();
     }
     
     [HttpPost]  
-    [Route("Item")]
+    [Route("")]
     public ActionResult<Item> CreateNewItem(ItemPostModel postModel)
     {
         try

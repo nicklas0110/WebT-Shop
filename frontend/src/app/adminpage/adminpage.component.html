@@ -1,4 +1,6 @@
-<p>adminpage works!</p>
+<a href="adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>
+<a href="adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>
+<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
 <div>
     <link rel="stylesheet" href="adminpage.component.scss">
         <mat-form-field style="margin-left:100px; margin-top:100px">
@@ -11,6 +13,10 @@
     <br>
 
     <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
+
+    <button mat-raised-button [disabled]="formModel.optionName === '' || formModel.optionGroupId == 0" (click)="editOption(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+
+    <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
     <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
         <mat-card-title>

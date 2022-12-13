@@ -33,11 +33,27 @@ export class AdminpageComponent implements OnInit {
     const result = await this.http.createOption(dto);
     console.log(result);
     this.options.push(result);
-
+    this.clearForm();
   }
 
   selectCard(option: Option) {
     this.formModel = {...option};
+    console.log(option);
+  }
+  clearForm(){
+    this.formModel = new Option(); // sets the info to the base value we have whits is blank for txt fields and id is 0
+  }
+
+  async editOption(id: any) {
+    let dto = {
+      name: this.formModel.optionName,
+      optionGroupId: this.formModel.optionGroupId
+    }
+    const option = await this.http.editOption(id,dto);
+    let indexToEdit = this.options.findIndex(o => o.id == id); // Sets the id of the box class for the url
+    console.log(indexToEdit);
+    this.options[indexToEdit] = option;
+    this.clearForm();
   }
 }
 
