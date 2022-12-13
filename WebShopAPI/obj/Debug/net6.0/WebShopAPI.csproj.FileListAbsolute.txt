@@ -167,3 +167,4 @@ C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Reigstad\RiderProjects\WebT-Shop\WebshopAPI\bin\Debug\net6.0\appsettings.json
+C:\Users\Nicklas\Documents\GitHub\WebT-Shop\WebshopAPI\bin\Debug\net6.0\appsettings.json
