@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../../services/http.service";
+import {Item, ItemDto} from "./ItemDto";
+import {Category, CategoryDto} from "../admincatgory/CategoryDto";
+import {FormControl, Validators} from "@angular/forms";
+import {Option} from "../OptionDto";
 
 @Component({
   selector: 'app-adminitem',
@@ -11,25 +15,31 @@ export class AdminitemComponent implements OnInit {
   formModel : Item = new Item(); // Sets formModel = to the Box class
   item: any;
   items: any[] = [];
+  categories : any[] = [];
+  options : Option[] = [];
+  categoryControl = new FormControl<number | null>(null, Validators.required);
+  optionsControl = new FormControl<number[]>([]);
+  selectFormControl = new FormControl('', Validators.required);
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
     const items = await this.http.getItems();
+    const categories = await this.http.getCategorys();
+    const options = await this.http.getOption();
+    this.categories = categories;
+    this.options = options;
     this.items = items;
     this.item = items;
   }
 
   async createItem() {
-    // @ts-ignore
-    /*  const result = await this.http.createOption(this.formModel as OptionDto);
-      this.options.push(result);
-      this.formModel = new Option();*/
-    let dto = {
-      name: this.formModel.itemName,
+    let dto : ItemDto= {
+      name: this.formModel.name,
       price: this.formModel.price,
-      itemCategoryId: this.formModel.itemCategoryId,
-    }
+      itemCategoryId: this.categoryControl.getRawValue() || 0,
+      optionIds: this.optionsControl.getRawValue() || []
+    };
     const result = await this.http.createItem(dto);
     console.log(result);
     this.items.push(result);
@@ -45,10 +55,12 @@ export class AdminitemComponent implements OnInit {
   }
 
   async editItem(id: any) {
-    let dto = {
-      name: this.formModel.itemName,
+    let dto : Item = {
+      id: id,
+      name: this.formModel.name,
       price: this.formModel.price,
       itemCategoryId: this.formModel.itemCategoryId,
+      optionIds: this.formModel.optionIds
     }
     const option = await this.http.editOptionGroup(id,dto);
     let indexToEdit = this.items.findIndex(i => i.id == id); // Sets the id of the box class for the url
@@ -58,15 +70,6 @@ export class AdminitemComponent implements OnInit {
   }
 }
 
-class ItemDto {
-  itemName: string = "";
-  price: number = 0;
-  itemCategoryId: number = 0;
-}
-// Sets the id when it is needed
-class Item extends ItemDto{
-  id: number = 0;
-}
 
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../../services/http.service";
+import {Category, CategoryDto} from "./CategoryDto";
 
 @Component({
   selector: 'app-admincatgory',
@@ -9,12 +10,12 @@ import {HttpService} from "../../../services/http.service";
 export class AdmincategoryComponent implements OnInit {
   formModel : Category = new Category(); // Sets formModel = to the Box class
   category: any;
-  categorys: any[] = [];
+  categorys: Category[] = [];
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
-    const categorys = await this.http.getCategorys();
+    const categorys : Category[] = await this.http.getCategorys();
     this.category = categorys;
     this.categorys = categorys;
   }
@@ -24,8 +25,8 @@ export class AdmincategoryComponent implements OnInit {
     /*  const result = await this.http.createOption(this.formModel as OptionDto);
       this.options.push(result);
       this.formModel = new Option();*/
-    let dto = {
-      name: this.formModel.categoryName,
+    let dto : CategoryDto= {
+      name: this.formModel.name,
     }
     const result = await this.http.createCategory(dto);
     console.log(result);
@@ -42,25 +43,16 @@ export class AdmincategoryComponent implements OnInit {
   }
 
   async editCategory(id: any) {
-    let dto = {
-      name: this.formModel.categoryName,
+    let dto : Category = {
+      id : id,
+      name: this.formModel.name,
     }
-    const option = await this.http.editCategory(id,dto);
+    const option : Category = await this.http.editCategory(id,dto);
     let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
     this.categorys[indexToEdit] = option;
     this.clearForm();
   }
 }
-
-class CategoryDto {
-  categoryName: string = "";
-
-}
-// Sets the id when it is needed
-class Category extends CategoryDto{
-  id: number = 0;
-}
-
 
 

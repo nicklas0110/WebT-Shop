@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {HttpService} from "../../services/http.service";
+import {Option} from "./OptionDto";
 
 
 @Component({
@@ -27,7 +28,7 @@ export class AdminpageComponent implements OnInit {
     this.options.push(result);
     this.formModel = new Option();*/
     let dto = {
-      name: this.formModel.optionName,
+      name: this.formModel.name,
       optionGroupId: this.formModel.optionGroupId
     }
     const result = await this.http.createOption(dto);
@@ -46,7 +47,7 @@ export class AdminpageComponent implements OnInit {
 
   async editOption(id: any) {
     let dto = {
-      name: this.formModel.optionName,
+      name: this.formModel.name,
       optionGroupId: this.formModel.optionGroupId
     }
     const option = await this.http.editOption(id,dto);
@@ -56,13 +57,3 @@ export class AdminpageComponent implements OnInit {
     this.clearForm();
   }
 }
-
-class OptionDto {
-  optionName: string = "";
-  optionGroupId: number = 1;
-}
-// Sets the id when it is needed
-class Option extends OptionDto{
-  id: number = 0;
-}
-

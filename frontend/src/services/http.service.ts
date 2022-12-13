@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import axios from "axios";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {catchError} from "rxjs";
+import {ItemDto} from "../app/adminpage/adminitem/ItemDto";
+import {Category, CategoryDto} from "../app/adminpage/admincatgory/CategoryDto";
 
 export const customAxios = axios.create({
   baseURL: 'https://localhost:7153'
@@ -64,7 +66,7 @@ export class HttpService {
     const httpResponse = await customAxios.get('Item');
     return httpResponse.data;
   }
-  async createItem(dto: { price: number; name: string; itemCategoryId: number }) {
+  async createItem(dto: ItemDto) {
     const httpResponse = await customAxios.post('Item',dto)
     return httpResponse.data
   }
@@ -75,13 +77,14 @@ export class HttpService {
   }
 
 
-  async createCategory(dto: { name: string }) {
+  async createCategory(dto: CategoryDto) {
     const httpResponse = await customAxios.post('Category',dto)
     return httpResponse.data;
   }
 
   async editCategory(id: any, dto: { name: string }) {
-
+    const httpResponse = await customAxios.put('Category/' + id,dto)
+    return httpResponse.data;
   }
 
 }

@@ -6,7 +6,7 @@
 <div>
     <link rel="stylesheet" href="adminpage.component.scss">
         <mat-form-field style="margin-left:100px; margin-top:100px">
-            <input matInput [(ngModel)]="formModel.optionName"placeholder="Option Name">
+            <input matInput [(ngModel)]="formModel.name"placeholder="Option Name">
         </mat-form-field>
     <br>
         <mat-form-field style="margin-left:100px; margin-top:100px">
@@ -14,9 +14,9 @@
         </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button mat-raised-button [disabled]="formModel.name === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.optionName === '' || formModel.optionGroupId == 0" (click)="editOption(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+    <button mat-raised-button [disabled]="formModel.name === '' || formModel.optionGroupId == 0" (click)="editOption(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
