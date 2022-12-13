@@ -25,7 +25,15 @@ public class OptionController : ControllerBase
     [Route("")]
     public ActionResult<List<Option>> GetAllOptions()
     {
-        return _webShopService.GetAllOptions();
+        try
+        { 
+            return _webShopService.GetAllOptions();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
     
     [HttpPost]  

@@ -17,6 +17,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Overlay} from "@angular/cdk/overlay";
+import {MatInputModule} from "@angular/material/input";
 
 
 const route: Routes = [
@@ -53,7 +54,8 @@ const route: Routes = [
     RouterModule.forRoot(route),
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

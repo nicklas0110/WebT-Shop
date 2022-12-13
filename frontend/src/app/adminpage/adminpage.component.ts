@@ -7,18 +7,18 @@ import {HttpService} from "../../services/http.service";
   templateUrl: './adminpage.component.html',
   styleUrls: ['./adminpage.component.scss']
 })
-// @ts-ignore
+
 export class AdminpageComponent implements OnInit {
   formModel : Option = new Option(); // Sets formModel = to the Box class
   option: any;
-  options: Array<Option> = [];
+  options: any[] = [];
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
     const options = await this.http.getOption();
-    this.options = options.data;
-    this.option = options.data;
+    this.options = options;
+    this.option = options;
   }
 
   async createOption() {
@@ -32,12 +32,14 @@ export class AdminpageComponent implements OnInit {
     }
     const result = await this.http.createOption(dto);
     console.log(result);
+    this.options.push(result);
+
   }
 }
 
 class OptionDto {
   optionName: string = "";
-  optionGroupId: Number = 1;
+  optionGroupId: number = 1;
 }
 // Sets the id when it is needed
 class Option extends OptionDto{

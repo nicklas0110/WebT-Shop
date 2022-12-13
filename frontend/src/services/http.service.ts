@@ -4,7 +4,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {catchError} from "rxjs";
 
 export const customAxios = axios.create({
-  baseURL: 'http://localhost5111'
+  baseURL: 'https://localhost:7153'
 })
 
 @Injectable({
@@ -21,12 +21,12 @@ export class HttpService {
       return response
     },
     rejected => {
-      if (rejected.response.status>= 400 && rejected.response.status <500){
-        matSnackbar.open(rejected.response.data);
-      }else if (rejected.response.status>499){
-        this.matSnackbar.open("Something Went Wrong")
-      }
-      catchError(rejected)
+    //   if (rejected.response.status>= 400 && rejected.response.status <500){
+    //     matSnackbar.open(rejected.response.data);
+    //   }else if (rejected.response.status>499){
+    //     this.matSnackbar.open("Something Went Wrong")
+    //   }
+     catchError(rejected)
     })
   }
 

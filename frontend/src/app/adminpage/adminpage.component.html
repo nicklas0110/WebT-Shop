@@ -1,22 +1,26 @@
 <p>adminpage works!</p>
 <div>
-        <mat-form-field>
-            <input matInput [(ngModel)]="formModel.optionName" style="margin-left:100px; margin-top:100px">
+    <link rel="stylesheet" href="adminpage.component.scss">
+        <mat-form-field style="margin-left:100px; margin-top:100px">
+            <input matInput [(ngModel)]="formModel.optionName"placeholder="Option Name">
         </mat-form-field>
     <br>
-        <mat-form-field>
-             <input matInput [(ngModel)]="formModel.optionGroupId" style="margin-left:100px; margin-top:100px">
+        <mat-form-field style="margin-left:100px; margin-top:100px">
+             <input matInput type="number" [(ngModel)]="formModel.optionGroupId" placeholder="type of OptionGroup By ID">
         </mat-form-field>
     <br>
 
-    <button mat-raised-button (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
 
     <mat-card style="margin-top:30px"*ngFor="let o of options">
         <mat-card-title>
-            {{o.optionName}}
+            {{o.name}}
         </mat-card-title>
         <mat-card-subtitle>
-            {{o.optionGroupId}}
+            optionGroupId: {{o.optionGroupId}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            Id: {{o.id}}
         </mat-card-subtitle>
     </mat-card>
 
