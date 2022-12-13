@@ -1,6 +1,6 @@
 
 export class CategoryDto {
-    name: string = "";
+    categoryName: string = "";
 
 }
 // Sets the id when it is needed

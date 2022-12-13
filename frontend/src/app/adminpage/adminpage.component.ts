@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {HttpService} from "../../services/http.service";
 import {Option} from "./OptionDto";
+import {FormControl, Validators} from "@angular/forms";
 
 
 @Component({
@@ -13,20 +14,21 @@ export class AdminpageComponent implements OnInit {
   formModel : Option = new Option(); // Sets formModel = to the Box class
   option: any;
   options: any[] = [];
+  optionGroups: any[] = [];
+  optionGroupControl = new FormControl<number | null>(null, Validators.required);
+
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
+    const optionGroups = await this.http.getOptionGroups();
     const options = await this.http.getOption();
+    this.optionGroups = optionGroups;
     this.options = options;
     this.option = options;
   }
 
   async createOption() {
-    // @ts-ignore
-  /*  const result = await this.http.createOption(this.formModel as OptionDto);
-    this.options.push(result);
-    this.formModel = new Option();*/
     let dto = {
       name: this.formModel.name,
       optionGroupId: this.formModel.optionGroupId

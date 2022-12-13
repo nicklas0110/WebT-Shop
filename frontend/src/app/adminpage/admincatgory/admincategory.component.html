@@ -7,19 +7,19 @@
 <div>
     <link rel="stylesheet" href="admincategory.component.scss">
     <mat-form-field style="margin-left:100px; margin-top:100px">
-        <input matInput [(ngModel)]="formModel.name"placeholder="Category Name">
+        <input matInput [(ngModel)]="formModel.categoryName" placeholder="Category Name">
     </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.name === '' " (click)="createCategory()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button mat-raised-button [disabled]="formModel.categoryName === '' " (click)="createCategory()" style="margin-left:125px; margin-top:100px">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.name === ''" (click)="editCategory(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+    <button mat-raised-button [disabled]="formModel.categoryName === ''" (click)="editCategory(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
     <mat-card style="margin-top:30px"*ngFor="let c of categorys" class="option-card" (click)="selectCard(c)">
         <mat-card-title>
-            Name: {{c.name}}
+            Name: {{c.categoryName}}
         </mat-card-title>
         <mat-card-subtitle>
             Id: {{c.id}}

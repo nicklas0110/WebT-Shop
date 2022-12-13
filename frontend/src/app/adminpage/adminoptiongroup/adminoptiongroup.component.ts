@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../../services/http.service";
+import {OptionGroup} from "./OptionGroupDto";
 
 @Component({
   selector: 'app-adminoptiongroup',
@@ -54,12 +55,6 @@ export class AdminoptiongroupComponent implements OnInit {
   }
 }
 
-class OptionGroupDto {
-  optionName: string = "";
-}
-// Sets the id when it is needed
-class OptionGroup extends OptionGroupDto{
-  id: number = 0;
-}
+
 
 

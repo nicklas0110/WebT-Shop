@@ -26,7 +26,7 @@ export class AdmincategoryComponent implements OnInit {
       this.options.push(result);
       this.formModel = new Option();*/
     let dto : CategoryDto= {
-      name: this.formModel.name,
+      categoryName: this.formModel.categoryName,
     }
     const result = await this.http.createCategory(dto);
     console.log(result);
@@ -45,7 +45,7 @@ export class AdmincategoryComponent implements OnInit {
   async editCategory(id: any) {
     let dto : Category = {
       id : id,
-      name: this.formModel.name,
+      categoryName: this.formModel.categoryName,
     }
     const option : Category = await this.http.editCategory(id,dto);
     let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
