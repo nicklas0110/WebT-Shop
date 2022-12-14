@@ -1,3 +1,18 @@
-mat-form-field, button, h1{
-  margin-left: 860px;
+h1{
+  display: grid;
+  text-align:  center;
+}
+
+mat-form-field{
+  margin: auto;
+  width: 15%;
+  display: grid;
+  text-align:  center;
+}
+
+button{
+  margin-left: 42.5%;
+  width: 3%;
+  display: grid;
+  text-align:  center;
 }
