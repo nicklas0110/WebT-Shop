@@ -25,22 +25,30 @@
     </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.name === '' || formModel.price == 0 || categoryControl.invalid" (click)="createItem()">Create</button>
+    <button class="Buttons" mat-raised-button [disabled]="formModel.name === '' || formModel.price == 0 || categoryControl.invalid" (click)="createItem()">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.name === ''|| formModel.price == 0 || categoryControl.invalid" (click)="editItem(this.formModel.id)">Edit</button>
+    <button class="Buttons" mat-raised-button [disabled]="formModel.name === ''|| formModel.price == 0 || categoryControl.invalid" (click)="editItem(this.formModel.id)">Edit</button>
 
-    <button mat-raised-button (click)="clearForm()">Clear</button>
+    <button class="Buttons" mat-raised-button (click)="clearForm()">Clear</button>
 
     <mat-card *ngFor="let i of items" class="item-card" (click)="selectCard(i)">
         <mat-card-title>
            Name: {{i.name}}
         </mat-card-title>
+        <mat-card-subtitle>
+            Id: {{i.id}}
+        </mat-card-subtitle>
         <mat-card-subtitle >
             Price: {{i.price}}
         </mat-card-subtitle>
-            Categorty:
         <mat-card-subtitle>
-            Id: {{i.id}}
+            Categorty: {{getCategory(i.itemCategoryId).categoryName}}
+        </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="i.optionIds.length > 0">
+            Option(s): <span *ngFor="let oId of i.optionIds">{{getOption(oId).name}} </span>
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            <button class="Delete" mat-raised-button [disabled]="formModel.name === ''" (click)="deleteEditItem(this.formModel.id)">Delete</button>
         </mat-card-subtitle>
     </mat-card>
 

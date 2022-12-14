@@ -21,7 +21,7 @@ public class ItemController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<Item>> GetAllTItems()
+    public ActionResult<List<ItemDTO>> GetAllTItems()
     {
         return _webShopService.GetAllItems();
     }
@@ -47,11 +47,12 @@ public class ItemController : ControllerBase
     }
     [HttpPut]
     [Route("Edit/{id}")] //localhost:5111/box/8732648732
-    public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] Item item)
+    public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] ItemEditModel editModel)
     {
         try
         {
-            return Ok(_webShopService.UpdateItem(id, item));
+            var dto = new ItemDTO(editModel);
+            return Ok(_webShopService.UpdateItem(id, dto));
         }
         catch (KeyNotFoundException e)
         {
@@ -64,11 +65,11 @@ public class ItemController : ControllerBase
     }
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
-    public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemSingleEditModel item)
+    public ActionResult<Item> DeleteUpdateItem([FromRoute] int id)
     {
         try
         {
-            return Ok(_webShopService.DeleteUpdateItem(id, item));
+            return Ok(_webShopService.DeleteUpdateItem(id));
         }
         catch (KeyNotFoundException e)
         {

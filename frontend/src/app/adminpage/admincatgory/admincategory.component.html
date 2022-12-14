@@ -11,7 +11,7 @@
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
-    <mat-card style="margin-top:30px" *ngFor="let c of categorys" class="category-card" (click)="selectCard(c)">
+    <mat-card style="margin-top:30px" *ngFor="let c of categories" class="category-card" (click)="selectCard(c)">
         <mat-card-title>
             Name: {{c.categoryName}}
         </mat-card-title>

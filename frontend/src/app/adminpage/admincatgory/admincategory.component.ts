@@ -11,14 +11,14 @@ import {timestamp} from "rxjs";
 export class AdmincategoryComponent implements OnInit {
   formModel : Category = new Category(); // Sets formModel = to the Box class
   category: any;
-  categorys: Category[] = [];
+  categories: Category[] = [];
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
     const categorys : Category[] = await this.http.getCategorys();
     this.category = categorys;
-    this.categorys = categorys;
+    this.categories = categorys;
   }
 
   async createCategory() {
@@ -27,12 +27,13 @@ export class AdmincategoryComponent implements OnInit {
     }
     const result = await this.http.createCategory(dto);
     console.log(result);
-    this.categorys.push(result);
+    this.categories.push(result);
     this.clearForm();
   }
 
   selectCard(category: Category) {
     this.formModel = {...category}; // creates a copy of option and sets it to the form - done to prevent 2 way binding
+    console.log(category);
   }
   clearForm(){
     this.formModel = new Category(); // sets the info to the base value we have whits is blank for txt fields and id is 0
@@ -44,20 +45,25 @@ export class AdmincategoryComponent implements OnInit {
       categoryName: this.formModel.categoryName,
     }
     const category : Category = await this.http.editCategory(id,dto);
-    let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
+    let indexToEdit = this.categories.findIndex(c => c.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.categorys[indexToEdit] = category;
+    this.categories[indexToEdit] = category;
     this.clearForm();
   }
 
-  async deleteEditCategory(id: number) {
+  async deleteEditCategory(id: number ) {
+    var date = new Date();
+    var now_utc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(),
+        date.getUTCDate(), date.getUTCHours(),
+        date.getUTCMinutes(), date.getUTCSeconds());
     let dto = {
-      id : id
+      id : id,
+      deletedAt: date.toISOString()
     }
     const category : Category = await this.http.deleteEditCategory(id,dto);
-    let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
+    let indexToEdit = this.categories.findIndex(c => c.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.categorys[indexToEdit] = category;
+    delete this.categories[indexToEdit] ;
     this.clearForm();
   }
 }

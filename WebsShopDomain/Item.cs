@@ -25,4 +25,12 @@ public class Item : BaseClass
         Price = dtoPrice;
         ItemCategoryId = itemCategoryId;
     }
+
+    public Item(int id, string name, decimal price, int itemCategoryId)
+    {
+        Id = id;
+        Name = name;
+        Price = price;
+        ItemCategoryId = itemCategoryId;
+    }
 }

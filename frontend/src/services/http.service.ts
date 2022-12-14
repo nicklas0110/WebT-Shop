@@ -94,8 +94,13 @@ export class HttpService {
   }
 
 
-  async deleteEditCategory(id: number, dto: { id: number }) {
+  async deleteEditCategory(id: number, dto: { deletedAt: string; id: number }) {
     const httpResponse = await customAxios.put('Category/Delete/' + id,dto)
+    return httpResponse.data;
+  }
+
+  async deleteEditItem(id: number) {
+    const httpResponse = await customAxios.put('Item/Delete/' + id)
     return httpResponse.data;
   }
 }

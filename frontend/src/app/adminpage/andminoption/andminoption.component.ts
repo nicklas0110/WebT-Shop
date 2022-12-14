@@ -47,6 +47,7 @@ export class AndminoptionComponent implements OnInit {
 
   clearForm(){
     this.formModel = new Option(); // sets the info to the base value we have whits is blank for txt fields and id is 0
+    this.optionGroupControl.reset();
   }
 
   getOptionGroup(id: number){

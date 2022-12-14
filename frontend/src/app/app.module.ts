@@ -52,7 +52,7 @@ const route: Routes = [
   },
   {
     path: 'superadmin', component: SuperadminComponent
-  }
+  },
 
 ]
 

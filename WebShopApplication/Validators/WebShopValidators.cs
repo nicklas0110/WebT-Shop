@@ -4,23 +4,15 @@ using WebsShopDomain;
 
 namespace WebShopApplication.Validators;
 
-public class PostBoxValidator : AbstractValidator<ItemDTO>
+public class ItemDtoValidator : AbstractValidator<ItemDTO>
 {
-    public PostBoxValidator()
+    public ItemDtoValidator()
     {
         RuleFor(p => p.Name).NotEmpty();
         RuleFor(p => p.Price).NotEmpty();
+        RuleFor(i => i.ItemCategoryId).NotEmpty();
         //RuleFor(p => p.ItemCategoryId).NotEmpty();
     }
-}
-
-public class PostDeleteValidator : AbstractValidator<ItemSingleEditModel>
-{
-    public PostDeleteValidator()
-    {
-        RuleFor(p => p.DeletedAt).NotEmpty();
-    }
-    
 }
 
 

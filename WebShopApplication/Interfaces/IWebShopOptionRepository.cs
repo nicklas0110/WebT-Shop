@@ -9,6 +9,8 @@ public interface IWebShopOptionRepository
     
     List<Option> GetAllOptions();
     
+    List<Option> GetOptionsByIds(List<int> optionIds);
+    
     Option UpdateOption(Option option);
     
     Option DeleteOption(int id, OptionSingleEditModel option);

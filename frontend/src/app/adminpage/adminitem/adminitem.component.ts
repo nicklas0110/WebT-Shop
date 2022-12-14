@@ -48,9 +48,13 @@ export class AdminitemComponent implements OnInit {
 
   selectCard(item: Item) {
     this.formModel = {...item};
+    this.optionsControl.setValue(item.optionIds);
+    this.categoryControl.setValue(item.itemCategoryId);
   }
   clearForm(){
     this.formModel = new Item(); // sets the info to the base value we have whits is blank for txt fields and id is 0
+    this.optionsControl.reset();
+    this.categoryControl.reset();
   }
 
   async editItem(id: any) {
@@ -67,6 +71,23 @@ export class AdminitemComponent implements OnInit {
     this.items[indexToEdit] = option;
     this.clearForm();
   }
+
+  async deleteEditItem(id: number) {
+    const item : Item = await this.http.deleteEditItem(id);
+    let indexToEdit = this.items.findIndex(i => i.id == id); // Sets the id of the box class for the url
+    console.log(indexToEdit);
+    if(indexToEdit > -1) this.items.splice(indexToEdit, 1);
+    this.clearForm();
+  }
+
+  getCategory(id : number) : Category {
+    return this.categories.find(c => c.id == id);
+  }
+
+  getOption(id : number) : Option {
+    return this.options.find(c => c.id == id);
+  }
+
 }
 
 

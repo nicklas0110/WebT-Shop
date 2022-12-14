@@ -1,4 +1,4 @@
-button{
+.Buttons{
   border: 2px solid powderblue;
   padding: 20px;
   color: blueviolet;
@@ -7,7 +7,18 @@ button{
   margin-top:100px;
 }
 
-button:hover{
+.Buttons:hover{
+  background: lightblue;
+}
+.Delete{
+  border: 2px solid powderblue;
+  padding: 20px;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+
+.Delete:hover{
   background: lightblue;
 }
 

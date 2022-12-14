@@ -25,6 +25,11 @@ public class WebShopOptionRepository : IWebShopOptionRepository
         return  _context.OptionTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
+    public List<Option> GetOptionsByIds(List<int> optionIds)
+    {
+        return _context.OptionTable.Where(o => optionIds.Contains(o.Id)).ToList();
+    }
+
     public Option UpdateOption(Option option)
     {
         _context.OptionTable.Update(option);
