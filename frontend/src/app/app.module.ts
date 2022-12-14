@@ -18,6 +18,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Overlay} from "@angular/cdk/overlay";
 import {MatInputModule} from "@angular/material/input";
+import {AuthguardService} from "../services/authguard.service";
 
 
 const route: Routes = [
@@ -28,10 +29,10 @@ const route: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'adminpage', component: AdminpageComponent
+    path: 'adminpage', component: AdminpageComponent, canActivate: [AuthguardService]
   },
   {
-    path: 'superadmin', component: SuperadminComponent
+    path: 'superadmin', component: SuperadminComponent, canActivate: [AuthguardService]
   }
 
 ]
