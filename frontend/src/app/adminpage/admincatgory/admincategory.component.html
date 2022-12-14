@@ -18,6 +18,9 @@
         <mat-card-subtitle>
             Id: {{c.id}}
         </mat-card-subtitle>
+        <mat-card-subtitle>
+            <button class="Delete" mat-raised-button [disabled]="formModel.categoryName === ''" (click)="deleteEditCategory(this.formModel.id)">Delete</button>
+        </mat-card-subtitle>
     </mat-card>
 
 </div>

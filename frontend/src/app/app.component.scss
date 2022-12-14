@@ -3,6 +3,9 @@ button{
   padding: 5px;
   color: blueviolet;
 }
+button:hover{
+  background: lightblue;
+}
 
 mat-toolbar{
   a {

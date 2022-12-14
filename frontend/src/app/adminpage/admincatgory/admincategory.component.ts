@@ -49,6 +49,17 @@ export class AdmincategoryComponent implements OnInit {
     this.categorys[indexToEdit] = category;
     this.clearForm();
   }
+
+  async deleteEditCategory(id: number) {
+    let dto = {
+      id : id
+    }
+    const category : Category = await this.http.deleteEditCategory(id,dto);
+    let indexToEdit = this.categorys.findIndex(c => c.id == id); // Sets the id of the box class for the url
+    console.log(indexToEdit);
+    this.categorys[indexToEdit] = category;
+    this.clearForm();
+  }
 }
 
 
