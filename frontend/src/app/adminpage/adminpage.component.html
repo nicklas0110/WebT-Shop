@@ -1,8 +1,20 @@
-<h1 style="margin-left: 900px; margin-top: 20px"> Chose </h1>
-<a href="adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>
-<a href="adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>
-<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
-<a href="adminoption"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option</button></a>
+<div class="admin-header">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle  routerLink="/adminpage/adminitem">Item</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/adminoptiongroup">Option group</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/admincategory">Category</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/adminoption">Option</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+
+<!--<a routerLink="/adminpage/adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>-->
+<!--<a routerLink="/adminpage/adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>-->
+<!--<a routerLink="/adminpage/admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>-->
+<!--<a routerLink="/adminpage/adminoption"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option</button></a>-->
 
 
 <link rel="stylesheet" href="adminpage.component.scss">
+
+<router-outlet>
+
+</router-outlet>

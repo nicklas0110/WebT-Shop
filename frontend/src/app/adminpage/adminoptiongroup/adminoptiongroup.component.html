@@ -1,25 +1,18 @@
-<h1 style="margin-left: 900px; margin-top: 20px"> Option Group </h1>
-
-<a href="adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>
-<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
-<a href="adminoption"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option</button></a>
-
-
-<div>
+<div class="">
     <link rel="stylesheet" href="adminoptiongroup.component.scss">
 
     <mat-form-field style="margin-left:100px; margin-top:100px">
-        <input matInput [(ngModel)]="formModel.optionName"placeholder="OptionGroup Name">
+        <input matInput [(ngModel)]="formModel.name"placeholder="OptionGroup Name">
     </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOptionGroup()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button mat-raised-button [disabled]="formModel.name === ''" (click)="createOptionGroup()" style="margin-left:125px; margin-top:100px">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="editOptionGroup(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+    <button mat-raised-button [disabled]="formModel.name === ''" (click)="editOptionGroup(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
-    <mat-card *ngFor="let og of optiongroups" class="option-card" (click)="selectCard(og)">
+    <mat-card *ngFor="let og of optiongroups" class="optionGroup-card" (click)="selectCard(og)">
         <mat-card-title>
             {{og.name}}
         </mat-card-title>

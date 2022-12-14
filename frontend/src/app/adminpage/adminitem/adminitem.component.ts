@@ -61,7 +61,7 @@ export class AdminitemComponent implements OnInit {
       itemCategoryId: this.formModel.itemCategoryId,
       optionIds: this.formModel.optionIds
     }
-    const option = await this.http.editOptionGroup(id,dto);
+    const option = await this.http.editItem(id,dto);
     let indexToEdit = this.items.findIndex(i => i.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
     this.items[indexToEdit] = option;

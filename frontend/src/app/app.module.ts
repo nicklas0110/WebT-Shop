@@ -23,6 +23,7 @@ import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminopt
 import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.component';
 import {MatSelectModule} from "@angular/material/select";
 import { AndminoptionComponent } from './adminpage/andminoption/andminoption.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 
 const route: Routes = [
@@ -34,18 +35,20 @@ const route: Routes = [
   },
   {
     path: 'adminpage', component: AdminpageComponent,
-  },
-  {
-    path: 'adminoption', component: AndminoptionComponent,
-  },
-  {
-    path: 'admincategory', component: AdmincategoryComponent,
-  },
-  {
-    path: 'adminitem', component: AdminitemComponent,
-  },
-  {
-    path: 'adminoptiongroup', component: AdminoptiongroupComponent,
+    children: [
+      {
+        path: 'adminoption', component: AndminoptionComponent,
+      },
+      {
+        path: 'admincategory', component: AdmincategoryComponent,
+      },
+      {
+        path: 'adminitem', component: AdminitemComponent,
+      },
+      {
+        path: 'adminoptiongroup', component: AdminoptiongroupComponent,
+      },
+    ]
   },
   {
     path: 'superadmin', component: SuperadminComponent
@@ -78,7 +81,8 @@ const route: Routes = [
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonToggleModule
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

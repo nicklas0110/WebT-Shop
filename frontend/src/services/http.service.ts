@@ -44,7 +44,7 @@ export class HttpService {
 
   // puts to the backend using an id and the dto class whits also contain an id and edits
   async editOption(id : any, dto: { name: string; optionGroupId: Number}) {
-    const httpResponse = await customAxios.put('option' + id, dto)
+    const httpResponse = await customAxios.put('option/Edit/' + id, dto)
     return httpResponse.data;
   }
 
@@ -59,7 +59,7 @@ export class HttpService {
   }
 
   async editOptionGroup(id: any, dto: { name: string }) {
-    const httpResponse = await customAxios.put('Category/Edit/' + id,dto)
+    const httpResponse = await customAxios.put('OptionGroup/Edit/' + id,dto)
     return httpResponse.data;
   }
 
@@ -70,6 +70,11 @@ export class HttpService {
   async createItem(dto: ItemDto) {
     const httpResponse = await customAxios.post('item',dto)
     return httpResponse.data
+  }
+
+  async editItem(id: any, dto: {name: string; price: number; itemCategoryId: number; optionIds: number[];} ) {
+    const httpResponse = await customAxios.put('Item/Edit/' + id,dto)
+    return httpResponse.data;
   }
 
   async getCategorys() {
@@ -84,8 +89,9 @@ export class HttpService {
   }
 
   async editCategory(id: any, dto: { categoryName: string }) {
-    const httpResponse = await customAxios.put('OptionGroup/Edit/' + id,dto)
+    const httpResponse = await customAxios.put('Category/Edit/' + id,dto)
     return httpResponse.data;
   }
+
 
 }

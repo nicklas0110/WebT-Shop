@@ -39,7 +39,6 @@ export class AdmincategoryComponent implements OnInit {
   }
 
   async editCategory(id: any) {
-    var timestamp = new Date().getTime()/1000;
     let dto : Category = {
       id : id,
       categoryName: this.formModel.categoryName,

@@ -1,9 +1,3 @@
-<h1 style="margin-left: 900px; margin-top: 20px"> Item </h1>
-
-<a href="adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>
-<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
-<a href="adminoption"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option</button></a>
-
 <link rel="stylesheet" href="adminitem.component.scss">
 
 <div>
@@ -37,14 +31,14 @@
 
     <button mat-raised-button (click)="clearForm()">Clear</button>
 
-    <mat-card *ngFor="let i of items let c of categories" class="option-card" (click)="selectCard(i)">
+    <mat-card *ngFor="let i of items" class="item-card" (click)="selectCard(i)">
         <mat-card-title>
            Name: {{i.name}}
         </mat-card-title>
         <mat-card-subtitle >
             Price: {{i.price}}
         </mat-card-subtitle>
-            Categorty: {{c.categoryName}}
+            Categorty:
         <mat-card-subtitle>
             Id: {{i.id}}
         </mat-card-subtitle>

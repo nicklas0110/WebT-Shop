@@ -1,8 +1,3 @@
-<h1 style="margin-left: 900px; margin-top: 20px"> Option </h1>
-<a href="adminitem"><button mat-raised-button style="margin-left:100px; margin-top:50px">Item</button></a>
-<a href="adminoptiongroup"><button mat-raised-button style="margin-left:100px; margin-top:50px">Option Group</button></a>
-<a href="admincategory"><button mat-raised-button style="margin-left:100px; margin-top:50px">Category</button></a>
-
 <div>
     <link rel="stylesheet" href="andminoption.component.scss">
 
@@ -28,15 +23,15 @@
 
     <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
 
-    <mat-card style="margin-top:30px"*ngFor="let o of options let og of optionGroups" class="option-card" (click)="selectCard(o)">
+    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
         <mat-card-title>
-            {{o.name}}
+            Option: {{o.name}}
         </mat-card-title>
         <mat-card-subtitle>
-            Option Groups: {{og.name}}
+            Id: {{o.id}}
         </mat-card-subtitle>
         <mat-card-subtitle>
-            Id: {{o.id}}
+            Option Groups: {{getOptionGroup(o.optionGroupId).name}}
         </mat-card-subtitle>
     </mat-card>
 

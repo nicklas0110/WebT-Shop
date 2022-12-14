@@ -1,5 +1,5 @@
 export class OptionGroupDto {
-    optionName: string = "";
+    name: string = "";
 }
 // Sets the id when it is needed
 export class OptionGroup extends OptionGroupDto{

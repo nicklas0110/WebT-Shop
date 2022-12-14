@@ -23,7 +23,7 @@ export class AdminoptiongroupComponent implements OnInit {
 
   async createOptionGroup() {
     let dto = {
-      name: this.formModel.optionName,
+      name: this.formModel.name,
     }
     const result = await this.http.createOptionGroup(dto);
     console.log(result);
@@ -40,7 +40,8 @@ export class AdminoptiongroupComponent implements OnInit {
 
   async editOptionGroup(id: any) {
     let dto = {
-      name: this.formModel.optionName,
+      id : id,
+      name: this.formModel.name,
     }
     const option = await this.http.editOptionGroup(id,dto);
     let indexToEdit = this.optiongroups.findIndex(og => og.id == id); // Sets the id of the box class for the url

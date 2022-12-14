@@ -9,15 +9,32 @@ button{
   background: blue;
 }
 
-.option-card {
+.category-card {
   margin-left: 50px;
   cursor: pointer;
 }
 
-.option-card:hover {
+.category-card:hover {
   background: lightgrey;
 }
 mat-form-field{
   margin-left:100px;
   margin-top:100px;
+}
+
+.admin-header {
+  width: 100%;
+  display: flex;
+  mat-button-toggle-group {
+    width: 100%;
+    display: flex;
+    mat-button-toggle {
+      flex-grow: 1;
+    }
+  }
+}
+
+.content-wrapper{
+  padding-left: 50px;
+  padding-right: 50px;
 }

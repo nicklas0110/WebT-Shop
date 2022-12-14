@@ -3,6 +3,7 @@ import {Option, OptionDto} from "./OptionDto";
 import {FormControl, Validators} from "@angular/forms";
 import {HttpService} from "../../../services/http.service";
 import {ItemDto} from "../adminitem/ItemDto";
+import {Category} from "../admincatgory/CategoryDto";
 
 @Component({
   selector: 'app-andminoption',
@@ -41,15 +42,22 @@ export class AndminoptionComponent implements OnInit {
 
   selectCard(option: Option) {
     this.formModel = {...option};
+    this.optionGroupControl.setValue(this.formModel.optionGroupId);
   }
+
   clearForm(){
     this.formModel = new Option(); // sets the info to the base value we have whits is blank for txt fields and id is 0
   }
 
+  getOptionGroup(id: number){
+    return this.optionGroups.find(og => og.id == id);
+  }
+
   async editOption(id: any) {
     let dto = {
+      id : id,
       name: this.formModel.name,
-      optionGroupId: this.formModel.optionGroupId
+      optionGroupId: this.optionGroupControl.getRawValue() ?? 0
     }
     const option = await this.http.editOption(id,dto);
     let indexToEdit = this.options.findIndex(o => o.id == id); // Sets the id of the box class for the url
