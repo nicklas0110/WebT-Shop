@@ -83,7 +83,7 @@ export class HttpService {
   }
 
 
-  async createCategory(dto: CategoryDto) {
+  async createCategory(dto: { categoryName: string }) {
     const httpResponse = await customAxios.post('category',dto)
     return httpResponse.data;
   }
