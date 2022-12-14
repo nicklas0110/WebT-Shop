@@ -8,7 +8,7 @@ import {HttpService} from "../../services/http.service";
 })
 
 export class LoginComponent implements OnInit {
-    email: any;
+  email: any;
   password: any;
 
   constructor(private http: HttpService) { }

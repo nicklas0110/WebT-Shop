@@ -49,8 +49,8 @@ export class HttpService {
     return httpResponse.data;
   }
 
-    async login(dto: any) {
-      const httpResult = await customAxios.post('auth/controller/login', dto);
+    async login(dto:{email: string; password: string;}) {
+      const httpResult = await customAxios.post('controller/login/', dto);
       return httpResult.data;
     }
 }
