@@ -13,5 +13,5 @@ public interface IWebShopOptionRepository
     
     Option UpdateOption(Option option);
     
-    Option DeleteOption(int id, OptionSingleEditModel option);
+    Option DeleteOption(int id);
 }

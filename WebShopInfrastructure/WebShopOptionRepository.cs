@@ -37,13 +37,13 @@ public class WebShopOptionRepository : IWebShopOptionRepository
         return option;
     }
 
-    public Option DeleteOption(int id, OptionSingleEditModel option)
+    public Option DeleteOption(int id)
     {
-        var d = _context.OptionTable.Find(id);
-        d.DeletedAt = option.DeletedAt;
-        _context.OptionTable.Update(d);
+        var o = _context.OptionTable.Find(id);
+        o.DeletedAt = DateTime.UtcNow;
+        _context.OptionTable.Update(o);
         _context.SaveChanges();
-        return d;
+        return o;
     }
     
 

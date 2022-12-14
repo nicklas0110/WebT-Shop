@@ -211,7 +211,7 @@ public class WebShopService : IWebShopService {
     
     public object? DeleteUpdateItem(int id)
     {
-        return _itemRepository.DeleteUpdateItem(id);;
+        return _itemRepository.DeleteUpdateItem(id);
     }
 
     
@@ -240,15 +240,9 @@ public class WebShopService : IWebShopService {
         return _categoryRepository.UpdateCategory(category);
     }
 
-    public Category DeleteCategory(int id, CategorySingleEditModel dto)
+    public Category DeleteCategory(int id)
     {
-        if (id != dto.Id)
-            throw new ValidationException("ID in body and route are different");
-        var validation = _categoryDeleteValidators.Validate(dto);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var category = new CategorySingleEditModel{DeletedAt = DateTime.Now};
-        return _categoryRepository.DeleteCategory(id ,category);;
+        return _categoryRepository.DeleteCategory(id);
     }
 
     
@@ -276,15 +270,9 @@ public class WebShopService : IWebShopService {
         return _optionRepository.UpdateOption(option);
     }
 
-    public Option DeleteOption(int id,OptionSingleEditModel dto)
+    public Option DeleteOption(int id)
     {
-        if (id != dto.Id)
-            throw new ValidationException("ID in body and route are different");
-        var validation = _optionDeleteValidators.Validate(dto);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var option = new OptionSingleEditModel{DeletedAt = DateTime.Now};
-        return _optionRepository.DeleteOption(id ,option);;
+        return _optionRepository.DeleteOption(id);
     }
 
     public OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto)

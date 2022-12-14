@@ -17,12 +17,12 @@ public interface IWebShopService
     Category CreateNewCategory(ItemCategoryDTO dto);
     List<Category> GetAllCategories();
     Category UpdateCategory(int id, Category category);
-    Category DeleteCategory(int id, CategorySingleEditModel category);
+    Category DeleteCategory(int id);
 
     Option CreateNewOption(OptionDTOs optionDto);
     List<Option> GetAllOptions();
     Option UpdateOption(int id, Option option);
-    Option DeleteOption(int id,OptionSingleEditModel option);
+    Option DeleteOption(int id);
     
     OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto);
     List<OptionGroup> GetAllOptionGroups();
