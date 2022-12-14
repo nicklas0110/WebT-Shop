@@ -1,10 +1,13 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
 namespace WebShopAPI.Controllers;
+
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class ItemController : ControllerBase
@@ -26,6 +29,7 @@ public class ItemController : ControllerBase
         return _webShopService.GetAllItems();
     }
     
+    [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("Item")]
     public ActionResult<Item> CreateNewItem(ItemPostModel postModel)
@@ -45,6 +49,8 @@ public class ItemController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> UpdateItem([FromRoute] int id, [FromBody] Item item)
@@ -62,6 +68,8 @@ public class ItemController : ControllerBase
             return StatusCode(500, e.ToString());
         }
     }
+    
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> DeleteUpdateItem([FromRoute] int id, [FromBody] ItemSingleEditModel item)

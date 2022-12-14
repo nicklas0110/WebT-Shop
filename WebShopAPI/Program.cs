@@ -72,8 +72,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
             ("D6ECEF6F47921E86EAB135CA49744")))
     };
-});   
- 
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", (policy) => { policy.RequireRole("Admin");});
+    options.AddPolicy("SuperAdminPolicy", (policy) => { policy.RequireRole("SuperAdmin");});
+}); 
+
 builder.Services.AddCors();
 
 var app = builder.Build();
