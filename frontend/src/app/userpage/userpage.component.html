@@ -1,6 +1,13 @@
 <div>
-  <link rel="stylesheet" href="userpage.component.scss">
-
-
-
+  <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
+    <mat-card-title>
+      {{o.name}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      optionGroupId: {{o.optionGroupId}}
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      Id: {{o.id}}
+    </mat-card-subtitle>
+  </mat-card>
 </div>
