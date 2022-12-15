@@ -6,16 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/admincatgory/admincategory.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminoptiongroup/adminoptiongroup.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/andminoption/andminoption.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/http.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +172,7 @@
       <workItem from="1670854261695" duration="4094000" />
       <workItem from="1670922704272" duration="3651000" />
       <workItem from="1671016018151" duration="2990000" />
-      <workItem from="1671096002525" duration="5442000" />
+      <workItem from="1671096002525" duration="7303000" />
     </task>
     <servers />
   </component>

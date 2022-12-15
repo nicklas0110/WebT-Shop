@@ -49,6 +49,8 @@ export class AdminoptiongroupComponent implements OnInit {
     console.log(indexToEdit);
     if(indexToEdit > -1) this.optiongroups.splice(indexToEdit, 1);
     this.clearForm();
+
+
   }
 
   async deleteEditOptionGroup(id: number) {
