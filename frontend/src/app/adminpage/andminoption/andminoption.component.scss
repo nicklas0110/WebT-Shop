@@ -8,6 +8,17 @@ button{
 .button:hover{
   background: blue;
 }
+.Delete{
+  border: 2px solid powderblue;
+  padding: 20px;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+
+.Delete:hover{
+  background: lightblue;
+}
 
 .option-card {
   margin-left: 50px;

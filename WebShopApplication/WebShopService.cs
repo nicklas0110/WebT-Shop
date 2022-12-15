@@ -149,9 +149,10 @@ public class WebShopService : IWebShopService {
         // create option groups
         var optionGroups = new List<OptionGroup>()
         {
-            new OptionGroup("Farver"),
-            new OptionGroup("Størelse"),
-            new OptionGroup("Print")
+            new OptionGroup("Color"),
+            new OptionGroup("Size"),
+            new OptionGroup("Print"),
+            new OptionGroup("Material")
         };
         foreach (var optionGroup in optionGroups)
         {
@@ -298,5 +299,10 @@ public class WebShopService : IWebShopService {
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
         return _optionGroupRepository.UpdateOptionGroups(optionGroup);
+    }
+
+    public OptionGroup DeleteOptionGroups(int id)
+    {
+        return _optionGroupRepository.DeleteOptionGroups(id);
     }
 }

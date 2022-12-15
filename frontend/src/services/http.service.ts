@@ -32,6 +32,8 @@ export class HttpService {
     })
   }
 
+
+
   async getOption(){
     const httpResponse = await customAxios.get('option');
     return httpResponse.data;
@@ -48,6 +50,13 @@ export class HttpService {
     return httpResponse.data;
   }
 
+  async deleteEditOption(id: number) {
+    const httpResponse = await customAxios.put('Option/Delete/' + id)
+    return httpResponse.data;
+  }
+
+
+
   async getOptionGroups() {
     const httpResponse = await customAxios.get('optiongroup');
     return httpResponse.data;
@@ -63,6 +72,13 @@ export class HttpService {
     return httpResponse.data;
   }
 
+  async deleteEditOptionGroup(id: number) {
+    const httpResponse = await customAxios.put('OptionGroup/Delete/' + id)
+    return httpResponse.data;
+  }
+
+
+
   async getItems() {
     const httpResponse = await customAxios.get('item');
     return httpResponse.data;
@@ -77,11 +93,17 @@ export class HttpService {
     return httpResponse.data;
   }
 
+  async deleteEditItem(id: number) {
+    const httpResponse = await customAxios.put('Item/Delete/' + id)
+    return httpResponse.data;
+  }
+
+
+
   async getCategorys() {
     const httpResponse = await customAxios.get('category');
     return httpResponse.data;
   }
-
 
   async createCategory(dto: { categoryName: string }) {
     const httpResponse = await customAxios.post('category',dto)
@@ -93,14 +115,14 @@ export class HttpService {
     return httpResponse.data;
   }
 
-
   async deleteEditCategory(id: number, dto: { deletedAt: string; id: number }) {
     const httpResponse = await customAxios.put('Category/Delete/' + id,dto)
     return httpResponse.data;
   }
 
-  async deleteEditItem(id: number) {
-    const httpResponse = await customAxios.put('Item/Delete/' + id)
-    return httpResponse.data;
-  }
+
+
+
+
+
 }

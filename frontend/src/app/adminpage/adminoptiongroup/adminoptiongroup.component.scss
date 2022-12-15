@@ -9,6 +9,18 @@ button:hover{
   background: lightblue;
 }
 
+.Delete{
+  border: 2px solid powderblue;
+  padding: 20px;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+
+.Delete:hover{
+  background: lightblue;
+}
+
 .optionGroup-card {
   margin-left: 50px;
   cursor: pointer;

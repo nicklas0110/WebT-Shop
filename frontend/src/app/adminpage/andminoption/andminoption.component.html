@@ -33,6 +33,9 @@
         <mat-card-subtitle>
             Option Groups: {{getOptionGroup(o.optionGroupId).name}}
         </mat-card-subtitle>
+        <mat-card-subtitle>
+            <button class="Delete" mat-raised-button [disabled]="formModel.name === ''" (click)="deleteEditOption(this.formModel.id)">Delete</button>
+        </mat-card-subtitle>
     </mat-card>
 
 </div>

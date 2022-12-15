@@ -4,6 +4,7 @@ import {FormControl, Validators} from "@angular/forms";
 import {HttpService} from "../../../services/http.service";
 import {ItemDto} from "../adminitem/ItemDto";
 import {Category} from "../admincatgory/CategoryDto";
+import {OptionGroup} from "../adminoptiongroup/OptionGroupDto";
 
 @Component({
   selector: 'app-andminoption',
@@ -63,7 +64,15 @@ export class AndminoptionComponent implements OnInit {
     const option = await this.http.editOption(id,dto);
     let indexToEdit = this.options.findIndex(o => o.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.options[indexToEdit] = option;
+    if(indexToEdit > -1) this.options.splice(indexToEdit, 1);
+    this.clearForm();
+  }
+
+  async deleteEditOption(id: number) {
+    const option : Option = await this.http.deleteEditOption(id);
+    let indexToEdit = this.options.findIndex(i => i.id == id); // Sets the id of the box class for the url
+    console.log(indexToEdit);
+    if(indexToEdit > -1) this.options.splice(indexToEdit, 1);
     this.clearForm();
   }
 }

@@ -66,11 +66,11 @@ public class CategoryController : ControllerBase
     
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
-    public ActionResult<Item> DeleteUpdateCategory([FromRoute] int id, [FromBody] CategorySingleEditModel category)
+    public ActionResult<Item> DeleteUpdateCategory([FromRoute] int id)
     {
         try
         {
-            return Ok(_webShopService.DeleteCategory(id, category));
+            return Ok(_webShopService.DeleteCategory(id));
         }
         catch (KeyNotFoundException e)
         {

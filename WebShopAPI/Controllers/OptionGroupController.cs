@@ -64,4 +64,24 @@ public class OptionGroupController : ControllerBase
             return StatusCode(500, e.ToString());
         }
     }
+    
+    
+     
+    [HttpPut]
+    [Route("Delete/{id}")] //localhost:5111/box/8732648732
+    public ActionResult<Item> DeleteUpdateOptionGroups([FromRoute] int id)
+    {
+        try
+        {
+            return Ok(_webShopService.DeleteOptionGroups(id));
+        }
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at ID " + id);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+    }
 }

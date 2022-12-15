@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../../services/http.service";
 import {OptionGroup} from "./OptionGroupDto";
+import {Item} from "../adminitem/ItemDto";
 
 @Component({
   selector: 'app-adminoptiongroup',
@@ -46,7 +47,15 @@ export class AdminoptiongroupComponent implements OnInit {
     const option = await this.http.editOptionGroup(id,dto);
     let indexToEdit = this.optiongroups.findIndex(og => og.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.optiongroups[indexToEdit] = option;
+    if(indexToEdit > -1) this.optiongroups.splice(indexToEdit, 1);
+    this.clearForm();
+  }
+
+  async deleteEditOptionGroup(id: number) {
+    const optionGroup : OptionGroup = await this.http.deleteEditOptionGroup(id);
+    let indexToEdit = this.optiongroups.findIndex(i => i.id == id); // Sets the id of the box class for the url
+    console.log(indexToEdit);
+    if(indexToEdit > -1) this.optiongroups.splice(indexToEdit, 1);
     this.clearForm();
   }
 }
