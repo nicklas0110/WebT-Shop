@@ -169,6 +169,7 @@ public class WebShopService : IWebShopService {
             new Option("M", 2),
             new Option("L", 2),
             new Option("XL", 2),
+            new Option("XXL", 2),
             new Option("Ja", 3),
             new Option("Nej", 3)
         };
