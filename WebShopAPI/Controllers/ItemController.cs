@@ -28,7 +28,7 @@ public class ItemController : ControllerBase
     
     [HttpPost]  
     [Route("")]
-    public ActionResult<Item> CreateNewItem(ItemPostModel postModel)
+    public ActionResult<ItemDTO> CreateNewItem(ItemPostModel postModel)
     {
         try
         {

@@ -6,7 +6,7 @@ namespace WebShopApplication.Interfaces;
 public interface IWebShopService
 {
     List<ItemDTO> GetAllItems();
-    Item CreateNewItem(ItemDTO dto);
+    ItemDTO CreateNewItem(ItemDTO dto);
     Item GetItemById(int id);
     void RebuildDB();
     void SeedData();

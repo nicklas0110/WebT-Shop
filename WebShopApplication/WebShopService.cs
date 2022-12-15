@@ -108,7 +108,7 @@ public class WebShopService : IWebShopService {
         return itemDtos;
     }
 
-    public Item CreateNewItem(ItemDTO dto)
+    public ItemDTO CreateNewItem(ItemDTO dto)
     {
         var validation = _itemDtoValidator.Validate(dto);
         if (!validation.IsValid)
@@ -119,7 +119,7 @@ public class WebShopService : IWebShopService {
         {
             AddOptionToItem(dto.OptionIds, item.Id);
         }
-        return item;
+        return new ItemDTO(item, dto.OptionIds);
     }
 
     private void AddOptionToItem(List<int> optionIds, int itemId)

@@ -62,13 +62,12 @@ export class AdminitemComponent implements OnInit {
       id: id,
       name: this.formModel.name,
       price: this.formModel.price,
-      itemCategoryId: this.formModel.itemCategoryId,
-      optionIds: this.formModel.optionIds
+      itemCategoryId: this.categoryControl.getRawValue() || 0,
+      optionIds: this.optionsControl.getRawValue() || []
     }
-    const option = await this.http.editItem(id,dto);
+    const item = await this.http.editItem(id,dto);
     let indexToEdit = this.items.findIndex(i => i.id == id); // Sets the id of the box class for the url
-    console.log(indexToEdit);
-    if(indexToEdit > -1) this.items.splice(indexToEdit, 1);
+    this.items[indexToEdit] = item;
     this.clearForm();
   }
 
