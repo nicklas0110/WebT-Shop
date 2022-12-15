@@ -32,7 +32,7 @@ public class OptionGroupController : ControllerBase
     {
         try
         {
-            var dto = new OptionGroupDTOs(postModel);
+            var dto = new OptionGroupDTO(postModel);
             var result = _webShopService.CreateNewOptionGroup(dto);
             return Created("", result);
         }
@@ -83,5 +83,24 @@ public class OptionGroupController : ControllerBase
         {
             return StatusCode(500, e.ToString());
         }
+    }
+    
+    [HttpGet]
+    [Route("with-options")]
+    public ActionResult<List<OptionGroupDTO>> GetAllOptionGroupsWithOptions()
+    {
+        var returnList = new List<OptionGroupDTO>();
+        var optionGroups = _webShopService.GetAllOptionGroups();
+        var options = _webShopService.GetAllOptions();
+
+        foreach (var optionGroup in optionGroups)
+        {
+            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
+            var optionGroupDto = new OptionGroupDTO()
+                { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
+            returnList.Add(optionGroupDto);
+        }
+
+        return returnList.Where(o => o.Options.Any()).ToList();
     }
 }

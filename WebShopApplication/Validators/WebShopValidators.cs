@@ -50,7 +50,7 @@ public class CategoryValidators : AbstractValidator<Category>
     }
 }
 
-public class PostOptionValidatorOption : AbstractValidator<OptionDTOs>
+public class PostOptionValidatorOption : AbstractValidator<OptionDTO>
 {
     public PostOptionValidatorOption()
     {
@@ -82,7 +82,7 @@ public class WebShopValidatorsOptionGroup : AbstractValidator<OptionGroup>
     
     
 }
-public class PostOptionGroupValidatorOption : AbstractValidator<OptionGroupDTOs>
+public class PostOptionGroupValidatorOption : AbstractValidator<OptionGroupDTO>
 {
     public PostOptionGroupValidatorOption()
     {

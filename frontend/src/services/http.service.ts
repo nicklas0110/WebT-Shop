@@ -88,6 +88,11 @@ export class HttpService {
     return httpResponse.data;
   }
 
+  async getOptionGroupsWithOptions() {
+    const httpResponse = await customAxios.get('OptionGroup/with-options/')
+    return httpResponse.data;
+  }
+
   async deleteEditOptionGroup(id: number) {
     const httpResponse = await customAxios.put('OptionGroup/Delete/' + id)
     return httpResponse.data;
@@ -96,11 +101,11 @@ export class HttpService {
 
 
   async getItems() {
-    const httpResponse = await customAxios.get('item');
+    const httpResponse = await customAxios.get('Item');
     return httpResponse.data;
   }
   async createItem(dto: ItemDto) {
-    const httpResponse = await customAxios.post('item',dto)
+    const httpResponse = await customAxios.post('Item',dto)
     return httpResponse.data
   }
 

@@ -33,8 +33,8 @@ var mapper = new MapperConfiguration(configuration =>
 {
     configuration.CreateMap<ItemDTO, Item>();
     configuration.CreateMap<ItemCategoryDTO, Category>();
-    configuration.CreateMap<OptionDTOs, Option>();
-    configuration.CreateMap<OptionGroupDTOs, OptionGroup>();
+    configuration.CreateMap<OptionDTO, Option>();
+    configuration.CreateMap<OptionGroupDTO, OptionGroup>();
 }).CreateMapper();
 
 builder.Services.AddSingleton(mapper);

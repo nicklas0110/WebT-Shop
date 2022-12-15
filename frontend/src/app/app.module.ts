@@ -40,7 +40,7 @@ import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminopt
 
 const route: Routes = [
   {
-    path: 'userpage', component: UserpageComponent,
+    path: '', component: UserpageComponent,
     children: [
       {
         path: 'page1', component: Page1Component,
@@ -60,7 +60,10 @@ const route: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'adminpage', component: AdminpageComponent, canActivate: [AuthguardService],
+    path: 'superadmin', component: SuperadminComponent
+  },
+  {
+    path: 'adminpage', component: AdminpageComponent,
     children: [
       {
         path: 'adminoption', component: AndminoptionComponent,
@@ -76,9 +79,7 @@ const route: Routes = [
       },
     ]
   },
-  {
-    path: 'superadmin', component: SuperadminComponent
-  },
+
 
 ]
 

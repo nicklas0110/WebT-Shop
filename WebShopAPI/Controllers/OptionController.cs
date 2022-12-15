@@ -58,7 +58,7 @@ public class OptionController : ControllerBase
     {
         try
         {
-            var dto = new OptionDTOs(postModel);
+            var dto = new OptionDTO(postModel);
             var result = _webShopService.CreateNewOption(dto);
             return Created("", result);
         }

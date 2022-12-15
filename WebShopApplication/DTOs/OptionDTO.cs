@@ -2,7 +2,7 @@
 
 namespace WebShopApplication.DTOs;
 
-public class OptionDTOs
+public class OptionDTO
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -19,15 +19,24 @@ public class OptionDTOs
     public int OptionGroupId { get; set; }
 
     
-    public OptionDTOs(){}
+    public OptionDTO(){}
     
-    public OptionDTOs(ItemOptionPostModel postModel)
+    public OptionDTO(ItemOptionPostModel postModel)
     {
         Name = postModel.Name;
         OptionGroupId = postModel.OptionGroupId;
     }
     
-    public OptionDTOs(OptionSingleEditModel postModel)
+    public OptionDTO(Option model)
+    {
+        Name = model.Name;
+        OptionGroupId = model.OptionGroupId;
+        CreatedAt = model.CreatedAt;
+        UpdatedAt = model.UpdatedAt;
+        DeletedAt = model.DeletedAt;
+    }
+    
+    public OptionDTO(OptionSingleEditModel postModel)
     {
         Id = postModel.Id;
     }

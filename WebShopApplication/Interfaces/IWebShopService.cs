@@ -19,14 +19,14 @@ public interface IWebShopService
     Category UpdateCategory(int id, Category category);
     Category DeleteCategory(int id);
 
-    Option CreateNewOption(OptionDTOs optionDto);
+    Option CreateNewOption(OptionDTO optionDto);
     List<Option> GetAllOptions();
     Option UpdateOption(int id, Option option);
     List<Option> GetOptionByGroupId(int id);
     Option DeleteOption(int id);
     
 
-    OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto);
+    OptionGroup CreateNewOptionGroup(OptionGroupDTO optionGroupDto);
     List<OptionGroup> GetAllOptionGroups();
     OptionGroup UpdateOptionGroups(int id, OptionGroup option);
     OptionGroup DeleteOptionGroups(int id);

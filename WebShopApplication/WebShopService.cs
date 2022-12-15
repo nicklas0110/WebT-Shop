@@ -165,13 +165,21 @@ public class WebShopService : IWebShopService {
             new Option("Blå", 1),
             new Option("Hvid", 1),
             new Option("Sort", 1),
+            new Option("XS", 2),
             new Option("S", 2),
             new Option("M", 2),
             new Option("L", 2),
             new Option("XL", 2),
             new Option("XXL", 2),
-            new Option("Ja", 3),
-            new Option("Nej", 3)
+            new Option("Im The Boss", 3),
+            new Option("Not today Satan", 3),
+            new Option("Im Lucifer Morningstar", 3),
+            new Option("Polyester", 4),
+            new Option("Bomuld", 4),
+            new Option("uld", 4),
+            new Option("Kashmir", 4),
+            new Option("Bambus stof", 4)
+            
         };
         foreach (var option in options)
         {
@@ -248,7 +256,7 @@ public class WebShopService : IWebShopService {
     }
 
     
-    public Option CreateNewOption(OptionDTOs optionDto)
+    public Option CreateNewOption(OptionDTO optionDto)
     {
         var validation = _postValidatorOption.Validate(optionDto);
         if (!validation.IsValid)
@@ -282,7 +290,7 @@ public class WebShopService : IWebShopService {
         return _optionRepository.GetOptionByGroupId(id);
     }
 
-    public OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto)
+    public OptionGroup CreateNewOptionGroup(OptionGroupDTO optionGroupDto)
     {
         var validation = _postOptionGroupValidator.Validate(optionGroupDto);
         if (!validation.IsValid)
