@@ -23,7 +23,7 @@ export class UserpageComponent implements OnInit {
 
   async ngOnInit(){
     const options = await this.http.getOption();
-    const optionGroupId = await this.http.getOptionGroupId()
+    const optionGroupId = await this.http.getOptionGroupId();
     this.options = options;
     this.option = options;
     this.optionGroupId = optionGroupId;

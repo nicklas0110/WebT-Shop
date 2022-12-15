@@ -1,9 +1,7 @@
 <div class="user-header">
   <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle  routerLink="/userpage/page1">All</mat-button-toggle>
-    <mat-button-toggle  routerLink="/userpage/page2">With print</mat-button-toggle>
-    <mat-button-toggle  routerLink="/userpage/page3">Without print</mat-button-toggle>
-    <mat-button-toggle  routerLink="/userpage/page4">Page 4</mat-button-toggle>
+    <mat-button-toggle ng-click="selectCategory(0)">All</mat-button-toggle>
+    <mat-button-toggle *ngFor="let category of categories" ng-click="selectCategory(category.id)">{{category.name}}</mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 
