@@ -12,4 +12,5 @@ public interface IWebShopOptionRepository
     Option UpdateOption(Option option);
     
     Option DeleteOption(int id, OptionSingleEditModel option);
+    List<Option> GetOptionByGroupId(int id);
 }

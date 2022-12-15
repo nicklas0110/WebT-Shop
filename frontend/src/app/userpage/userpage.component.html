@@ -1,8 +1,8 @@
 <div class="user-header">
   <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle  routerLink="/userpage/page1">Page 1</mat-button-toggle>
-    <mat-button-toggle  routerLink="/userpage/page2">Page 2</mat-button-toggle>
-    <mat-button-toggle  routerLink="/userpage/page3">Page 3</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page1">All</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page2">With print</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page3">Without print</mat-button-toggle>
     <mat-button-toggle  routerLink="/userpage/page4">Page 4</mat-button-toggle>
   </mat-button-toggle-group>
 </div>
@@ -10,6 +10,55 @@
 
 
 <link rel="stylesheet" href="userpage.component.scss">
+<div class="pagetext">
+  <br>
+  <br>
+  Select a sorting combination to find the T-shirt you're looking for!
+  <br>
+  <br>
+  <mat-grid-list cols="4" rowHeight="100">
+
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Options</mat-label>
+        <mat-select [formControl]="optionsControl" multiple>
+          <mat-option *ngFor="let option of options" [value]="option.id">{{option.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Size</mat-label>
+        <mat-select>
+          <mat-option></mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Fill</mat-label>
+        <mat-select>
+          <mat-option></mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Material</mat-label>
+        <mat-select>
+          <mat-option></mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+
+
+  </mat-grid-list>
+</div>
+
 
 <router-outlet>
 

@@ -54,4 +54,9 @@ export class HttpService {
       const httpResult = await customAxios.post('controller/login/', dto);
       return httpResult.data;
     }
+
+  async getOptionGroupId() {
+    const httpResponse = await customAxios.get('optionById');
+    return httpResponse.data;
+  }
 }

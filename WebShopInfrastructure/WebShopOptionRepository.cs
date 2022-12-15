@@ -41,6 +41,11 @@ public class WebShopOptionRepository : IWebShopOptionRepository
         return d;
     }
 
+    public List<Option> GetOptionByGroupId(int id)
+    {
+        return  _context.OptionTable.Where(x => x.OptionGroupId == id).ToList();
+    }
+
     public void RebuildDB()
     {
         _context.Database.EnsureDeleted();

@@ -1,4 +1,23 @@
 mat-grid-tile{
-  margin-top: 10px;
-  background-color: darkslategray;
+  background-color: lightgrey;
+}
+
+mat-card{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+.buy{
+  background-color: black;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price{
+  font-size: large;
+  font-weight: bold;
 }

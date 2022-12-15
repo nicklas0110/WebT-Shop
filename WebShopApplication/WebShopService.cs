@@ -268,6 +268,11 @@ public class WebShopService : IWebShopService {
         return _optionRepository.DeleteOption(id ,option);;
     }
 
+    public List<Option> GetOptionByGroupId(int id)
+    {
+        return _optionRepository.GetOptionByGroupId(id);
+    }
+
     public OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto)
     {
         var validation = _postOptionGroupValidator.Validate(optionGroupDto);

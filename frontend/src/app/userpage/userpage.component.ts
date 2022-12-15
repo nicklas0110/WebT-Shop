@@ -15,18 +15,27 @@ export class UserpageComponent implements OnInit {
   formModel : Option = new Option(); // Sets formModel = to the Box class
   option: any;
   options: any[] = [];
+  optionGroupId: any[] =[];
+
+  optionsControl = new FormControl<number[]>([]);
 
   constructor(private http : HttpService) { }
 
   async ngOnInit(){
     const options = await this.http.getOption();
+    const optionGroupId = await this.http.getOptionGroupId()
     this.options = options;
     this.option = options;
+    this.optionGroupId = optionGroupId;
   }
 
 
   selectCard(option: Option) {
     this.formModel = {...option};
+  }
+
+  ColorId(id: number) {
+    id = 1
   }
 }
 

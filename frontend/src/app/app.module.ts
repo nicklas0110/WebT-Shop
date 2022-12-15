@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import { LoginComponent } from './login/login.component';
 import { UserpageComponent } from './userpage/userpage.component';
@@ -26,6 +26,7 @@ import { Page3Component } from './userpage/page3/page3.component';
 import { Page4Component } from './userpage/page4/page4.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
 
 
 const route: Routes = [
@@ -83,7 +84,9 @@ const route: Routes = [
     MatButtonModule,
     MatInputModule,
     MatButtonToggleModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

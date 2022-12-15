@@ -36,6 +36,22 @@ public class OptionController : ControllerBase
         }
     }
     
+    [HttpGet]
+    [Route("GetByGroupId")]
+    public ActionResult<List<Option>> GetOptionByGroupId(int id)
+    {
+        try
+        { 
+            return _webShopService.GetOptionByGroupId(id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+    
+    
     [HttpPost]  
     [Route("")]
     public ActionResult<Option> CreateNewOption(ItemOptionPostModel postModel)
