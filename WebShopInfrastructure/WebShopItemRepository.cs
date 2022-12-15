@@ -1,4 +1,6 @@
-﻿using WebShopApplication.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
 using WebsShopDomain;
 
@@ -43,10 +45,10 @@ public class WebShopRepository : IWebShopItemRepository
         return tShirt;
     }
 
-    public Item DeleteUpdateItem(int id, ItemSingleEditModel item)
+    public Item DeleteUpdateItem(int id)
     {
         var d = _context.ItemTable.Find(id);
-        d.DeletedAt = item.DeletedAt;
+        d.DeletedAt = DateTime.UtcNow;
         _context.ItemTable.Update(d);
         _context.SaveChanges();
         return d;

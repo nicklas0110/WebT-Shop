@@ -1,14 +1,23 @@
 button{
   border: 2px solid powderblue;
-  padding: 30px;
+  padding: 5px;
   color: blueviolet;
 }
-
-.box-card {
-  margin-left: 50px;
-  cursor: pointer;
+button:hover{
+  background: lightblue;
 }
 
-.box-card:hover {
-  background: lightgrey;
+h2{
+  margin-left: 75%;
+  color: navy;
+}
+
+mat-toolbar{
+  a {
+    margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    height: 100%;
+    img{ height: 80%}
+  }
 }

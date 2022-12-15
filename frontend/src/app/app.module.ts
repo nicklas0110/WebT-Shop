@@ -27,6 +27,15 @@ import { Page4Component } from './userpage/page4/page4.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import { AndminoptionComponent } from './adminpage/andminoption/andminoption.component';
+import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.component';
+import { AdminitemComponent } from './adminpage/adminitem/adminitem.component';
+import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminoptiongroup.component';
+
+
+
+
+
 
 
 const route: Routes = [
@@ -51,11 +60,25 @@ const route: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'adminpage', component: AdminpageComponent, canActivate: [AuthguardService]
+    path: 'adminpage', component: AdminpageComponent, canActivate: [AuthguardService],
+    children: [
+      {
+        path: 'adminoption', component: AndminoptionComponent,
+      },
+      {
+        path: 'admincategory', component: AdmincategoryComponent,
+      },
+      {
+        path: 'adminitem', component: AdminitemComponent,
+      },
+      {
+        path: 'adminoptiongroup', component: AdminoptiongroupComponent,
+      },
+    ]
   },
   {
-    path: 'superadmin', component: SuperadminComponent, canActivate: [AuthguardService]
-  }
+    path: 'superadmin', component: SuperadminComponent
+  },
 
 ]
 
@@ -70,7 +93,12 @@ const route: Routes = [
     Page1Component,
     Page2Component,
     Page3Component,
-    Page4Component
+    Page4Component,
+    AdminitemComponent,
+    AdminoptiongroupComponent,
+    AdmincategoryComponent,
+    AndminoptionComponent
+
   ],
   imports: [
     BrowserModule,
@@ -87,6 +115,7 @@ const route: Routes = [
     MatGridListModule,
     MatSelectModule,
     ReactiveFormsModule
+
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

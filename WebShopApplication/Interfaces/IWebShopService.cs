@@ -5,28 +5,29 @@ namespace WebShopApplication.Interfaces;
 
 public interface IWebShopService
 {
-    List<Item> GetAllItems();
-    Item CreateNewItem(ItemDTO dto);
+    List<ItemDTO> GetAllItems();
+    ItemDTO CreateNewItem(ItemDTO dto);
     Item GetItemById(int id);
     void RebuildDB();
     void SeedData();
-    Item UpdateItem(int id, Item product);
-    object? DeleteUpdateItem(int id, ItemSingleEditModel item);
+    ItemDTO UpdateItem(int id, ItemDTO item);
+    object? DeleteUpdateItem(int id);
     
 
     Category CreateNewCategory(ItemCategoryDTO dto);
     List<Category> GetAllCategories();
     Category UpdateCategory(int id, Category category);
-    Category DeleteCategory(int id, CategorySingleEditModel category);
+    Category DeleteCategory(int id);
 
     Option CreateNewOption(OptionDTOs optionDto);
     List<Option> GetAllOptions();
     Option UpdateOption(int id, Option option);
-    Option DeleteOption(int id,OptionSingleEditModel option);
     List<Option> GetOptionByGroupId(int id);
+    Option DeleteOption(int id);
+    
 
     OptionGroup CreateNewOptionGroup(OptionGroupDTOs optionGroupDto);
-    
     List<OptionGroup> GetAllOptionGroups();
-    
+    OptionGroup UpdateOptionGroups(int id, OptionGroup option);
+    OptionGroup DeleteOptionGroups(int id);
 }

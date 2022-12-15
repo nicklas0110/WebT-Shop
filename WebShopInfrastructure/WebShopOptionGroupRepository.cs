@@ -24,6 +24,22 @@ public class WebShopOptionGroupRepository : IWebShopOptionGroupRepository
         return  _context.OptionGroupTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
+    public OptionGroup UpdateOptionGroups(OptionGroup optionGroup)
+    {
+        _context.OptionGroupTable.Update(optionGroup);
+        _context.SaveChanges();
+        return optionGroup;
+    }
+
+    public OptionGroup DeleteOptionGroups(int id)
+    {
+        var og = _context.OptionGroupTable.Find(id);
+        og.DeletedAt = DateTime.UtcNow;
+        _context.OptionGroupTable.Update(og);
+        _context.SaveChanges();
+        return og;
+    }
+
     public void RebuildDB()
     {
         _context.Database.EnsureDeleted();

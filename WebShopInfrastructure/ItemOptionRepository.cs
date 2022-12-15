@@ -20,4 +20,20 @@ public class ItemOptionRepositoryRepository : IItemOptionRepository
             _context.SaveChanges();
         }
     }
+
+    public List<ItemOption> GetByItemIds(List<int> itemIds)
+    {
+        return _context.ItemOptionTable
+            .Where(io => io.DeletedAt == null || io.DeletedAt > DateTime.UtcNow)
+            .Where(io => itemIds.Contains(io.ItemId))
+            .ToList();
+    }
+
+    public void DeleteItemOption(int id)
+    {
+        var itemOption = _context.ItemOptionTable.Find(id);
+        itemOption.DeletedAt = DateTime.UtcNow;
+        _context.ItemOptionTable.Update(itemOption);
+        _context.SaveChanges();
+    }
 }

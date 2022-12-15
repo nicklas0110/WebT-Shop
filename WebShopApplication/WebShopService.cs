@@ -15,10 +15,9 @@ public class WebShopService : IWebShopService {
 
     private readonly IWebShopServiceRepository _serviceRepository;
 
-    private readonly PostBoxValidator _postValidator;
+    private readonly ItemDtoValidator _itemDtoValidator;
     private readonly ItemValidator _itemValidator;
     private readonly IWebShopItemRepository _itemRepository;
-    private readonly PostDeleteValidator _itemSingleEditRepositoryPost;
     
     private readonly IWebShopCategoryRepository _categoryRepository;
     private readonly CategoryValidator _postValidatorCategory;
@@ -33,6 +32,7 @@ public class WebShopService : IWebShopService {
     private readonly IItemOptionRepository _itemOptionRepositoryRepo;
 
     private readonly IWebShopOptionGroupRepository _optionGroupRepository;
+    private readonly IValidator<OptionGroup> _optionGroupValidator;
     private readonly PostOptionGroupValidatorOption _postOptionGroupValidator;
     
     private readonly IMapper _mapper;
@@ -41,9 +41,8 @@ public class WebShopService : IWebShopService {
         IWebShopServiceRepository serviceRepository,
         
         IWebShopItemRepository itemRepository,
-        PostBoxValidator postValidatorWebShopDTOs,
+        ItemDtoValidator itemDtoValidator,
         ItemValidator itemValidator,
-        PostDeleteValidator itemSingleEditRepositoryPost,
         
         IWebShopCategoryRepository categoryRepository,
         CategoryValidator postValidatorCategory,
@@ -58,6 +57,7 @@ public class WebShopService : IWebShopService {
         IItemOptionRepository itemOptionRepositoryRepo,
         
         IWebShopOptionGroupRepository optionGroupRepository,
+        IValidator<OptionGroup> optionGroupValidator,
         PostOptionGroupValidatorOption postOptionGroupValidator,
         
         IMapper mapper
@@ -67,9 +67,8 @@ public class WebShopService : IWebShopService {
         _serviceRepository = serviceRepository;
         
         _itemRepository = itemRepository;
-        _postValidator = postValidatorWebShopDTOs;
+        _itemDtoValidator = itemDtoValidator;
         _itemValidator = itemValidator;
-        _itemSingleEditRepositoryPost = itemSingleEditRepositoryPost;
         
         _categoryRepository = categoryRepository;
         _postValidatorCategory = postValidatorCategory;
@@ -84,6 +83,7 @@ public class WebShopService : IWebShopService {
         _itemOptionRepositoryRepo = itemOptionRepositoryRepo;
 
         _optionGroupRepository = optionGroupRepository;
+        _optionGroupValidator = optionGroupValidator;
         _postOptionGroupValidator = postOptionGroupValidator;
 
         _mapper = mapper;
@@ -95,29 +95,42 @@ public class WebShopService : IWebShopService {
         itemRepository = Repository;
     }
 
-    public List<Item> GetAllItems()
+    public List<ItemDTO> GetAllItems()
     {
-        return _itemRepository.GetAllItems();
+        var items = _itemRepository.GetAllItems();
+        var itemOptions = _itemOptionRepositoryRepo.GetByItemIds(items.Select(i => i.Id).ToList());
+        var itemDtos = new List<ItemDTO>();
+        foreach (var item in items)
+        {
+            var optionIds = itemOptions.Where(io => io.ItemId == item.Id).Select(io  => io.OptionId).ToList();
+            itemDtos.Add(new ItemDTO(item, optionIds));
+        }
+        return itemDtos;
     }
 
-    public Item CreateNewItem(ItemDTO dto)
+    public ItemDTO CreateNewItem(ItemDTO dto)
     {
-        var validation = _postValidator.Validate(dto);
+        var validation = _itemDtoValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
         var item = new Item(dto.Name,dto.Price, dto.ItemCategoryId);
         item = _itemRepository.CreateNewItem(item);
         if (dto.OptionIds.Any())
         {
-            // to do create ItemOptions
-            var itemOptions = new List<ItemOption>();
-            foreach (var optionId in dto.OptionIds)
-            {
-                itemOptions.Add(new ItemOption() { ItemId = item.Id, OptionId = optionId });
-            }
-            _itemOptionRepositoryRepo.CreateItemOptions(itemOptions);
+            AddOptionToItem(dto.OptionIds, item.Id);
         }
-        return item;
+        return new ItemDTO(item, dto.OptionIds);
+    }
+
+    private void AddOptionToItem(List<int> optionIds, int itemId)
+    {
+        // to do create ItemOptions
+        var itemOptions = new List<ItemOption>();
+        foreach (var optionId in optionIds)
+        {
+            itemOptions.Add(new ItemOption() { ItemId = itemId, OptionId = optionId });
+        }
+        _itemOptionRepositoryRepo.CreateItemOptions(itemOptions);
     }
 
     public Item GetItemById(int id)
@@ -136,9 +149,10 @@ public class WebShopService : IWebShopService {
         // create option groups
         var optionGroups = new List<OptionGroup>()
         {
-            new OptionGroup("Farver"),
-            new OptionGroup("Størelse"),
-            new OptionGroup("Print")
+            new OptionGroup("Color"),
+            new OptionGroup("Size"),
+            new OptionGroup("Print"),
+            new OptionGroup("Material")
         };
         foreach (var optionGroup in optionGroups)
         {
@@ -155,6 +169,7 @@ public class WebShopService : IWebShopService {
             new Option("M", 2),
             new Option("L", 2),
             new Option("XL", 2),
+            new Option("XXL", 2),
             new Option("Ja", 3),
             new Option("Nej", 3)
         };
@@ -174,25 +189,31 @@ public class WebShopService : IWebShopService {
     }
 
 
-    public Item UpdateItem(int id, Item product)
+    public ItemDTO UpdateItem(int id, ItemDTO itemDto)
     {
-        if (id != product.Id)
+        if (id != itemDto.Id)
             throw new ValidationException("ID in body and route are different");
-        var validation = _itemValidator.Validate(product);
+        var validation = _itemDtoValidator.Validate(itemDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        return _itemRepository.UpdateItem(id ,product);;
+        var item = new Item(itemDto.Id, itemDto.Name, itemDto.Price, itemDto.ItemCategoryId);
+        var itemIds = new List<int>();
+        itemIds.Add(item.Id);
+        var io = _itemOptionRepositoryRepo.GetByItemIds(itemIds);
+        var ioToDelete = io.Where(io => !itemDto.OptionIds.Contains(io.OptionId)).Select(io => io.Id);
+        foreach (var ioId in ioToDelete)
+        {
+            _itemOptionRepositoryRepo.DeleteItemOption(ioId);
+
+        }
+        AddOptionToItem(itemDto.OptionIds.Where(o => !io.Exists(x => x.OptionId == o)).ToList(), item.Id);
+        var updatedItem = _itemRepository.UpdateItem(id, item);
+        return new ItemDTO(updatedItem, itemDto.OptionIds);
     }
     
-    public object? DeleteUpdateItem(int id, ItemSingleEditModel dto)
+    public object? DeleteUpdateItem(int id)
     {
-        if (id != dto.Id)
-            throw new ValidationException("ID in body and route are different");
-        var validation = _itemSingleEditRepositoryPost.Validate(dto);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var item = new ItemSingleEditModel{DeletedAt = DateTime.Now};
-        return _itemRepository.DeleteUpdateItem(id ,item);;
+        return _itemRepository.DeleteUpdateItem(id);
     }
 
     
@@ -221,15 +242,9 @@ public class WebShopService : IWebShopService {
         return _categoryRepository.UpdateCategory(category);
     }
 
-    public Category DeleteCategory(int id, CategorySingleEditModel dto)
+    public Category DeleteCategory(int id)
     {
-        if (id != dto.Id)
-            throw new ValidationException("ID in body and route are different");
-        var validation = _categoryDeleteValidators.Validate(dto);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var category = new CategorySingleEditModel{DeletedAt = DateTime.Now};
-        return _categoryRepository.DeleteCategory(id ,category);;
+        return _categoryRepository.DeleteCategory(id);
     }
 
     
@@ -254,18 +269,12 @@ public class WebShopService : IWebShopService {
         var validation = _optionValidator.Validate(option);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        return _optionRepository.UpdateOption(option);;
+        return _optionRepository.UpdateOption(option);
     }
 
-    public Option DeleteOption(int id,OptionSingleEditModel dto)
+    public Option DeleteOption(int id)
     {
-        if (id != dto.Id)
-            throw new ValidationException("ID in body and route are different");
-        var validation = _optionDeleteValidators.Validate(dto);
-        if (!validation.IsValid)
-            throw new ValidationException(validation.ToString());
-        var option = new OptionSingleEditModel{DeletedAt = DateTime.Now};
-        return _optionRepository.DeleteOption(id ,option);;
+        return _optionRepository.DeleteOption(id);
     }
 
     public List<Option> GetOptionByGroupId(int id)
@@ -286,5 +295,20 @@ public class WebShopService : IWebShopService {
     public List<OptionGroup> GetAllOptionGroups()
     {
         return _optionGroupRepository.GetAllOptionGroups();
+    }
+
+    public OptionGroup UpdateOptionGroups(int id, OptionGroup optionGroup)
+    {
+        if (id != optionGroup.Id)
+            throw new ValidationException("ID in body and route are different");
+        var validation = _optionGroupValidator.Validate(optionGroup);
+        if (!validation.IsValid)
+            throw new ValidationException(validation.ToString());
+        return _optionGroupRepository.UpdateOptionGroups(optionGroup);
+    }
+
+    public OptionGroup DeleteOptionGroups(int id)
+    {
+        return _optionGroupRepository.DeleteOptionGroups(id);
     }
 }

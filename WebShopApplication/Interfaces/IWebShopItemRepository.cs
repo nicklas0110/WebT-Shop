@@ -8,8 +8,8 @@ public interface IWebShopItemRepository
     List<Item> GetAllItems();
     Item CreateNewItem(Item tShirt);
     Item GetItemById(int id);
-    Item UpdateItem(int id, Item tShirt);
-    Item DeleteUpdateItem(int id, ItemSingleEditModel item);
+    Item UpdateItem(int id, Item item);
+    Item DeleteUpdateItem(int id);
     
     
 }

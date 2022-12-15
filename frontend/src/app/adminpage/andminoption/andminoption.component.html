@@ -1,0 +1,41 @@
+<div>
+    <link rel="stylesheet" href="andminoption.component.scss">
+
+    <mat-form-field class="form-fieldName">
+        <input matInput [(ngModel)]="formModel.name"placeholder="Option Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Option Group</mat-label>
+        <mat-select [formControl]="optionGroupControl" required>
+            <mat-option *ngFor="let optionGroup of optionGroups" [value]="optionGroup.id">
+                {{optionGroup.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="optionGroupControl.hasError('required')">Please choose an category</mat-error>
+    </mat-form-field>
+
+    <br>
+
+    <button class="ButtonCreate" mat-raised-button [disabled]="formModel.name === ''" (click)="createOption()">Create</button>
+
+    <button class="Buttons" mat-raised-button [disabled]="formModel.name === '' || formModel.optionGroupId == 0" (click)="editOption(this.formModel.id)">Edit</button>
+
+    <button class="Buttons" mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
+    <br>
+    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
+        <mat-card-title>
+            Option: {{o.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            Id: {{o.id}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            Option Groups: {{getOptionGroup(o.optionGroupId).name}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            <button class="Delete" mat-raised-button [disabled]="formModel.name === ''" (click)="deleteEditOption(this.formModel.id)">Delete</button>
+        </mat-card-subtitle>
+    </mat-card>
+
+</div>

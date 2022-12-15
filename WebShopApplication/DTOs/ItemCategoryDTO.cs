@@ -20,7 +20,7 @@ public class ItemCategoryDTO
 
     public ItemCategoryDTO(ItemCategoryPostModel postModel)
     {
-        CategoryName = postModel.Name;
+        CategoryName = postModel.CategoryName;
     }
     
     public ItemCategoryDTO(CategorySingleEditModel postModel)
@@ -34,7 +34,7 @@ public class ItemCategoryDTO
 
 public class ItemCategoryPostModel
 {
-    public string Name { get; set; }
+    public string CategoryName { get; set; }
 }
 
 public class CategorySingleEditModel

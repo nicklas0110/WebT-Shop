@@ -30,13 +30,13 @@ public class WebShopCategoryRepository : IWebShopCategoryRepository
          return  _context.CategoryTable.Where(x => x.DeletedAt == null || x.CreatedAt >= x.DeletedAt).ToList();
     }
 
-    Category IWebShopCategoryRepository.DeleteCategory(int id, CategorySingleEditModel category)
+    Category IWebShopCategoryRepository.DeleteCategory(int id)
     {
-        var d = _context.CategoryTable.Find(id);
-        d.DeletedAt = category.DeletedAt;
-        _context.CategoryTable.Update(d);
+        var c = _context.CategoryTable.Find(id);
+        c.DeletedAt = DateTime.UtcNow;
+        _context.CategoryTable.Update(c);
         _context.SaveChanges();
-        return d;
+        return c;
     }
 
     public void RebuildDB()

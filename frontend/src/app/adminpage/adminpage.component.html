@@ -1,27 +1,16 @@
-<p>adminpage works!</p>
-<div>
-    <link rel="stylesheet" href="adminpage.component.scss">
-        <mat-form-field style="margin-left:100px; margin-top:100px">
-            <input matInput [(ngModel)]="formModel.optionName"placeholder="Option Name">
-        </mat-form-field>
-    <br>
-        <mat-form-field style="margin-left:100px; margin-top:100px">
-             <input matInput type="number" [(ngModel)]="formModel.optionGroupId" placeholder="type of OptionGroup By ID">
-        </mat-form-field>
-    <br>
-
-    <button mat-raised-button [disabled]="formModel.optionName === ''" (click)="createOption()" style="margin-left:125px; margin-top:100px">Create</button>
-
-    <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
-        <mat-card-title>
-            {{o.name}}
-        </mat-card-title>
-        <mat-card-subtitle>
-            optionGroupId: {{o.optionGroupId}}
-        </mat-card-subtitle>
-        <mat-card-subtitle>
-            Id: {{o.id}}
-        </mat-card-subtitle>
-    </mat-card>
-
+<div class="admin-header">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle  routerLink="/adminpage/adminitem" class="admin-button">Item</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/adminoptiongroup" class="admin-button">Option group</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/admincategory" class="admin-button">Category</mat-button-toggle>
+        <mat-button-toggle  routerLink="/adminpage/adminoption" class="admin-button">Option</mat-button-toggle>
+    </mat-button-toggle-group>
 </div>
+
+
+
+<link rel="stylesheet" href="adminpage.component.scss">
+
+<router-outlet>
+
+</router-outlet>

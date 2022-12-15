@@ -73,7 +73,7 @@ public class OptionController : ControllerBase
     }
 
     [HttpPut]
-    [Route("{id}")] //localhost:5111/box/8732648732
+    [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Option> UpdateOption([FromRoute] int id, [FromBody] Option option)
     {
         try
@@ -92,11 +92,11 @@ public class OptionController : ControllerBase
     
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
-    public ActionResult<Item> DeleteUpdateOption([FromRoute] int id, [FromBody] OptionSingleEditModel option)
+    public ActionResult<Item> DeleteUpdateOption([FromRoute] int id)
     {
         try
         {
-            return Ok(_webShopService.DeleteOption(id, option));
+            return Ok(_webShopService.DeleteOption(id));
         }
         catch (KeyNotFoundException e)
         {

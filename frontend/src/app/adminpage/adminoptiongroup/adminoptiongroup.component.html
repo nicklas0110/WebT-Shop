@@ -1,0 +1,27 @@
+<div class="">
+    <link rel="stylesheet" href="adminoptiongroup.component.scss">
+
+    <mat-form-field class="form-fieldName">
+        <input matInput [(ngModel)]="formModel.name"placeholder="OptionGroup Name">
+    </mat-form-field>
+    <br>
+
+    <button class="ButtonCreate" mat-raised-button [disabled]="formModel.name === ''" (click)="createOptionGroup()">Create</button>
+
+    <button class="Buttons" mat-raised-button [disabled]="formModel.name === ''" (click)="editOptionGroup(this.formModel.id)">Edit</button>
+
+    <button class="Buttons" mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
+    <br>
+    <mat-card *ngFor="let og of optiongroups" class="optionGroup-card" (click)="selectCard(og)">
+        <mat-card-title>
+            {{og.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            Id: {{og.id}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            <button class="Delete" mat-raised-button [disabled]="formModel.name === ''" (click)="deleteEditOptionGroup(this.formModel.id)">Delete</button>
+        </mat-card-subtitle>
+    </mat-card>
+
+</div>
