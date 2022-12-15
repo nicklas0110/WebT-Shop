@@ -1,17 +1,17 @@
 <div class="">
     <link rel="stylesheet" href="adminoptiongroup.component.scss">
 
-    <mat-form-field style="margin-left:100px; margin-top:100px">
+    <mat-form-field class="form-fieldName">
         <input matInput [(ngModel)]="formModel.name"placeholder="OptionGroup Name">
     </mat-form-field>
     <br>
 
-    <button mat-raised-button [disabled]="formModel.name === ''" (click)="createOptionGroup()" style="margin-left:125px; margin-top:100px">Create</button>
+    <button class="ButtonCreate" mat-raised-button [disabled]="formModel.name === ''" (click)="createOptionGroup()">Create</button>
 
-    <button mat-raised-button [disabled]="formModel.name === ''" (click)="editOptionGroup(this.formModel.id)" style="margin-left:125px; margin-top:100px">Edit</button>
+    <button class="Buttons" mat-raised-button [disabled]="formModel.name === ''" (click)="editOptionGroup(this.formModel.id)">Edit</button>
 
-    <button mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
-
+    <button class="Buttons" mat-raised-button (click)="clearForm()" style="margin-left:125px">Clear</button>
+    <br>
     <mat-card *ngFor="let og of optiongroups" class="optionGroup-card" (click)="selectCard(og)">
         <mat-card-title>
             {{og.name}}

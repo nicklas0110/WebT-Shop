@@ -1,11 +1,13 @@
-button{
+.Buttons{
   border: 2px solid powderblue;
   padding: 20px;
   color: blueviolet;
   cursor: pointer;
+  margin-left:125px;
+  margin-top:100px;
 }
 
-button:hover{
+.Buttons:hover{
   background: lightblue;
 }
 
@@ -21,15 +23,33 @@ button:hover{
   background: lightblue;
 }
 
+.ButtonCreate{
+  border: 2px solid powderblue;
+  padding: 20px;
+  color: blueviolet;
+  cursor: pointer;
+  margin-left:125px;
+  margin-top:100px;
+  margin-left: 35%;
+}
+.ButtonCreate:hover{
+  background: lightblue;
+}
+
 .optionGroup-card {
   margin-left: 50px;
   cursor: pointer;
+  margin-top: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .optionGroup-card:hover {
   background: lightgrey;
 }
 
-mat-card{
-  margin-top: 20px;
+.form-fieldName{
+  margin-left: 42.5%;
+  margin-top:100px;
 }
+

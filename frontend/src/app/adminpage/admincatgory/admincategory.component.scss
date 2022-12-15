@@ -1,11 +1,13 @@
-button{
+.categoryButton{
   border: 2px solid powderblue;
   padding: 20px;
   color: blueviolet;
   cursor: pointer;
+  margin-left:125px;
+  margin-top:100px;
 }
 
-button:hover{
+.categoryButton:hover{
   background: lightblue;
 }
 
@@ -21,11 +23,33 @@ button:hover{
   background: lightblue;
 }
 
+.ButtonCategoryCreate{
+  border: 2px solid powderblue;
+  padding: 20px;
+  color: blueviolet;
+  cursor: pointer;
+  margin-top:100px;
+  margin-left: 35%;
+}
+.ButtonCategoryCreate:hover{
+  background: lightblue;
+}
+
 .category-card {
   margin-left: 50px;
   cursor: pointer;
+  margin-top: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .category-card:hover {
   background: lightgrey;
 }
+
+.form-fieldName{
+  margin-left: 42.5%;
+  margin-top:100px;
+}
+
+

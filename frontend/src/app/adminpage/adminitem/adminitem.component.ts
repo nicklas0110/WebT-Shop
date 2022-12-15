@@ -68,7 +68,7 @@ export class AdminitemComponent implements OnInit {
     const option = await this.http.editItem(id,dto);
     let indexToEdit = this.items.findIndex(i => i.id == id); // Sets the id of the box class for the url
     console.log(indexToEdit);
-    this.items[indexToEdit] = option;
+    if(indexToEdit > -1) this.items.splice(indexToEdit, 1);
     this.clearForm();
   }
 
