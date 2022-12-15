@@ -5,10 +5,7 @@
     <projectFile profileName="IIS Express">WebshopAPI/WebShopAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopAPI/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/db.db-wal" afterDir="false" />
-    </list>
+    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +144,7 @@
       <workItem from="1670922704272" duration="3651000" />
       <workItem from="1670937297595" duration="773000" />
       <workItem from="1671017291439" duration="595000" />
+      <workItem from="1671065270455" duration="502000" />
     </task>
     <servers />
   </component>
