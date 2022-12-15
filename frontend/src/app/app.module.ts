@@ -24,6 +24,7 @@ import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.c
 import {MatSelectModule} from "@angular/material/select";
 import { AndminoptionComponent } from './adminpage/andminoption/andminoption.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 const route: Routes = [
@@ -82,7 +83,8 @@ const route: Routes = [
     MatInputModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatGridListModule
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

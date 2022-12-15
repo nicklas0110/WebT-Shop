@@ -6,7 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/adminpage/adminitem/adminitem.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +170,7 @@
       <workItem from="1670854261695" duration="4094000" />
       <workItem from="1670922704272" duration="3651000" />
       <workItem from="1671016018151" duration="2990000" />
-      <workItem from="1671096002525" duration="3862000" />
+      <workItem from="1671096002525" duration="4851000" />
     </task>
     <servers />
   </component>
