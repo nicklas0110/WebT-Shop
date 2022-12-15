@@ -12,3 +12,15 @@ button{
 .box-card:hover {
   background: lightgrey;
 }
+
+.user-header {
+  width: 100%;
+  display: flex;
+  mat-button-toggle-group {
+    width: 100%;
+    display: flex;
+    mat-button-toggle {
+      flex-grow: 1;
+    }
+  }
+}

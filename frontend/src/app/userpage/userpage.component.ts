@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from "../../services/http.service";
 import {customAxios} from "../app.component";
+import {FormControl, Validators} from "@angular/forms";
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @Component({

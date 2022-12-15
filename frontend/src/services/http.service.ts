@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import axios from "axios";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {catchError} from "rxjs";
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 export const customAxios = axios.create({
   baseURL: 'https://localhost:7153',

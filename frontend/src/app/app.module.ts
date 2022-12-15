@@ -10,6 +10,7 @@ import {MatCardModule} from "@angular/material/card";
 import { LoginComponent } from './login/login.component';
 import { UserpageComponent } from './userpage/userpage.component';
 import { SuperadminComponent } from './superadmin/superadmin.component';
+// @ts-ignore
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -19,11 +20,31 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {Overlay} from "@angular/cdk/overlay";
 import {MatInputModule} from "@angular/material/input";
 import {AuthguardService} from "../services/authguard.service";
+import { Page1Component } from './userpage/page1/page1.component';
+import { Page2Component } from './userpage/page2/page2.component';
+import { Page3Component } from './userpage/page3/page3.component';
+import { Page4Component } from './userpage/page4/page4.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 const route: Routes = [
   {
-    path: 'userpage', component: UserpageComponent
+    path: 'userpage', component: UserpageComponent,
+    children: [
+      {
+        path: 'page1', component: Page1Component,
+      },
+      {
+        path: 'page2', component: Page2Component,
+      },
+      {
+        path: 'page3', component: Page3Component,
+      },
+      {
+        path: 'page4', component: Page4Component,
+      },
+    ]
   },
   {
     path: 'login', component: LoginComponent
@@ -44,7 +65,11 @@ const route: Routes = [
     LoginComponent,
     UserpageComponent,
     SuperadminComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    Page1Component,
+    Page2Component,
+    Page3Component,
+    Page4Component
   ],
   imports: [
     BrowserModule,
@@ -56,7 +81,9 @@ const route: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonToggleModule,
+    MatGridListModule
   ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]

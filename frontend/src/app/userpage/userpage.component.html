@@ -1,13 +1,16 @@
-<div>
-  <mat-card style="margin-top:30px"*ngFor="let o of options" class="option-card" (click)="selectCard(o)">
-    <mat-card-title>
-      {{o.name}}
-    </mat-card-title>
-    <mat-card-subtitle>
-      optionGroupId: {{o.optionGroupId}}
-    </mat-card-subtitle>
-    <mat-card-subtitle>
-      Id: {{o.id}}
-    </mat-card-subtitle>
-  </mat-card>
+<div class="user-header">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle  routerLink="/userpage/page1">Page 1</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page2">Page 2</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page3">Page 3</mat-button-toggle>
+    <mat-button-toggle  routerLink="/userpage/page4">Page 4</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
+
+
+
+<link rel="stylesheet" href="userpage.component.scss">
+
+<router-outlet>
+
+</router-outlet>
