@@ -31,6 +31,7 @@ import { AndminoptionComponent } from './adminpage/andminoption/andminoption.com
 import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.component';
 import { AdminitemComponent } from './adminpage/adminitem/adminitem.component';
 import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminoptiongroup.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -115,7 +116,8 @@ const route: Routes = [
     MatButtonToggleModule,
     MatGridListModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
 
   ],
   providers: [MatSnackBar, Overlay],
