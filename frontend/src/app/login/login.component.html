@@ -17,9 +17,4 @@
     </mat-form-field>
     <br>
     <button mat-raised-button (click)="login()  ">Log in
-        <div routerLink="/adminpage/" *ngIf ="decodedToken.role == 'Admin'; else elseBlock">
-        <li routerLink="/adminpage/"></li>
-        </div>
     </button>
-
-    <ng-template #elseBlock><span routerLink="/login/"></span></ng-template>

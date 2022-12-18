@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import jwtDecode from 'jwt-decode';
 import {HttpService} from "../../services/http.service";
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   password: any;
   decodedToken: Token = new Token;
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,11 +27,11 @@ export class LoginComponent implements OnInit {
     var token = await this.http.login(dto);
    localStorage.setItem('token', token)
     let decodedToken = jwtDecode(token) as Token;
-    if (decodedToken.role == 'Admin' || 'SuperAdmin'){
-        location.href = 'http://localhost:4200/adminpage';
+    if (decodedToken.role == 'Admin' || decodedToken.role == 'SuperAdmin'){
+        this.router.navigateByUrl('/adminpage');
     }
     else{
-        location.href = 'http://localhost:4200/userpage';
+        this.router.navigateByUrl('/');
     }
   }
 
