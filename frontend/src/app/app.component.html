@@ -1,17 +1,18 @@
 <link rel="stylesheet" href="app.component.scss">
 
 <mat-toolbar>
+    <div>
+        <a routerLink="/"> <img src="../assets/Logo.png"> </a>
+        <button *ngIf="isUserAdmin()" routerLink="adminpage" mat-raised-button>Admin Page</button>
+    </div>
+    <div>
+        <button *ngIf="!user"  routerLink="login" mat-raised-button>Login</button>
 
-  <a routerLink="/">
-  <img src="../assets/Logo.png">
-  </a>
- <a routerLink="adminpage">
-   <button mat-raised-button>Admin Page</button>
- </a>
-  <a routerLink="login">
-    <button mat-raised-button>Login</button>
-  </a>
-  <h2>Balance: 200£</h2>
+        <h2 *ngIf="user">Balance: 200£</h2>
+        <h3 *ngIf="user">{{user.email}} ({{user.role}})</h3>
+
+        <button *ngIf="user" (click)="logout()" mat-raised-button>Logout</button>
+    </div>
 </mat-toolbar>
 
 <router-outlet>

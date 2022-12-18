@@ -7,17 +7,19 @@ button:hover{
   background: lightblue;
 }
 
-h2{
-  margin-left: 75%;
-  color: navy;
-}
-
 mat-toolbar{
-  a {
-    margin-left: 30px;
-    padding-top: 15px;
-    padding-bottom: 5px;
-    height: 100%;
-    img{ height: 80%}
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 100px;
+  div {
+    display: flex;
+    align-items: center;
+    > * {
+      margin: 0 5px;
+    }
+
+    a img {
+      transform: scale(0.7);
+    }
   }
 }

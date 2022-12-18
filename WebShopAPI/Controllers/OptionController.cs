@@ -19,8 +19,6 @@ public class OptionController : ControllerBase
         _webShopOptionRepository = webShopOptionRepository;
     }
     
-    
-    
     [HttpGet]
     [Route("")]
     public ActionResult<List<Option>> GetAllOptions()

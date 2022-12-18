@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
 
 
 
-class Token {
+export class Token {
   role?: string;
+  email?: string;
 }
