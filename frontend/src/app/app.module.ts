@@ -32,6 +32,8 @@ import { AdmincategoryComponent } from './adminpage/admincatgory/admincategory.c
 import { AdminitemComponent } from './adminpage/adminitem/adminitem.component';
 import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminoptiongroup.component';
 import { CommonModule } from '@angular/common';
+import {MatTabsModule} from "@angular/material/tabs";
+import { ItemCardComponent } from './item-card/item-card.component';
 
 
 
@@ -99,27 +101,29 @@ const route: Routes = [
     AdminitemComponent,
     AdminoptiongroupComponent,
     AdmincategoryComponent,
-    AndminoptionComponent
+    AndminoptionComponent,
+    ItemCardComponent
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatCardModule,
-    RouterModule.forRoot(route),
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatButtonToggleModule,
-    MatGridListModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    CommonModule
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatCardModule,
+        RouterModule.forRoot(route),
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatButtonToggleModule,
+        MatGridListModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        CommonModule,
+        MatTabsModule
 
-  ],
+    ],
   providers: [MatSnackBar, Overlay],
   bootstrap: [AppComponent]
 })

@@ -1,16 +1,18 @@
 <div class="admin-header">
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle  routerLink="/adminpage/adminitem" class="admin-button">Item</mat-button-toggle>
-        <mat-button-toggle  routerLink="/adminpage/adminoptiongroup" class="admin-button">Option group</mat-button-toggle>
-        <mat-button-toggle  routerLink="/adminpage/admincategory" class="admin-button">Category</mat-button-toggle>
-        <mat-button-toggle  routerLink="/adminpage/adminoption" class="admin-button">Option</mat-button-toggle>
-    </mat-button-toggle-group>
+    <nav mat-tab-nav-bar  [tabPanel]="tabPanel">
+        <a mat-tab-link *ngFor="let link of links"
+            (click)="activeLink = link"
+            [active]="activeLink == link"
+            routerLink="{{link.link}}"
+        >{{link.name}}</a>
+    </nav>
 </div>
 
+<mat-tab-nav-panel #tabPanel>
+    <router-outlet>
+
+    </router-outlet>
+</mat-tab-nav-panel>
 
 
 <link rel="stylesheet" href="adminpage.component.scss">
-
-<router-outlet>
-
-</router-outlet>

@@ -1,7 +1,7 @@
 <div class="user-header">
   <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle ng-click="selectCategory(0)">All</mat-button-toggle>
-    <mat-button-toggle *ngFor="let category of categories" ng-click="selectCategory(category.id)">{{category.categoryName}}</mat-button-toggle>
+    <mat-button-toggle (click)="selectCategory(0)">All</mat-button-toggle>
+    <mat-button-toggle *ngFor="let category of categories" (click)="selectCategory(category.id)">{{category.categoryName}}</mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 
@@ -19,16 +19,19 @@
     <mat-grid-tile *ngFor="let optionGroup of optionGroups">
       <mat-form-field appearance="fill">
         <mat-label>{{optionGroup.name}}</mat-label>
-        <mat-select multiple>
+        <mat-select multiple [(ngModel)]="selectedOptions[optionGroup.name]" (selectionChange)="optionsChanged()">
           <mat-option *ngFor="let option of optionGroup.options" [value]="option.id">{{option.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </mat-grid-tile>
 
   </mat-grid-list>
+  <div *ngIf="!items || items.length == 0">
+    <h4><i>No products with selected filter</i></h4>
+  </div>
+  <div *ngFor="let item of items">
+    <app-item-card [item]="item" [categories]="categories" [options]="options" appearance="fill"></app-item-card>
+  </div>
+
 </div>
 
-
-<router-outlet>
-
-</router-outlet>

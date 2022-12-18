@@ -6,6 +6,7 @@ namespace WebShopApplication.Interfaces;
 public interface IWebShopService
 {
     List<ItemDTO> GetAllItems();
+    List<ItemDTO> GetAllItemWithFilter(int? categoryId, List<List<int>> optionIds);
     ItemDTO CreateNewItem(ItemDTO dto);
     Item GetItemById(int id);
     void RebuildDB();
@@ -30,4 +31,5 @@ public interface IWebShopService
     List<OptionGroup> GetAllOptionGroups();
     OptionGroup UpdateOptionGroups(int id, OptionGroup option);
     OptionGroup DeleteOptionGroups(int id);
+    List<OptionGroupDTO> GetAllOptionGroupsWithOptions();
 }

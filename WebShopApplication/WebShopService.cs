@@ -107,6 +107,30 @@ public class WebShopService : IWebShopService {
         }
         return itemDtos;
     }
+    
+    public List<ItemDTO> GetAllItemWithFilter(int? categoryId, List<List<int>> optionsIds)
+    {
+        var items = _itemRepository.GetAllItems();
+        if (categoryId.HasValue)
+        {
+            items = items.Where(i => i.ItemCategoryId == categoryId).ToList();
+        }
+        var itemOptions = _itemOptionRepositoryRepo.GetByItemIds(items.Select(i => i.Id).ToList());
+        var itemDtos = new List<ItemDTO>();
+        foreach (var item in items)
+        {
+            var optionIds = itemOptions.Where(io => io.ItemId == item.Id).Select(io  => io.OptionId).ToList();
+            var include = true;
+            foreach (var optionList in optionsIds)
+            {
+                if(optionList.Any()) include = optionIds.Intersect(optionList).Any();
+                if(!include) break;;
+            }
+            if(include) itemDtos.Add(new ItemDTO(item, optionIds));
+        }
+        
+        return itemDtos;
+    }
 
     public ItemDTO CreateNewItem(ItemDTO dto)
     {
@@ -318,5 +342,20 @@ public class WebShopService : IWebShopService {
     public OptionGroup DeleteOptionGroups(int id)
     {
         return _optionGroupRepository.DeleteOptionGroups(id);
+    }
+
+    public List<OptionGroupDTO> GetAllOptionGroupsWithOptions()
+    {
+        var optionGroups = GetAllOptionGroups();
+        var options = GetAllOptions();
+        var groupDtos = new List<OptionGroupDTO>();
+        foreach (var optionGroup in optionGroups)
+        {
+            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
+            var optionGroupDtos = new OptionGroupDTO()
+                { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
+            groupDtos.Add(optionGroupDtos);
+        }
+        return groupDtos.Where(o => o.Options.Any()).ToList();
     }
 }

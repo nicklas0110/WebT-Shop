@@ -89,18 +89,31 @@ public class OptionGroupController : ControllerBase
     [Route("with-options")]
     public ActionResult<List<OptionGroupDTO>> GetAllOptionGroupsWithOptions()
     {
-        var returnList = new List<OptionGroupDTO>();
-        var optionGroups = _webShopService.GetAllOptionGroups();
-        var options = _webShopService.GetAllOptions();
-
-        foreach (var optionGroup in optionGroups)
+        try
         {
-            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
-            var optionGroupDto = new OptionGroupDTO()
-                { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
-            returnList.Add(optionGroupDto);
+            return Ok(_webShopService.GetAllOptionGroupsWithOptions());
         }
-
-        return returnList.Where(o => o.Options.Any()).ToList();
+        catch (KeyNotFoundException e)
+        {
+            return NotFound("No product found at groupDtos ");
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.ToString());
+        }
+        
+    // var returnList = new List<OptionGroupDTO>();
+    // var optionGroups = _webShopService.GetAllOptionGroups();
+    // var options = _webShopService.GetAllOptions();
+    //
+    // foreach (var optionGroup in optionGroups)
+    // {
+    //     var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
+    //     var optionGroupDto = new OptionGroupDTO()
+    //         { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
+    //     returnList.Add(optionGroupDto);
+    // }
+    //
+    // return returnList.Where(o => o.Options.Any()).ToList();
     }
 }

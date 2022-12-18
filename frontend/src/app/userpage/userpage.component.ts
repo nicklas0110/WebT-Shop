@@ -4,6 +4,7 @@ import {customAxios} from "../app.component";
 import {FormControl, Validators} from "@angular/forms";
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {Category} from "../adminpage/admincatgory/CategoryDto";
+import {Option} from "../adminpage/andminoption/OptionDto";
 
 
 @Component({
@@ -16,8 +17,11 @@ export class UserpageComponent implements OnInit {
   formModel : Option = new Option(); // Sets formModel = to the Box class
   option: any;
   optionGroups: any[] = [];
+  options: Option[] = [];
   items: any[] = [];
   categories: any[] = [];
+  selectedCategoryId: number = 0;
+  selectedOptions: any = {};
 
   optionsControl = new FormControl<number[]>([]);
 
@@ -26,10 +30,13 @@ export class UserpageComponent implements OnInit {
   async ngOnInit(){
     const optionGroups = await this.http.getOptionGroupsWithOptions();
     const categories = await this.http.getCategorys();
-    // const items = await this.http.getItems();
-    // this.items = items;
     this.categories = categories;
     this.optionGroups = optionGroups;
+    for(let i = 0; i < optionGroups.length; i++){
+      let og = optionGroups[i];
+      this.options = this.options.concat(og.options);
+    }
+    await this.getItems();
   }
 
 
@@ -37,20 +44,21 @@ export class UserpageComponent implements OnInit {
     this.formModel = {...option};
   }
 
-  selectCategory(category: Category){
-
+  selectCategory(categoryId: number){
+    this.selectedCategoryId = categoryId;
+    this.getItems();
   }
 
-  ColorId(id: number) {
-    id = 1
+  optionsChanged() {
+    this.getItems();
   }
-}
 
-class OptionDto {
-  optionName: string = "";
-  optionGroupId: number = 1;
-}
-// Sets the id when it is needed
-class Option extends OptionDto{
-  id: number = 0;
+  async getItems(){
+    console.log(this.selectedOptions);
+    let optionsList : any[] = [];
+    for(const [key, value] of Object.entries(this.selectedOptions)){
+      optionsList.push(value);
+    }
+    this.items = await this.http.getItemsWithFilter(this.selectedCategoryId, optionsList);
+  }
 }

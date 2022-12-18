@@ -22,6 +22,7 @@ public class ItemController : ControllerBase
         _webShopItemRepository = webShopItemRepository;
     }
     
+    [AllowAnonymous]
     [HttpGet]
     [Route("")]
     public ActionResult<List<ItemDTO>> GetAllTItems()
@@ -87,5 +88,15 @@ public class ItemController : ControllerBase
         {
             return StatusCode(500, e.ToString());
         }
+    }
+
+    [AllowAnonymous]
+    [HttpPost]
+    [Route("with-filter/{categoryId}")]
+    public ActionResult<List<ItemDTO>> GetItemWithFilter([FromRoute] int categoryId,
+        [FromBody] List<List<int>> optionIds)
+    {
+        // if categoryId == 0, then its all aka ignore filter
+        return _webShopService.GetAllItemWithFilter(categoryId != 0 ? categoryId : null, optionIds);
     }
 }

@@ -5,6 +5,7 @@ import {catchError} from "rxjs";
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {ItemDto} from "../app/adminpage/adminitem/ItemDto";
 import {Category, CategoryDto} from "../app/adminpage/admincatgory/CategoryDto";
+import {OptionDto} from "../app/adminpage/andminoption/OptionDto";
 
 
 export const customAxios = axios.create({
@@ -37,21 +38,19 @@ export class HttpService {
     })
   }
 
-
-
   async getOption(){
     const httpResponse = await customAxios.get('option');
     return httpResponse.data;
   }
 
   async createOption(dto: { name: string; optionGroupId: Number }) {
-    const httpResponse = await customAxios.post('option',dto)
+    const httpResponse = await customAxios.post('option',dto);
     return httpResponse.data;
   }
 
   // puts to the backend using an id and the dto class whits also contain an id and edits
   async editOption(id : any, dto: { name: string; optionGroupId: Number}) {
-    const httpResponse = await customAxios.put('option/Edit/' + id, dto)
+    const httpResponse = await customAxios.put('option/Edit/' + id, dto);
     return httpResponse.data;
   }
 
@@ -102,6 +101,10 @@ export class HttpService {
 
   async getItems() {
     const httpResponse = await customAxios.get('Item');
+    return httpResponse.data;
+  }
+  async getItemsWithFilter(categoryId: number, optionsLists: any) {
+    const httpResponse = await customAxios.post('Item/with-filter/'+ categoryId, optionsLists || []);
     return httpResponse.data;
   }
   async createItem(dto: ItemDto) {

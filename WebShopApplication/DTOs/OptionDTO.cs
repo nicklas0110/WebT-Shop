@@ -29,6 +29,7 @@ public class OptionDTO
     
     public OptionDTO(Option model)
     {
+        Id = model.Id;
         Name = model.Name;
         OptionGroupId = model.OptionGroupId;
         CreatedAt = model.CreatedAt;

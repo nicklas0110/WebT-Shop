@@ -1,4 +1,5 @@
-﻿using WebsShopDomain;
+﻿using WebShopApplication.DTOs;
+using WebsShopDomain;
 
 namespace WebShopApplication.Interfaces;
 
