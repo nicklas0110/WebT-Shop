@@ -201,24 +201,24 @@ public class WebShopService : IWebShopService {
         // create option
         var options = new List<Option>()
         {
-            new Option("Rød", 1),
-            new Option("Blå", 1),
-            new Option("Hvid", 1),
-            new Option("Sort", 1),
-            new Option("XS", 2),
-            new Option("S", 2),
-            new Option("M", 2),
-            new Option("L", 2),
-            new Option("XL", 2),
-            new Option("XXL", 2),
-            new Option("Print: Im The Boss", 3),
-            new Option("Print: Not today Satan", 3),
-            new Option("Print: Im Lucifer Morningstar", 3),
-            new Option("Polyester", 4),
-            new Option("Bomuld", 4),
-            new Option("Uld", 4),
-            new Option("Kashmir", 4),
-            new Option("Bambus stof", 4)
+            new Option("Rød", 1), //1
+            new Option("Blå", 1), //2
+            new Option("Hvid", 1), //3
+            new Option("Sort", 1), //4
+            new Option("XS", 2), //5
+            new Option("S", 2), //6
+            new Option("M", 2), //7
+            new Option("L", 2), //8
+            new Option("XL", 2), //9
+            new Option("XXL", 2), //10
+            new Option("Print: Im The Boss", 3), //11
+            new Option("Print: Not today Satan", 3), //12
+            new Option("Print: Im Lucifer Morningstar", 3), //13
+            new Option("Polyester", 4), //14
+            new Option("Bomuld", 4), //15
+            new Option("Uld", 4), //16
+            new Option("Kashmir", 4), //17
+            new Option("Bambus stof", 4) //18
             
         };
         foreach (var option in options)
@@ -235,6 +235,24 @@ public class WebShopService : IWebShopService {
         {
             _categoryRepository.CreateNewCategory(category);
         }
+        // create Item
+        // list of Option Ids
+        List<int> list1 = new List<int>() { 1,2,3,5,6,7,8,14,15 };
+        List<int> list2 = new List<int>() { 1,2,3,5,6,7,8,11,14,15 };
+        List<int> list3 = new List<int>() { 1,2,5,6,7,8,12,18 };
+        List<int> list4 = new List<int>() { 1,2,5,6,8,17 };
+        var items = new List<Item>()
+        {
+            new Item(1,"T-Shirt",320,1,new List<int>(list1)),
+            new Item(2,"T-Shirt med Print",450,1,new List<int>(list2)),
+            new Item(3,"T-Shirt med Print",300,1,new List<int>(list3)),
+            new Item(4,"T-Shirt",700,1,new List<int>(list4)),
+        };
+        foreach (var item in items)
+        {
+            _itemRepository.CreateNewItem(item);
+        }
+        
     }
 
 

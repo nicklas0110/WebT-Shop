@@ -51,8 +51,16 @@ public class ItemDTO
         ItemCategoryId = editModel.ItemCategoryId;
         OptionIds = editModel.OptionIds;
     }
-    
-    
+
+    public ItemDTO(int id, string name, decimal price, int itemCategoryId, List<int> optionIds)
+    {
+        Id = id;
+        Name = name;
+        Price = price;
+        ItemCategoryId = itemCategoryId;
+        OptionIds = optionIds;
+
+    }
 }
 
 public class ItemPostModel
