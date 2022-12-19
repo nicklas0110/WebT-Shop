@@ -237,21 +237,21 @@ public class WebShopService : IWebShopService {
         }
         // create Item
         // list of Option Ids
-        List<int> list1 = new List<int>() { 1,2,3,5,6,7,8,14,15 };
-        List<int> list2 = new List<int>() { 1,2,3,5,6,7,8,11,14,15 };
-        List<int> list3 = new List<int>() { 1,2,5,6,7,8,12,18 };
-        List<int> list4 = new List<int>() { 1,2,5,6,8,17 };
-        var items = new List<Item>()
-        {
-            new Item(1,"T-Shirt",320,1,new List<int>(list1)),
-            new Item(2,"T-Shirt med Print",450,1,new List<int>(list2)),
-            new Item(3,"T-Shirt med Print",300,1,new List<int>(list3)),
-            new Item(4,"T-Shirt",700,1,new List<int>(list4)),
-        };
-        foreach (var item in items)
-        {
-            _itemRepository.CreateNewItem(item);
-        }
+        // List<int> list1 = new List<int>() { 1,2,3,5,6,7,8,14,15 };
+        // List<int> list2 = new List<int>() { 1,2,3,5,6,7,8,11,14,15 };
+        // List<int> list3 = new List<int>() { 1,2,5,6,7,8,12,18 };
+        // List<int> list4 = new List<int>() { 1,2,5,6,8,17 };
+        // var items = new List<Item>()
+        // {
+        //     new Item(1,"T-Shirt",320,1,new List<int>(list1)),
+        //     new Item(2,"T-Shirt med Print",450,1,new List<int>(list2)),
+        //     new Item(3,"T-Shirt med Print",300,1,new List<int>(list3)),
+        //     new Item(4,"T-Shirt",700,1,new List<int>(list4)),
+        // };
+        // foreach (var item in items)
+        // {
+        //     _itemRepository.CreateNewItem(item);
+        // }
         
     }
 

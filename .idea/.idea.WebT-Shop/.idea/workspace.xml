@@ -5,10 +5,7 @@
     <projectFile profileName="IIS Express">WebshopAPI/WebShopAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/DTOs/ItemDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
