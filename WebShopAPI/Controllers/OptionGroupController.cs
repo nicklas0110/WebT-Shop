@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
@@ -26,6 +27,7 @@ public class OptionGroupController : ControllerBase
         return _webShopService.GetAllOptionGroups();
     }
     
+    [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
     public ActionResult<OptionGroup> CreateNewOptionGroup(OptionGroupPostModel postModel)
@@ -46,7 +48,7 @@ public class OptionGroupController : ControllerBase
         }
     }
     
-    
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<OptionGroup> UpdateOptionGroups([FromRoute] int id, [FromBody] OptionGroup optionGroup)
@@ -65,8 +67,7 @@ public class OptionGroupController : ControllerBase
         }
     }
     
-    
-     
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> DeleteUpdateOptionGroups([FromRoute] int id)
@@ -85,6 +86,7 @@ public class OptionGroupController : ControllerBase
         }
     }
     
+    [Authorize("AdminPolicy")]
     [HttpGet]
     [Route("with-options")]
     public ActionResult<List<OptionGroupDTO>> GetAllOptionGroupsWithOptions()
@@ -101,19 +103,5 @@ public class OptionGroupController : ControllerBase
         {
             return StatusCode(500, e.ToString());
         }
-        
-    // var returnList = new List<OptionGroupDTO>();
-    // var optionGroups = _webShopService.GetAllOptionGroups();
-    // var options = _webShopService.GetAllOptions();
-    //
-    // foreach (var optionGroup in optionGroups)
-    // {
-    //     var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
-    //     var optionGroupDto = new OptionGroupDTO()
-    //         { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
-    //     returnList.Add(optionGroupDto);
-    // }
-    //
-    // return returnList.Where(o => o.Options.Any()).ToList();
     }
 }

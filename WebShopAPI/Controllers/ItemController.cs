@@ -90,7 +90,7 @@ public class ItemController : ControllerBase
         }
     }
 
-    [AllowAnonymous]
+    [Authorize("AdminPolicy")]
     [HttpPost]
     [Route("with-filter/{categoryId}")]
     public ActionResult<List<ItemDTO>> GetItemWithFilter([FromRoute] int categoryId,

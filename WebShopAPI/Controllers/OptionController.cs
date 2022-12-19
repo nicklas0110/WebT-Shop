@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
@@ -49,7 +50,7 @@ public class OptionController : ControllerBase
         }
     }
     
-    
+    [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
     public ActionResult<Option> CreateNewOption(ItemOptionPostModel postModel)
@@ -70,6 +71,7 @@ public class OptionController : ControllerBase
         }
     }
 
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Option> UpdateOption([FromRoute] int id, [FromBody] Option option)
@@ -88,6 +90,7 @@ public class OptionController : ControllerBase
         }
     }
     
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> DeleteUpdateOption([FromRoute] int id)

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
@@ -27,6 +28,7 @@ public class CategoryController : ControllerBase
         return _webShopService.GetAllCategories();
     }
     
+    [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
     public ActionResult<Category> CreateNewCategory(ItemCategoryPostModel postModel)
@@ -46,6 +48,8 @@ public class CategoryController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+    
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Edit/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Category> UpdateCategory([FromRoute] int id, [FromBody] Category category)
@@ -64,6 +68,7 @@ public class CategoryController : ControllerBase
         }
     }
     
+    [Authorize("AdminPolicy")]
     [HttpPut]
     [Route("Delete/{id}")] //localhost:5111/box/8732648732
     public ActionResult<Item> DeleteUpdateCategory([FromRoute] int id)
