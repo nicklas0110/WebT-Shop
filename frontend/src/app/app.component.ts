@@ -49,4 +49,8 @@ export class AppComponent implements OnInit {
   isUserAdmin() {
     return this.user?.role == 'Admin' || this.user?.role == 'SuperAdmin';
   }
+
+  addBal() {
+
+  }
 }

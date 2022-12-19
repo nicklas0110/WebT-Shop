@@ -8,12 +8,13 @@
     <div>
         <button *ngIf="!user"  routerLink="login" mat-raised-button>Login</button>
 
-        <h2 *ngIf="user">Balance: {{user.balance}}£</h2>
-        <h3 *ngIf="user">{{user.email}} ({{user.role}})</h3>
+        <h2 *ngIf="user"> Balance: {{user.balance}}£ <button class="addBal" *ngIf="user" (click)="addBal()" button>Add £</button></h2>
+        <h2 *ngIf="user">{{user.email}} ({{user.role}})</h2>
 
         <button *ngIf="user" (click)="logout()" mat-raised-button>Logout</button>
     </div>
 </mat-toolbar>
+<div class="rectangle">WebT-Shop</div>
 
 <router-outlet>
 

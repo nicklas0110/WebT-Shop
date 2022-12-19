@@ -6,6 +6,22 @@ button{
 button:hover{
   background: lightblue;
 }
+.addBal{
+  font-size: x-small;
+  padding: 0.5px;
+  border-radius: 2px;
+}
+
+.rectangle {
+  height: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: darkslategray;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: "Agency FB";
+}
 
 mat-toolbar{
   display: flex;
