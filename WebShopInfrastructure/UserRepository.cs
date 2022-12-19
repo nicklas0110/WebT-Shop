@@ -25,4 +25,17 @@ public class UserRepository : IUserRepository
         return user;
     }
     
+    public void AddBalance(int userId, int balance)
+    {
+        var user = _context.UserTable.FirstOrDefault(u => u.Id == userId);
+        user.Balance += balance;
+        _context.SaveChanges();
+    }
+
+    public void RemoveBalance(int userId, int balance)
+    {
+        var user = _context.UserTable.FirstOrDefault(u => u.Id == userId);
+        user.Balance -= balance;
+        _context.SaveChanges();
+    }
 }

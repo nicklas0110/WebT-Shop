@@ -12,6 +12,7 @@ import {HttpService} from "../../services/http.service";
 export class LoginComponent implements OnInit {
   email: any;
   password: any;
+  balance: any;
   decodedToken: Token = new Token;
 
   constructor(private http: HttpService, private router: Router) { }
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
   async login() {
     let dto = {
       email: this.email,
-      password: this.password
+      password: this.password,
+      balance: this.balance
     }
     var token = await this.http.login(dto);
    localStorage.setItem('token', token)
@@ -42,4 +44,5 @@ export class LoginComponent implements OnInit {
 export class Token {
   role?: string;
   email?: string;
+  balance?: number;
 }

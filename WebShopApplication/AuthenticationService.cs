@@ -15,7 +15,8 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly AppSettings _appSettings;
     private readonly IUserRepository _repository;
-    
+    private readonly IWebShopServiceRepository _serviceRepository;
+
     public AuthenticationService(IUserRepository repository,
         IOptions<AppSettings> appSettings)
     {
@@ -37,7 +38,8 @@ public class AuthenticationService : IAuthenticationService
                 Email = dto.Email,
                 Salt = salt,
                 Hash = BCrypt.Net.BCrypt.HashPassword(dto.Password + salt),
-                Role = dto.Role
+                Role = dto.Role,
+                Balance = dto.Balance
             };
             _repository.CreateNewUser(user);
             return GenerateToken(user);
@@ -51,7 +53,7 @@ public class AuthenticationService : IAuthenticationService
         var key =Encoding.UTF8.GetBytes(_appSettings.Secret.ToString());
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email), new Claim("role", user.Role) }),
+            Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email), new Claim("role", user.Role), new Claim("balance", user.Balance.ToString()) }),
             Expires = DateTime.UtcNow.AddDays(7),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
@@ -69,5 +71,4 @@ public class AuthenticationService : IAuthenticationService
 
         throw new Exception("Invalid login");
     }
-    
 }

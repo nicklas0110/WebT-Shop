@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Security.Cryptography;
+using AutoMapper;
 using FluentValidation;
 using WebShopApplication.DTOs;
 using WebShopApplication.Interfaces;
@@ -35,8 +36,11 @@ public class WebShopService : IWebShopService {
     private readonly IValidator<OptionGroup> _optionGroupValidator;
     private readonly PostOptionGroupValidatorOption _postOptionGroupValidator;
     
+    private readonly IUserRepository _userRepository;
+
     private readonly IMapper _mapper;
     
+
     public WebShopService(
         IWebShopServiceRepository serviceRepository,
         
@@ -59,6 +63,8 @@ public class WebShopService : IWebShopService {
         IWebShopOptionGroupRepository optionGroupRepository,
         IValidator<OptionGroup> optionGroupValidator,
         PostOptionGroupValidatorOption postOptionGroupValidator,
+        
+        IUserRepository userRepository,
         
         IMapper mapper
         
@@ -85,6 +91,8 @@ public class WebShopService : IWebShopService {
         _optionGroupRepository = optionGroupRepository;
         _optionGroupValidator = optionGroupValidator;
         _postOptionGroupValidator = postOptionGroupValidator;
+
+        _userRepository = userRepository;
 
         _mapper = mapper;
 
@@ -170,6 +178,14 @@ public class WebShopService : IWebShopService {
 
     public void SeedData()
     {
+        
+        var salt = RandomNumberGenerator.GetBytes(32).ToString();
+        var user1 = new User{ Email = "SuperAdmin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "SuperAdmin", Balance = 100 };
+        var user2 = new User{ Email = "Admin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "Admin", Balance = 100 };
+        var user3 = new User{ Email = "User", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
+        var user4 = new User{ Email = "User2", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
+        _userRepository.CreateNewUser(user1); _userRepository.CreateNewUser(user2); _userRepository.CreateNewUser(user3); _userRepository.CreateNewUser(user4);
+        
         // create option groups
         var optionGroups = new List<OptionGroup>()
         {
