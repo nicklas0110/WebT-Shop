@@ -211,12 +211,12 @@ public class WebShopService : IWebShopService {
             new Option("L", 2),
             new Option("XL", 2),
             new Option("XXL", 2),
-            new Option("Im The Boss", 3),
-            new Option("Not today Satan", 3),
-            new Option("Im Lucifer Morningstar", 3),
+            new Option("Print: Im The Boss", 3),
+            new Option("Print: Not today Satan", 3),
+            new Option("Print: Im Lucifer Morningstar", 3),
             new Option("Polyester", 4),
             new Option("Bomuld", 4),
-            new Option("uld", 4),
+            new Option("Uld", 4),
             new Option("Kashmir", 4),
             new Option("Bambus stof", 4)
             
@@ -228,7 +228,8 @@ public class WebShopService : IWebShopService {
         // create category
         var categories = new List<Category>()
         {
-            new Category("T-Shit")
+            new Category("T-Shirt"),
+            new Category("Sweater")
         };
         foreach (var category in categories)
         {
