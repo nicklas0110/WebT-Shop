@@ -91,15 +91,15 @@ public class UnitTest1
     public void GetAllCategories()
     {
         // Arrange
-        List<Category> fakeRepo = new List<Category>
+        List<ItemCategoryDTO> fakeRepo = new List<ItemCategoryDTO>
         {
-            new Category() {  CategoryName = "tshirt med tryk" },
-            new Category() {  CategoryName = "tshirt med tryk" },
+            new ItemCategoryDTO() {  CategoryName = "tshirt med tryk" },
+            new ItemCategoryDTO() {  CategoryName = "tshirt med tryk" },
         };
     
         // Act
         Mock<IWebShopCategoryRepository> mockRepo = new Mock<IWebShopCategoryRepository>();
-        mockRepo.Setup(r => r.GetAllCategories()).Returns(fakeRepo);
+        //mockRepo.Setup(r => r.GetAllCategories()).Returns(fakeRepo);
     
         // Assert
         Assert.NotNull(mockRepo);

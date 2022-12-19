@@ -22,7 +22,7 @@ public class OptionController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<Option>> GetAllOptions()
+    public ActionResult<List<OptionDTO>> GetAllOptions()
     {
         try
         { 
@@ -53,7 +53,7 @@ public class OptionController : ControllerBase
     [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
-    public ActionResult<Option> CreateNewOption(ItemOptionPostModel postModel)
+    public ActionResult<OptionDTO> CreateNewOption(ItemOptionPostModel postModel)
     {
         try
         {

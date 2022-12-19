@@ -22,7 +22,7 @@ public class OptionGroupController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<OptionGroup>> GetAllOptionGroups()
+    public ActionResult<List<OptionGroupDTO>> GetAllOptionGroups()
     {
         return _webShopService.GetAllOptionGroups();
     }

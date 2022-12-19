@@ -28,8 +28,28 @@ public class ItemCategoryDTO
         Id = postModel.Id;
         DeletedAt = postModel.DeletedAt;
     }
+
+    public ItemCategoryDTO(Category model)
+    {
+        Id = model.Id;
+        CategoryName = model.CategoryName;
+        CreatedAt = model.CreatedAt;
+        UpdatedAt = model.UpdatedAt;
+        DeletedAt = model.DeletedAt;
+    }
     
-    
+    public ItemCategoryDTO(CategoryEditModel editModel)
+    {
+        Id = editModel.Id;
+        CategoryName = editModel.CategoryName;
+        Items = editModel.Items;
+    }
+
+    public ItemCategoryDTO(ItemCategoryDTO model)
+    {
+        Id = model.Id;
+        CategoryName = model.CategoryName;
+    }
 }
 
 public class ItemCategoryPostModel
@@ -59,4 +79,11 @@ public class CategoryGetAllDto : IEnumerable<object>
     {
         return GetEnumerator();
     }
+}
+
+public class  CategoryEditModel
+{
+    public int Id { get; set; }
+    public string CategoryName { get; set; }
+    public List<Item> Items { get; set; }
 }

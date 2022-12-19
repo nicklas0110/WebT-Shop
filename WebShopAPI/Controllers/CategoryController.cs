@@ -23,7 +23,7 @@ public class CategoryController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<Category>> GetAllTCategories()
+    public ActionResult<List<ItemCategoryDTO>> GetAllTCategories()
     {
         return _webShopService.GetAllCategories();
     }
@@ -31,7 +31,7 @@ public class CategoryController : ControllerBase
     [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
-    public ActionResult<Category> CreateNewCategory(ItemCategoryPostModel postModel)
+    public ActionResult<ItemCategoryDTO> CreateNewCategory(ItemCategoryPostModel postModel)
     {
         try
         {
@@ -56,7 +56,7 @@ public class CategoryController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.UpdateCategory(id, category));
+            return Ok(_webShopService.UpdateCategory(id,category));
         }
         catch (KeyNotFoundException e)
         {

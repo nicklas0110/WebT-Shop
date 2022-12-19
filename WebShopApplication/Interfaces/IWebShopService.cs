@@ -15,20 +15,20 @@ public interface IWebShopService
     object? DeleteUpdateItem(int id);
     
 
-    Category CreateNewCategory(ItemCategoryDTO dto);
-    List<Category> GetAllCategories();
+    ItemCategoryDTO CreateNewCategory(ItemCategoryDTO dto);
+    List<ItemCategoryDTO> GetAllCategories();
     Category UpdateCategory(int id, Category category);
     Category DeleteCategory(int id);
 
-    Option CreateNewOption(OptionDTO optionDto);
-    List<Option> GetAllOptions();
+    OptionDTO CreateNewOption(OptionDTO optionDto);
+    List<OptionDTO> GetAllOptions();
     Option UpdateOption(int id, Option option);
     List<Option> GetOptionByGroupId(int id);
     Option DeleteOption(int id);
     
 
-    OptionGroup CreateNewOptionGroup(OptionGroupDTO optionGroupDto);
-    List<OptionGroup> GetAllOptionGroups();
+    OptionGroupDTO CreateNewOptionGroup(OptionGroupDTO optionGroupDto);
+    List<OptionGroupDTO> GetAllOptionGroups();
     OptionGroup UpdateOptionGroups(int id, OptionGroup option);
     OptionGroup DeleteOptionGroups(int id);
     List<OptionGroupDTO> GetAllOptionGroupsWithOptions();

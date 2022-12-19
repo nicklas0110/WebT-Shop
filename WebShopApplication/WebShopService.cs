@@ -267,18 +267,25 @@ public class WebShopService : IWebShopService {
 
     
 
-    public Category CreateNewCategory(ItemCategoryDTO dtoCategoryDto)
+    public ItemCategoryDTO CreateNewCategory(ItemCategoryDTO dto)
     {
-        var validation = _postValidatorCategory.Validate(dtoCategoryDto);
+        var validation = _postValidatorCategory.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var category = new Category(dtoCategoryDto.CategoryName);
-        return _categoryRepository.CreateNewCategory(category);
+        var category = new Category(dto.CategoryName);
+        category = _categoryRepository.CreateNewCategory(category);
+        return new ItemCategoryDTO(category);
     }
 
-    public List<Category> GetAllCategories()
+    public List<ItemCategoryDTO> GetAllCategories()
     {
-        return _categoryRepository.GetAllCategories();
+        var catagorys = _categoryRepository.GetAllCategories();
+        var catagoryDtos = new List<ItemCategoryDTO>();
+        foreach (var catagory in catagorys)
+        {
+            catagoryDtos.Add(new ItemCategoryDTO(catagory));
+        }
+        return catagoryDtos;
     }
 
     public Category UpdateCategory(int id, Category category)
@@ -297,18 +304,25 @@ public class WebShopService : IWebShopService {
     }
 
     
-    public Option CreateNewOption(OptionDTO optionDto)
+    public OptionDTO CreateNewOption(OptionDTO dto)
     {
-        var validation = _postValidatorOption.Validate(optionDto);
+        var validation = _postValidatorOption.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var option = new Option(optionDto.Name, optionDto.OptionGroupId);
-        return _optionRepository.CreateNewOption(option);
+        var option = new Option(dto.Name, dto.OptionGroupId);
+        option = _optionRepository.CreateNewOption(option);
+        return new OptionDTO(option);
     }
 
-    public List<Option> GetAllOptions()
+    public List<OptionDTO> GetAllOptions()
     {
-        return _optionRepository.GetAllOptions();
+        var options = _optionRepository.GetAllOptions();
+        var optionDtos = new List<OptionDTO>();
+        foreach (var option in options)
+        {
+            optionDtos.Add(new OptionDTO(option));
+        }
+        return optionDtos;
     }
 
     public Option UpdateOption(int id, Option option)
@@ -331,19 +345,26 @@ public class WebShopService : IWebShopService {
         return _optionRepository.GetOptionByGroupId(id);
     }
 
-    public OptionGroup CreateNewOptionGroup(OptionGroupDTO optionGroupDto)
+    public OptionGroupDTO CreateNewOptionGroup(OptionGroupDTO optionGroupDto)
     {
         var validation = _postOptionGroupValidator.Validate(optionGroupDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
         var optionGroup = new OptionGroup(optionGroupDto.Name);
-        return _optionGroupRepository.CreateNewOptionGroup(optionGroup);
+        optionGroup = _optionGroupRepository.CreateNewOptionGroup(optionGroup);
+        return new OptionGroupDTO(optionGroup);
     }
 
 
-    public List<OptionGroup> GetAllOptionGroups()
+    public List<OptionGroupDTO> GetAllOptionGroups()
     {
-        return _optionGroupRepository.GetAllOptionGroups();
+        var optionGroups = _optionGroupRepository.GetAllOptionGroups();
+        var optionGroupDtos = new List<OptionGroupDTO>();
+        foreach (var optionGroup in optionGroups)
+        {
+            optionGroupDtos.Add(new OptionGroupDTO(optionGroup));
+        }
+        return optionGroupDtos;
     }
 
     public OptionGroup UpdateOptionGroups(int id, OptionGroup optionGroup)
@@ -368,7 +389,7 @@ public class WebShopService : IWebShopService {
         var groupDtos = new List<OptionGroupDTO>();
         foreach (var optionGroup in optionGroups)
         {
-            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
+            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => o = new OptionDTO()).ToList();
             var optionGroupDtos = new OptionGroupDTO()
                 { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
             groupDtos.Add(optionGroupDtos);

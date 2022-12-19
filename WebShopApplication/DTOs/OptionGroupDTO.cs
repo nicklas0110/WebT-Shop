@@ -1,4 +1,6 @@
-﻿namespace WebShopApplication.DTOs;
+﻿using WebsShopDomain;
+
+namespace WebShopApplication.DTOs;
 
 public class OptionGroupDTO
 {
@@ -27,6 +29,14 @@ public class OptionGroupDTO
         Id = postModel.Id;
     }
 
+    public OptionGroupDTO(OptionGroup model)
+    {
+        Id = model.Id;
+        Name = model.Name;
+        CreatedAt = model.CreatedAt;
+        UpdatedAt = model.UpdatedAt;
+        DeletedAt = model.DeletedAt;
+    }
 }
 
 public class OptionGroupPostModel
