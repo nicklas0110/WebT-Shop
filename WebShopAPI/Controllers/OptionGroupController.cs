@@ -30,7 +30,7 @@ public class OptionGroupController : ControllerBase
     [Authorize("AdminPolicy")]
     [HttpPost]  
     [Route("")]
-    public ActionResult<OptionGroup> CreateNewOptionGroup(OptionGroupPostModel postModel)
+    public ActionResult<OptionGroupDTO> CreateNewOptionGroup(OptionGroupPostModel postModel)
     {
         try
         {
