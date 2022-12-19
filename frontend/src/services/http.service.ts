@@ -60,6 +60,11 @@ export class HttpService {
       return httpResult.data;
     }
 
+  async register(dto:{email: string; password: string; role: string;}) {
+    const httpResult = await customAxios.post('controller/register/', dto);
+    return httpResult.data;
+  }
+
   async getOptionGroupId() {
     const httpResponse = await customAxios.get('optionById');
     return httpResponse.data;

@@ -26,7 +26,9 @@ export class AuthguardService implements CanActivate {
     }
 }
 
-class Token {
+export class Token {
     exp?: number;
     role?: string;
+    email?: string;
+    balance?: number;
 }

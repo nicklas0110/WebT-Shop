@@ -2,7 +2,7 @@ import {Component, OnInit, OnChanges} from '@angular/core';
 import {HttpService} from "../services/http.service";
 import axios from "axios";
 import jwtDecode from 'jwt-decode';
-import { Token } from './login/login.component';
+import { Token } from '../services/authguard.service';
 import { Router } from '@angular/router';
 
 

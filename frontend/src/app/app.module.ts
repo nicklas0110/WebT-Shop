@@ -34,6 +34,7 @@ import { AdminoptiongroupComponent } from './adminpage/adminoptiongroup/adminopt
 import { CommonModule } from '@angular/common';
 import {MatTabsModule} from "@angular/material/tabs";
 import { ItemCardComponent } from './item-card/item-card.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -60,8 +61,11 @@ const route: Routes = [
     ]
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginComponent,
   },
+    {
+        path: 'register', component: RegisterComponent,
+    },
   {
     path: 'superadmin', component: SuperadminComponent
   },
@@ -102,7 +106,8 @@ const route: Routes = [
     AdminoptiongroupComponent,
     AdmincategoryComponent,
     AndminoptionComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    RegisterComponent
 
   ],
     imports: [
