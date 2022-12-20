@@ -11,7 +11,7 @@ public class Item : BaseClass
     [ForeignKey("ItemCategory")]
     public int ItemCategoryId { get; set; }
     public Category ItemCategory { get; set; }
-    public List<int> OptionIds { get; set; }
+    //public List<int> OptionIds { get; set; }
     
     public Item(){}
 
@@ -31,14 +31,5 @@ public class Item : BaseClass
         Name = name;
         Price = price;
         ItemCategoryId = itemCategoryId;
-    }
-        
-    public Item(int id, string name, decimal price, int itemCategoryId, List<int> optionIds)
-    {
-        Id = id;
-        Name = name;
-        Price = price;
-        ItemCategoryId = itemCategoryId;
-        OptionIds = optionIds;
     }
 }
