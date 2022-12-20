@@ -22,7 +22,7 @@ public class OptionGroupController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<OptionGroupDTO>> GetAllOptionGroups()
+    public ActionResult<List<OptionGroup>> GetAllOptionGroups()
     {
         return _webShopService.GetAllOptionGroups();
     }
@@ -86,7 +86,7 @@ public class OptionGroupController : ControllerBase
         }
     }
     
-    [Authorize("AdminPolicy")]
+    
     [HttpGet]
     [Route("with-options")]
     public ActionResult<List<OptionGroupDTO>> GetAllOptionGroupsWithOptions()

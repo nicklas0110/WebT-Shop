@@ -22,7 +22,7 @@ public class OptionController : ControllerBase
     
     [HttpGet]
     [Route("")]
-    public ActionResult<List<OptionDTO>> GetAllOptions()
+    public ActionResult<List<Option>> GetAllOptions()
     {
         try
         { 
