@@ -1,6 +1,7 @@
 
 export class ItemDto {
-    name: string = "";
+    name: string = '';
+    image: string = '';
     price: number = 0;
     itemCategoryId: number = 0;
     optionIds: number[] = [];

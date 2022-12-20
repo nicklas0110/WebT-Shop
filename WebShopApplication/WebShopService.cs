@@ -145,7 +145,7 @@ public class WebShopService : IWebShopService {
         var validation = _itemDtoValidator.Validate(dto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var item = new Item(dto.Name,dto.Price, dto.ItemCategoryId);
+        var item = new Item(dto.Name, dto.Image, dto.Price, dto.ItemCategoryId);
         item = _itemRepository.CreateNewItem(item);
         if (dto.OptionIds.Any())
         {
@@ -263,7 +263,7 @@ public class WebShopService : IWebShopService {
         var validation = _itemDtoValidator.Validate(itemDto);
         if (!validation.IsValid)
             throw new ValidationException(validation.ToString());
-        var item = new Item(itemDto.Id, itemDto.Name, itemDto.Price, itemDto.ItemCategoryId);
+        var item = new Item(itemDto.Id, itemDto.Name, itemDto.Image, itemDto.Price, itemDto.ItemCategoryId);
         var itemIds = new List<int>();
         itemIds.Add(item.Id);
         var io = _itemOptionRepositoryRepo.GetByItemIds(itemIds);

@@ -39,7 +39,6 @@ import { DialogBalComponent } from './dialog-bal/dialog-bal.component';
 
 
 
-
 const route: Routes = [
   {
     path: '', component: UserpageComponent,

@@ -12,6 +12,7 @@ public class ItemDTO
 
     public int Id { get; set; }
     public string Name { get; set; }
+    public string Image { get; set; }
     
     public decimal Price { get; set; }
     
@@ -29,6 +30,7 @@ public class ItemDTO
     public ItemDTO(ItemPostModel postModel)
     {
         Name = postModel.Name;
+        Image = postModel.Image;
         Price = postModel.Price;
         ItemCategoryId = postModel.ItemCategoryId;
         OptionIds = postModel.OptionIds;
@@ -38,6 +40,7 @@ public class ItemDTO
     {
         Id = model.Id;
         Name = model.Name;
+        Image = model.Image;
         Price = model.Price;
         ItemCategoryId = model.ItemCategoryId;
         OptionIds = optionIds;
@@ -47,6 +50,7 @@ public class ItemDTO
     {
         Id = editModel.Id;
         Name = editModel.Name;
+        Image = editModel.Image;
         Price = editModel.Price;
         ItemCategoryId = editModel.ItemCategoryId;
         OptionIds = editModel.OptionIds;
@@ -66,6 +70,7 @@ public class ItemDTO
 public class ItemPostModel
 {
     public string Name { get; set; }
+    public string Image { get; set; }
     public decimal Price { get; set; }
     public int ItemCategoryId { get; set; }
     public List<int> OptionIds { get; set; }
@@ -75,6 +80,7 @@ public class ItemEditModel
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public string Image { get; set; }
     public decimal Price { get; set; }
     public int ItemCategoryId { get; set; }
     public List<int> OptionIds { get; set; }

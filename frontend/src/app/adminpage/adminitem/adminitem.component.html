@@ -8,6 +8,9 @@
     <mat-form-field >
         <input matInput [(ngModel)]="formModel.price"placeholder="Item Price">
     </mat-form-field>
+    <mat-form-field >
+        <input matInput [(ngModel)]="formModel.image"placeholder="Item Image URL">
+    </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Category</mat-label>
         <mat-select [formControl]="categoryControl" required>
@@ -35,6 +38,9 @@
         <mat-card-title>
            Name: {{i.name}}
         </mat-card-title>
+        <mat-card-subtitle>
+            <img [src]="i.image" alt="">
+        </mat-card-subtitle>
         <mat-card-subtitle>
             Id: {{i.id}}
         </mat-card-subtitle>

@@ -1,4 +1,4 @@
-import {Component, OnInit, OnChanges} from '@angular/core';
+import {Component, OnInit, OnChanges, ViewChild, TemplateRef} from '@angular/core';
 import {HttpService} from "../services/http.service";
 import axios from "axios";
 import jwtDecode from 'jwt-decode';
@@ -23,8 +23,11 @@ export const customAxios = axios.create({
 export class AppComponent implements OnInit {
 
   user: Token | undefined;
+  balance: number = 0;
 
-  constructor(private router: Router, public dialog: MatDialog) { }
+  @ViewChild('balanceDialog') balanceDialog!: TemplateRef<any>;
+
+  constructor(private router: Router, public dialog: MatDialog, private http: HttpService) { }
 
   ngOnInit(): void {
     // Load user info from jwt when page is changed
@@ -34,12 +37,18 @@ export class AppComponent implements OnInit {
 
     // Load Initial
     this.loadUserFromJwt();
+
+    this.http.balanceChanged.subscribe(
+        () => this.updateBalance()
+    );
   }
 
   loadUserFromJwt() {
     const token = localStorage.getItem('token');
     console.log(token);
     this.user = token ? jwtDecode(token!) as Token : undefined;
+
+    this.updateBalance();
   }
 
   logout() {
@@ -53,6 +62,10 @@ export class AppComponent implements OnInit {
   }
 
   addBal() {
-    this.dialog.open(DialogBalComponent);
+    this.dialog.open(this.balanceDialog);
+  }
+
+  async updateBalance() {
+    this.balance = await this.http.getBalance(this.user?.id!);
   }
 }

@@ -1,9 +1,10 @@
 import { Token } from 'src/services/authguard.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 import { HttpService } from 'src/services/http.service';
 import { Router } from '@angular/router';
 import { Balance } from './balanceDto';
+import {FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog-bal',
@@ -11,10 +12,14 @@ import { Balance } from './balanceDto';
   styleUrls: ['./dialog-bal.component.scss']
 })
 export class DialogBalComponent implements OnInit {
-  userId: any;
-  balance: number = 0;
+
   user: Token | undefined;
-  formModule : Balance = new Balance();
+
+  balanceForm: FormGroup = new FormGroup({
+    balance: new FormControl(0, [Validators.required])
+  });
+
+  @Output() balanceChange: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private http: HttpService, private router: Router) { }
 
@@ -30,26 +35,15 @@ export class DialogBalComponent implements OnInit {
 
   loadUserFromJwt() {
     const token = localStorage.getItem('token');
-    console.log(token);
     this.user = token ? jwtDecode(token!) as Token : undefined;
-    console.log(this.user);
   }
 
   async addBalance() {
-    let dto : Balance = {
-      balance: this.formModule.balance,
-      userId: this.formModule.userId
-
+    console.log(this.user?.id);
+    if (this.user?.id && this.balanceForm.valid) {
+      const res = await this.http.addBalance(this.user.id, this.balanceForm.value);
+      this.balanceChange.emit(res);
     }
-
-    var token = await this.http.addBalance(this.formModule.userId, dto);
-    console.log(this.formModule.userId);
-    localStorage.setItem('token', token)
-    let decodedToken = jwtDecode(token) as Token;
-    decodedToken.balance = this.formModule.balance
-    decodedToken.id = this.formModule.userId
-    console.log(this.formModule.userId);
-
   }
 
 }

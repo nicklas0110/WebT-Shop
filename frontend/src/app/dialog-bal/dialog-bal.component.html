@@ -1,10 +1,12 @@
 <h2>Add Currency to account</h2>
 <mat-dialog-content>Choose amount!</mat-dialog-content>
 <mat-dialog-actions>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Amount</mat-label>
-        <input [(ngModel)]="formModule.balance" matInput>
+    <form [formGroup]="balanceForm" (submit)="addBalance()">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Amount</mat-label>
+            <input type="number" formControlName="balance" matInput>
 
-    </mat-form-field>
-    <button mat-button mat-dialog-close (click)="addBalance()">Add</button>
+        </mat-form-field>
+        <button type="submit" mat-button mat-dialog-close>Add</button>
+    </form>
 </mat-dialog-actions>

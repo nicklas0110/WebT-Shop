@@ -17,12 +17,12 @@ public class BalanceController : ControllerBase
     
     [HttpPost]
     [Route("addBalance/{userId:int}")]
-    public ActionResult AddBalance(int userId, [FromQuery] int balance)
+    public ActionResult<int> AddBalance(int userId, [FromQuery] int balance)
     {
         try
         {
-            _repo.AddBalance(userId, balance);
-            return Ok();
+            var result = _repo.AddBalance(userId, balance);
+            return Ok(result);
         }
         catch (Exception e)
         {
@@ -32,17 +32,31 @@ public class BalanceController : ControllerBase
     
     [HttpPost]
     [Route("removeBalance/{userId:int}")]
-    public ActionResult RemoveBalance(int userId, [FromQuery] int balance)
+    public ActionResult<int> RemoveBalance(int userId, [FromQuery] int balance)
     {
         try
         {
-            _repo.RemoveBalance(userId, balance);
-            return Ok();
+            var result = _repo.RemoveBalance(userId, balance);
+            return Ok(result);
         }
         catch (Exception e)
         {
             return BadRequest(e.Message);
         }
     }
-    
+
+    [HttpGet("balance/{userId:int}")]
+    public ActionResult<int> GetBalance(int userId)
+    {
+        try
+        {
+            var result = _repo.GetBalance(userId);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
 }

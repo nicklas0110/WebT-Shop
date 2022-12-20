@@ -36,6 +36,7 @@ export class AdminitemComponent implements OnInit {
   async createItem() {
     let dto : ItemDto= {
       name: this.formModel.name,
+      image: this.formModel.image,
       price: this.formModel.price,
       itemCategoryId: this.categoryControl.getRawValue() || 0,
       optionIds: this.optionsControl.getRawValue() || []
@@ -62,6 +63,7 @@ export class AdminitemComponent implements OnInit {
       id: id,
       name: this.formModel.name,
       price: this.formModel.price,
+      image: this.formModel.image,
       itemCategoryId: this.categoryControl.getRawValue() || 0,
       optionIds: this.optionsControl.getRawValue() || []
     }

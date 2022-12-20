@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable } from '@angular/core';
 import axios from "axios";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {catchError} from "rxjs";
@@ -19,6 +19,8 @@ export const customAxios = axios.create({
   providedIn: 'root'
 })
 export class HttpService {
+
+  balanceChanged: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private matSnackbar: MatSnackBar){
     customAxios.interceptors.response.use(
@@ -65,8 +67,21 @@ export class HttpService {
     return httpResult.data;
   }
 
-  async addBalance(userId:number, dto:{balance: number;}) {
-    const httpResult = await customAxios.post('controller/addBalance/' + userId, dto);
+  async addBalance(userId:number, dto: { balance: number }) {
+    const httpResult = await customAxios.post('addBalance/' + userId + '?balance=' + dto.balance);
+    this.balanceChanged.emit(httpResult.data);
+    return httpResult.data;
+  }
+
+  async removeBalance(userId:number, dto: { balance: number }) {
+    const httpResult = await customAxios.post('removeBalance/' + userId + '?balance=' + dto.balance);
+
+    this.balanceChanged.emit(httpResult.data);
+    return httpResult.data;
+  }
+
+  async getBalance(userId:number) {
+    const httpResult = await customAxios.get('balance/' + userId);
     return httpResult.data;
   }
 

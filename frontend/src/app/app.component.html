@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="app.component.scss">
 
+<ng-template #balanceDialog>
+    <app-dialog-bal (balanceChange)="updateBalance()"></app-dialog-bal>
+</ng-template>
+
 <mat-toolbar>
     <div>
         <a routerLink="/"> <img src="../assets/Logo.png"> </a>
@@ -8,7 +12,7 @@
     <div>
         <button *ngIf="!user"  routerLink="login" mat-raised-button>Login</button>
 
-        <h2 *ngIf="user"> Balance: {{user.balance}}£ <button mat-raised-button class="addBal" *ngIf="user" (click)="addBal()" button>Add £</button></h2>
+        <h2 *ngIf="user"> Balance: {{balance | currency:'EUR'}} <button class="addBal" *ngIf="user" (click)="addBal()" button>Add €</button></h2>
         <h2 *ngIf="user">{{user.email}} ({{user.role}})</h2>
 
         <button *ngIf="user" (click)="logout()" mat-raised-button>Logout</button>
