@@ -20,10 +20,6 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {Overlay} from "@angular/cdk/overlay";
 import {MatInputModule} from "@angular/material/input";
 import {AuthguardService} from "../services/authguard.service";
-import { Page1Component } from './userpage/page1/page1.component';
-import { Page2Component } from './userpage/page2/page2.component';
-import { Page3Component } from './userpage/page3/page3.component';
-import { Page4Component } from './userpage/page4/page4.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
@@ -47,20 +43,6 @@ import { DialogBalComponent } from './dialog-bal/dialog-bal.component';
 const route: Routes = [
   {
     path: '', component: UserpageComponent,
-    children: [
-      {
-        path: 'page1', component: Page1Component,
-      },
-      {
-        path: 'page2', component: Page2Component,
-      },
-      {
-        path: 'page3', component: Page3Component,
-      },
-      {
-        path: 'page4', component: Page4Component,
-      },
-    ]
   },
   {
     path: 'login', component: LoginComponent,
@@ -100,10 +82,6 @@ const route: Routes = [
     UserpageComponent,
     SuperadminComponent,
     AdminpageComponent,
-    Page1Component,
-    Page2Component,
-    Page3Component,
-    Page4Component,
     AdminitemComponent,
     AdminoptiongroupComponent,
     AdmincategoryComponent,
