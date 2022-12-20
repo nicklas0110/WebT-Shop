@@ -180,10 +180,10 @@ public class WebShopService : IWebShopService {
     {
         
         var salt = RandomNumberGenerator.GetBytes(32).ToString();
-        var user1 = new User{ Email = "SuperAdmin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "SuperAdmin", Balance = 100 };
-        var user2 = new User{ Email = "Admin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "Admin", Balance = 100 };
-        var user3 = new User{ Email = "User", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
-        var user4 = new User{ Email = "User2", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
+        var user1 = new User{Id = 1, Email = "SuperAdmin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "SuperAdmin", Balance = 100 };
+        var user2 = new User{Id = 2, Email = "Admin", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "Admin", Balance = 100 };
+        var user3 = new User{Id = 3, Email = "User", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
+        var user4 = new User{Id = 4, Email = "User2", Salt = salt, Hash = BCrypt.Net.BCrypt.HashPassword("Password" + salt), Role = "User", Balance = 0 };
         _userRepository.CreateNewUser(user1); _userRepository.CreateNewUser(user2); _userRepository.CreateNewUser(user3); _userRepository.CreateNewUser(user4);
         
         // create option groups

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 import { HttpService } from 'src/services/http.service';
 import { Router } from '@angular/router';
+import { Balance } from './balanceDto';
 
 @Component({
   selector: 'app-dialog-bal',
@@ -10,9 +11,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./dialog-bal.component.scss']
 })
 export class DialogBalComponent implements OnInit {
-  userId: undefined;
-  balance: any;
+  userId: any;
+  balance: number = 0;
   user: Token | undefined;
+  formModule : Balance = new Balance();
 
   constructor(private http: HttpService, private router: Router) { }
 
@@ -30,17 +32,24 @@ export class DialogBalComponent implements OnInit {
     const token = localStorage.getItem('token');
     console.log(token);
     this.user = token ? jwtDecode(token!) as Token : undefined;
+    console.log(this.user);
   }
 
   async addBalance() {
-    let dto = {
-      balance: this.balance,
-      userId: this.userId
+    let dto : Balance = {
+      balance: this.formModule.balance,
+      userId: this.formModule.userId
+
     }
-    var token = await this.http.addBalance(this.userId, dto);
+
+    var token = await this.http.addBalance(this.formModule.userId, dto);
+    console.log(this.formModule.userId);
     localStorage.setItem('token', token)
     let decodedToken = jwtDecode(token) as Token;
-    decodedToken.balance = this.balance;
+    decodedToken.balance = this.formModule.balance
+    decodedToken.id = this.formModule.userId
+    console.log(this.formModule.userId);
+
   }
 
 }

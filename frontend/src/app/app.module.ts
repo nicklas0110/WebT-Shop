@@ -69,10 +69,10 @@ const route: Routes = [
         path: 'register', component: RegisterComponent,
     },
   {
-    path: 'superadmin', component: SuperadminComponent
+    path: 'superadmin', component: SuperadminComponent, canActivate: [AuthguardService]
   },
   {
-    path: 'adminpage', component: AdminpageComponent,
+    path: 'adminpage', component: AdminpageComponent, canActivate: [AuthguardService],
     children: [
       {
         path: 'adminoption', component: AndminoptionComponent,

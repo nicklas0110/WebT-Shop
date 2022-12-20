@@ -65,8 +65,8 @@ export class HttpService {
     return httpResult.data;
   }
 
-  async addBalance(userId:any, dto:{balance: number;}) {
-    const httpResult = await customAxios.post('controller/addBalance' + userId, dto);
+  async addBalance(userId:number, dto:{balance: number;}) {
+    const httpResult = await customAxios.post('controller/addBalance/' + userId, dto);
     return httpResult.data;
   }
 

@@ -39,7 +39,8 @@ public class AuthenticationService : IAuthenticationService
                 Salt = salt,
                 Hash = BCrypt.Net.BCrypt.HashPassword(dto.Password + salt),
                 Role = dto.Role,
-                Balance = dto.Balance
+                Balance = dto.Balance,
+                Id = dto.Id
             };
             _repository.CreateNewUser(user);
             return GenerateToken(user);
@@ -53,7 +54,7 @@ public class AuthenticationService : IAuthenticationService
         var key =Encoding.UTF8.GetBytes(_appSettings.Secret.ToString());
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email), new Claim("role", user.Role), new Claim("balance", user.Balance.ToString()) }),
+            Subject = new ClaimsIdentity(new[] { new Claim("email", user.Email), new Claim("role", user.Role), new Claim("balance", user.Balance.ToString()), new Claim("Id", user.Id.ToString()) }),
             Expires = DateTime.UtcNow.AddDays(7),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };

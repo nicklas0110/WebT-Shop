@@ -17,7 +17,7 @@ export class AuthguardService implements CanActivate {
             let currentDate = new Date();
             if(decodedToken.exp) {
                 let expiry = new Date(decodedToken.exp*1000);
-                if(currentDate<expiry && decodedToken.role=='Admin') {
+                if(currentDate<expiry && decodedToken.role=='Admin' || currentDate<expiry && decodedToken.role=='SuperAdmin') {
                     return true;
                 }
             }
@@ -31,5 +31,5 @@ export class Token {
     role?: string;
     email?: string;
     balance?: number;
-    userId?: number
+    id?: number;
 }

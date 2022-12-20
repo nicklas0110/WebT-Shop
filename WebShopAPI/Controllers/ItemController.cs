@@ -22,7 +22,6 @@ public class ItemController : ControllerBase
         _webShopItemRepository = webShopItemRepository;
     }
     
-    [AllowAnonymous]
     [HttpGet]
     [Route("")]
     public ActionResult<List<ItemDTO>> GetAllTItems()
