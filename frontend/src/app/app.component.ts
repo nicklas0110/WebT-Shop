@@ -4,6 +4,8 @@ import axios from "axios";
 import jwtDecode from 'jwt-decode';
 import { Token } from '../services/authguard.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogBalComponent } from './dialog-bal/dialog-bal.component';
 
 
 export const customAxios = axios.create({
@@ -22,7 +24,7 @@ export class AppComponent implements OnInit {
 
   user: Token | undefined;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     // Load user info from jwt when page is changed
@@ -51,6 +53,6 @@ export class AppComponent implements OnInit {
   }
 
   addBal() {
-
+    this.dialog.open(DialogBalComponent);
   }
 }

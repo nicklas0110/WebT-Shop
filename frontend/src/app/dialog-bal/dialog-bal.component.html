@@ -1,0 +1,10 @@
+<h2>Add Currency to account</h2>
+<mat-dialog-content>Choose amount!</mat-dialog-content>
+<mat-dialog-actions>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input [(ngModel)]="balance" matInput>
+
+    </mat-form-field>
+    <button mat-button mat-dialog-close (click)="addBalance()">Add</button>
+</mat-dialog-actions>
