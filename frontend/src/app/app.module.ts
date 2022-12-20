@@ -35,6 +35,8 @@ import { CommonModule } from '@angular/common';
 import {MatTabsModule} from "@angular/material/tabs";
 import { ItemCardComponent } from './item-card/item-card.component';
 import { RegisterComponent } from './register/register.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogBalComponent } from './dialog-bal/dialog-bal.component';
 
 
 
@@ -107,9 +109,11 @@ const route: Routes = [
     AdmincategoryComponent,
     AndminoptionComponent,
     ItemCardComponent,
-    RegisterComponent
+    RegisterComponent,
+    DialogBalComponent,
 
   ],
+    entryComponents: [DialogBalComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -126,7 +130,8 @@ const route: Routes = [
         MatSelectModule,
         ReactiveFormsModule,
         CommonModule,
-        MatTabsModule
+        MatTabsModule,
+        MatDialogModule
 
     ],
   providers: [MatSnackBar, Overlay],

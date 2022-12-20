@@ -31,4 +31,5 @@ export class Token {
     role?: string;
     email?: string;
     balance?: number;
+    userId?: number
 }

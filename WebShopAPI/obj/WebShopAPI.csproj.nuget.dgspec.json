@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj": {}
+    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj": {
+    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj",
         "projectName": "WebShopAPI",
-        "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj",
-        "packagesPath": "C:\\Users\\Reigstad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebshopAPI\\obj\\",
+        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebshopAPI\\WebShopAPI.csproj",
+        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebshopAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reigstad\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj": {
-                "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj"
+              "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj"
               }
             }
           }
@@ -85,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -94,21 +95,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {
+    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
         "projectName": "WebShopApplication",
-        "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
-        "packagesPath": "C:\\Users\\Reigstad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\obj\\",
+        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
+        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reigstad\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -120,8 +121,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
-                "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj"
+              "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
+                "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj"
               }
             }
           }
@@ -171,7 +172,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -180,21 +182,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj": {
+    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj",
         "projectName": "WebShopInfrastructure",
-        "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj",
-        "packagesPath": "C:\\Users\\Reigstad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopInfrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\WebShopInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reigstad\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -206,11 +208,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {
-                "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj"
+              "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {
+                "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj"
               },
-              "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
-                "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj"
+              "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
+                "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj"
               }
             }
           }
@@ -240,7 +242,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -249,21 +252,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
+    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
+        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
         "projectName": "WebsShopDomain",
-        "projectPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
-        "packagesPath": "C:\\Users\\Reigstad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reigstad\\RiderProjects\\WebT-Shop\\WebsShopDomain\\obj\\",
+        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
+        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reigstad\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -292,7 +295,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -301,7 +305,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
