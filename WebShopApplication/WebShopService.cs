@@ -332,15 +332,9 @@ public class WebShopService : IWebShopService {
         return new OptionDTO(option);
     }
 
-    public List<OptionDTO> GetAllOptions()
+    public List<Option> GetAllOptions()
     {
-        var options = _optionRepository.GetAllOptions();
-        var optionDtos = new List<OptionDTO>();
-        foreach (var option in options)
-        {
-            optionDtos.Add(new OptionDTO(option));
-        }
-        return optionDtos;
+        return _optionRepository.GetAllOptions();
     }
 
     public Option UpdateOption(int id, Option option)
@@ -374,15 +368,9 @@ public class WebShopService : IWebShopService {
     }
 
 
-    public List<OptionGroupDTO> GetAllOptionGroups()
+    public List<OptionGroup> GetAllOptionGroups()
     {
-        var optionGroups = _optionGroupRepository.GetAllOptionGroups();
-        var optionGroupDtos = new List<OptionGroupDTO>();
-        foreach (var optionGroup in optionGroups)
-        {
-            optionGroupDtos.Add(new OptionGroupDTO(optionGroup));
-        }
-        return optionGroupDtos;
+        return _optionGroupRepository.GetAllOptionGroups();
     }
 
     public OptionGroup UpdateOptionGroups(int id, OptionGroup optionGroup)
@@ -407,7 +395,7 @@ public class WebShopService : IWebShopService {
         var groupDtos = new List<OptionGroupDTO>();
         foreach (var optionGroup in optionGroups)
         {
-            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => o = new OptionDTO()).ToList();
+            var optionDtos = options.Where(o => o.OptionGroupId == optionGroup.Id).Select(o => new OptionDTO(o)).ToList();
             var optionGroupDtos = new OptionGroupDTO()
                 { Id = optionGroup.Id, Name = optionGroup.Name, Options = optionDtos };
             groupDtos.Add(optionGroupDtos);

@@ -5,7 +5,14 @@
     <projectFile profileName="IIS Express">WebshopAPI/WebShopAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="" />
+    <list default="true" id="4ea6f6ce-e434-4554-8708-1eb3e931ea4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebT-Shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionGroupController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/Controllers/OptionGroupController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopAPI/bin/Debug/net6.0/WebShopAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/Interfaces/IWebShopService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebShopApplication/WebShopService.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
