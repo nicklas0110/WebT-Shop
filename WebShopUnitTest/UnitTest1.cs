@@ -65,7 +65,8 @@ public class UnitTest1
         // Act
         Mock<IWebShopItemRepository> mockRepo = new Mock<IWebShopItemRepository>();
         mockRepo.Setup(r => r.GetAllItems()).Returns(fakeRepo);
-
+        
+        
         // Assert
         Assert.NotNull(mockRepo);
     }

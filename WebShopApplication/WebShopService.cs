@@ -392,6 +392,13 @@ public class WebShopService : IWebShopService {
     {
         var optionGroups = GetAllOptionGroups();
         var options = GetAllOptions();
+
+        return GetAllOptionsWithOptionGroupsMapping(optionGroups, options);
+    }
+
+    public List<OptionGroupDTO> GetAllOptionsWithOptionGroupsMapping(List<OptionGroup> optionGroups,
+        List<Option> options)
+    {
         var groupDtos = new List<OptionGroupDTO>();
         foreach (var optionGroup in optionGroups)
         {
