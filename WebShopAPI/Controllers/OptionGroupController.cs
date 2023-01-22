@@ -10,13 +10,13 @@ namespace WebShopAPI.Controllers;
 [Route("[controller]")]
 public class OptionGroupController : ControllerBase
 {
-    private IWebShopService _webShopService;
+    private IWebShopServiceOptionGroups _webShopServiceOptionGroup;
     private IWebShopOptionGroupRepository _webShopOptionGroupRepository;
 
     
-    public OptionGroupController(IWebShopService webShopService,IWebShopOptionGroupRepository webShopOptionGroup)
+    public OptionGroupController(IWebShopServiceOptionGroups webShopService,IWebShopOptionGroupRepository webShopOptionGroup)
     {
-        _webShopService = webShopService;
+        _webShopServiceOptionGroup = webShopService;
         _webShopOptionGroupRepository = webShopOptionGroup;
     }
     
@@ -24,7 +24,7 @@ public class OptionGroupController : ControllerBase
     [Route("")]
     public ActionResult<List<OptionGroup>> GetAllOptionGroups()
     {
-        return _webShopService.GetAllOptionGroups();
+        return _webShopServiceOptionGroup.GetAllOptionGroups();
     }
     
     [Authorize("AdminPolicy")]
@@ -35,7 +35,7 @@ public class OptionGroupController : ControllerBase
         try
         {
             var dto = new OptionGroupDTO(postModel);
-            var result = _webShopService.CreateNewOptionGroup(dto);
+            var result = _webShopServiceOptionGroup.CreateNewOptionGroup(dto);
             return Created("", result);
         }
         catch (ValidationException v)
@@ -55,7 +55,7 @@ public class OptionGroupController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.UpdateOptionGroups(id, optionGroup));
+            return Ok(_webShopServiceOptionGroup.UpdateOptionGroups(id, optionGroup));
         }
         catch (KeyNotFoundException e)
         {
@@ -74,7 +74,7 @@ public class OptionGroupController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.DeleteOptionGroups(id));
+            return Ok(_webShopServiceOptionGroup.DeleteOptionGroups(id));
         }
         catch (KeyNotFoundException e)
         {
@@ -93,7 +93,7 @@ public class OptionGroupController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.GetAllOptionGroupsWithOptions());
+            return Ok(_webShopServiceOptionGroup.GetAllOptionGroupsWithOptions());
         }
         catch (KeyNotFoundException e)
         {

@@ -12,13 +12,13 @@ namespace WebShopAPI.Controllers;
 [Route("[controller]")]
 public class ItemController : ControllerBase
 {
-    private IWebShopService _webShopService;
+    private IWebShopServiceItem _webShopServiceItem;
     private IWebShopItemRepository _webShopItemRepository;
 
     
-    public ItemController(IWebShopService webShopService,IWebShopItemRepository webShopItemRepository)
+    public ItemController(IWebShopServiceItem webShopService,IWebShopItemRepository webShopItemRepository)
     {
-        _webShopService = webShopService;
+        _webShopServiceItem = webShopService;
         _webShopItemRepository = webShopItemRepository;
     }
     
@@ -26,7 +26,7 @@ public class ItemController : ControllerBase
     [Route("")]
     public ActionResult<List<ItemDTO>> GetAllTItems()
     {
-        return _webShopService.GetAllItems();
+        return _webShopServiceItem.GetAllItems();
     }
     
     [Authorize("AdminPolicy")]
@@ -37,7 +37,7 @@ public class ItemController : ControllerBase
         try
         {
             var dto = new ItemDTO(postModel);
-            var result = _webShopService.CreateNewItem(dto);
+            var result = _webShopServiceItem.CreateNewItem(dto);
             return Created("", result);
         }
         catch (ValidationException v)
@@ -58,7 +58,7 @@ public class ItemController : ControllerBase
         try
         {
             var dto = new ItemDTO(editModel);
-            return Ok(_webShopService.UpdateItem(id, dto));
+            return Ok(_webShopServiceItem.UpdateItem(id, dto));
         }
         catch (KeyNotFoundException e)
         {
@@ -77,7 +77,7 @@ public class ItemController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.DeleteUpdateItem(id));
+            return Ok(_webShopServiceItem.DeleteUpdateItem(id));
         }
         catch (KeyNotFoundException e)
         {
@@ -96,6 +96,6 @@ public class ItemController : ControllerBase
         [FromBody] List<List<int>> optionIds)
     {
         // if categoryId == 0, then its all aka ignore filter
-        return _webShopService.GetAllItemWithFilter(categoryId != 0 ? categoryId : null, optionIds);
+        return _webShopServiceItem.GetAllItemWithFilter(categoryId != 0 ? categoryId : null, optionIds);
     }
 }

@@ -11,13 +11,13 @@ namespace WebShopAPI.Controllers;
 [Route("[controller]")]
 public class CategoryController : ControllerBase
 {
-    private IWebShopService _webShopService;
+    private IWebShopServiceCategory _webShopServiceCat;
     private IWebShopCategoryRepository _webShopCategoryRepository;
     
     
-    public CategoryController(IWebShopService webShopService,IWebShopCategoryRepository webShopCategoryRepository)
+    public CategoryController(IWebShopServiceCategory webShopServiceCat,IWebShopCategoryRepository webShopCategoryRepository)
     {
-        _webShopService = webShopService;
+        _webShopServiceCat = webShopServiceCat;
         _webShopCategoryRepository = webShopCategoryRepository;
     }
     
@@ -25,7 +25,7 @@ public class CategoryController : ControllerBase
     [Route("")]
     public ActionResult<List<ItemCategoryDTO>> GetAllTCategories()
     {
-        return _webShopService.GetAllCategories();
+        return _webShopServiceCat.GetAllCategories();
     }
     
     [Authorize("AdminPolicy")]
@@ -36,7 +36,7 @@ public class CategoryController : ControllerBase
         try
         {
             var dto = new ItemCategoryDTO(postModel);
-            var result = _webShopService.CreateNewCategory(dto);
+            var result = _webShopServiceCat.CreateNewCategory(dto);
             return Created("", result);
         }
         catch (ValidationException v)
@@ -56,7 +56,7 @@ public class CategoryController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.UpdateCategory(id,category));
+            return Ok(_webShopServiceCat.UpdateCategory(id,category));
         }
         catch (KeyNotFoundException e)
         {
@@ -75,7 +75,7 @@ public class CategoryController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.DeleteCategory(id));
+            return Ok(_webShopServiceCat.DeleteCategory(id));
         }
         catch (KeyNotFoundException e)
         {

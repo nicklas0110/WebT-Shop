@@ -11,12 +11,12 @@ namespace WebShopAPI.Controllers;
 [Route("[controller]")]
 public class OptionController : ControllerBase
 {
-    private IWebShopService _webShopService;
+    private IWebShopServiceOption _webShopServiceOption;
     private IWebShopOptionRepository _webShopOptionRepository;
     
-    public OptionController(IWebShopService webShopService,IWebShopOptionRepository webShopOptionRepository)
+    public OptionController(IWebShopServiceOption webShopService,IWebShopOptionRepository webShopOptionRepository)
     {
-        _webShopService = webShopService;
+        _webShopServiceOption = webShopService;
         _webShopOptionRepository = webShopOptionRepository;
     }
     
@@ -26,7 +26,7 @@ public class OptionController : ControllerBase
     {
         try
         { 
-            return _webShopService.GetAllOptions();
+            return _webShopServiceOption.GetAllOptions();
         }
         catch (Exception e)
         {
@@ -41,7 +41,7 @@ public class OptionController : ControllerBase
     {
         try
         { 
-            return _webShopService.GetOptionByGroupId(id);
+            return _webShopServiceOption.GetOptionByGroupId(id);
         }
         catch (Exception e)
         {
@@ -58,7 +58,7 @@ public class OptionController : ControllerBase
         try
         {
             var dto = new OptionDTO(postModel);
-            var result = _webShopService.CreateNewOption(dto);
+            var result = _webShopServiceOption.CreateNewOption(dto);
             return Created("", result);
         }
         catch (ValidationException v)
@@ -78,7 +78,7 @@ public class OptionController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.UpdateOption(id, option));
+            return Ok(_webShopServiceOption.UpdateOption(id, option));
         }
         catch (KeyNotFoundException e)
         {
@@ -97,7 +97,7 @@ public class OptionController : ControllerBase
     {
         try
         {
-            return Ok(_webShopService.DeleteOption(id));
+            return Ok(_webShopServiceOption.DeleteOption(id));
         }
         catch (KeyNotFoundException e)
         {

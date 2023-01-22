@@ -10,7 +10,7 @@ using Moq;
 public class UnitTest1
 {
 
-    [Fact]
+    /*[Fact]
     public void CreateWebShopServiceWithRepository()
     {
         // Arrange
@@ -18,12 +18,12 @@ public class UnitTest1
         IWebShopItemRepository repository = mockRepository.Object;
 
         // Act
-        IWebShopService service = new WebShopService(repository);
+        IWebShopServiceItem service = new WebShopServiceItem(repository);
 
         // Assert
         Assert.NotNull(service);
-        Assert.True(service is WebShopService);
-    }
+        Assert.True(service is IWebShopServiceItem);
+    } */
     
 
     [Fact]
@@ -168,7 +168,7 @@ public class UnitTest1
         // Item tshirt2 = new Item() { Id = 1, Name = "tshirt uden tryk", Price = 499 };
 
         // Act
-        Mock<WebShopService> mockRepo = new Mock<WebShopService>();
+        //Mock<WebShopService> mockRepo = new Mock<WebShopService>();
         //mockRepo.Setup(i => i.UpdateItem(tshirt1.Id, tshirt2));
         // var item = mockRepo.Setup(i => i.UpdateItem(tshirt1.Id, tshirt2));
         

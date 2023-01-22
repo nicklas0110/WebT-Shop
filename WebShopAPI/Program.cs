@@ -55,7 +55,10 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 
 //dependency, Application
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IWebShopService, WebShopService>();
+builder.Services.AddScoped<IWebShopServiceItem, WebShopServiceItem>();
+builder.Services.AddScoped<IWebShopServiceOption, WebShopServiceOption>();
+builder.Services.AddScoped<IWebShopServiceOptionGroups, WebShopServiceOptionGroups>();
+builder.Services.AddScoped<IWebShopServiceCategory, WebShopServiceCategory>();
 //dependency, Infrastructure
 builder.Services.AddScoped<IWebShopItemRepository, WebShopRepository>();
 builder.Services.AddScoped<IWebShopOptionGroupRepository, WebShopOptionGroupRepository>();
