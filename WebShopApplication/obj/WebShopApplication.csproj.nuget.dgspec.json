@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {}
+    "/Users/nick0110/Documents/GitHub/WebT-Shop/WebShopApplication/WebShopApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj": {
+    "/Users/nick0110/Documents/GitHub/WebT-Shop/WebShopApplication/WebShopApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
+        "projectUniqueName": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebShopApplication/WebShopApplication.csproj",
         "projectName": "WebShopApplication",
-        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\WebShopApplication.csproj",
-        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebShopApplication\\obj\\",
+        "projectPath": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebShopApplication/WebShopApplication.csproj",
+        "packagesPath": "/Users/nick0110/.nuget/packages/",
+        "outputPath": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebShopApplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/nick0110/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
-                "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj"
+              "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/WebsShopDomain.csproj": {
+                "projectPath": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/WebsShopDomain.csproj"
               }
             }
           }
@@ -77,8 +77,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -87,21 +86,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@6/6.0.114/libexec/sdk/6.0.114/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj": {
+    "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/WebsShopDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
+        "projectUniqueName": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/WebsShopDomain.csproj",
         "projectName": "WebsShopDomain",
-        "projectPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\WebsShopDomain.csproj",
-        "packagesPath": "C:\\Users\\Nicklas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicklas\\Documents\\GitHub\\WebT-Shop\\WebsShopDomain\\obj\\",
+        "projectPath": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/WebsShopDomain.csproj",
+        "packagesPath": "/Users/nick0110/.nuget/packages/",
+        "outputPath": "/Users/nick0110/Documents/GitHub/WebT-Shop/WebsShopDomain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicklas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/nick0110/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -130,8 +129,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -140,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@6/6.0.114/libexec/sdk/6.0.114/RuntimeIdentifierGraph.json"
         }
       }
     }
